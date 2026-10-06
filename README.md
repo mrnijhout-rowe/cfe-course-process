@@ -6,8 +6,7 @@ Mathematics, taught by Dan Nijhout-Rowe. It is published automatically
 from a private repository on every change, so it is current.
 
 It exists for two reasons: to share the process with other teachers,
-and to be transparent with students about how AI is used to build
-their course.
+and to be transparent with students about my use of AI. 
 
 ## What is here
 
@@ -45,7 +44,8 @@ his GitHub profile, https://github.com/mrnijhout-rowe.
 
 ## How it works
 
-The AI model proposes a unit or lesson skeleton, Dan edits or approves
-it, the model writes the content, Dan teaches it and records what
+The structure of the course, units and lessons are decided by Dan; 
+the model suggests activities that fill in the gaps, Dan edits or approves
+them, the model writes the content, Dan teaches it and records what
 happened. The division of labor and the rules the model works under
 are all in `CLAUDE.md`, section 4 in particular.
