@@ -401,3 +401,29 @@ Asked in chat on 2026-10-06:
    reading quiz there, or move it?
 
    Dan: Move the reading quiz to 4.2.
+
+Asked in chat on 2026-10-06, after package U4-B:
+
+8. CHECK_4.6's fourth question expects `range(0, len(word), 2)`. Have
+   fall students used `range` with a step?
+
+   Dan: they have but will need a reminder of it.
+
+   Applied: LP_4.4's Codio section gives the reminder when U6.EX is
+   assigned, and LP_4.5's Preparation list backs it up.
+
+9. QUIZ_4.5 question 5 asks about equivalent and identical lists, from
+   the part of chapter 9 that class reaches at 4.8. Keep it?
+
+   Dan: keep it
+
+10. CHECK_4.6's A3 tests the idea behind lesson 4.4's Quick check with
+    different code. Too close?
+
+    Dan: not too close, keep it
+
+11. Lesson 4.5's partner challenge teaches changing a list with a loop
+    over positions, which makes the spare peer instruction question at
+    4.6 a recap. All right?
+
+    Dan: Yes

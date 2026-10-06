@@ -11,9 +11,9 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-06, after packages S0, T0, U4-PLAN, U4-A, and R on U4-A)
+## Where things stand (2026-10-06, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, and U4-B)
 
-- The outline is approved. Lesson materials exist for 4.1 to 4.4.
+- The outline is approved. Lesson materials exist for 4.1 to 4.8.
 - Package S0 is done. Everything Dan approved in step 0 is now in
   DECISIONS.md and CLAUDE.md: the coding content is Units 2, 3, and 4
   with data structures as Unit 4, each unit has reading quizzes,
@@ -52,9 +52,18 @@ those live in CLAUDE.md and DECISIONS.md.
   problem 4 pitfall and two Codio notes in LP_4.4, and the 4.4 peer
   instruction note in UNIT_4_PLAN.md. QUIZ_4.2 partly rewards coming
   to lesson 4.1; Dan kept it that way, and its header says so.
-- **Next:** U4-B (needed October 19).
+- Package U4-B is done (2026-10-06): lessons 4.5 to 4.8, QUIZ_4.5,
+  CHECK_4.6_Strings_And_Lists, and these lessons' questions on
+  materials/PLICKERS_4_Questions.md. No Codio fix was needed. The
+  check's fourth question draws on U6.EX problem 5. Dan's four
+  answers to its report are in UNIT_4_PLAN.md (items 8 to 11); the one
+  that changed a file added a reminder about `range` with a step to
+  LP_4.4's Codio section and LP_4.5's Preparation list. It has not
+  been through package R.
+- **Next:** R on U4-B, before Dan teaches from it (October 19), then
+  U4-C (needed October 26).
 
-**Open after U4-A:**
+**Open after U4-A and U4-B:**
 
 - For Dan, before October 12: run one saved Thonny file that opens
   `words.txt` on your own laptop (LP_4.2 Preparation).
@@ -66,6 +75,14 @@ those live in CLAUDE.md and DECISIONS.md.
   LP_4.2 and LP_4.4 leave them unlabeled, and REV-4 should keep them.
   The chapter 7 quiz moved to 4.2 because 4.1 is the first class after
   fall 2026's Fall Break; REV-4 may move it back for spring.
+- For Dan, before assigning U5.EX at lesson 4.7: remove problem 5.
+  Before assigning U8.EX at lesson 4.8: remove problems 1 and 4 (LP_4.7
+  and LP_4.8 Preparation).
+- For U4-C: CHECK_4.11 may not repeat a Quick check. LP_4.6's is a
+  `pop` and `append` trace, LP_4.7's is `'-'.join(sorted('cab'))`, and
+  LP_4.8's is `y = x`, `y.append(3)`, `x = [0]`. `t = t.append(x)` as
+  an explain-and-fix question is still unused. Lesson 4.5's partner
+  challenge taught the index loop that U5.EX problem 1 needs.
 - For whoever next edits tools/plan_check.py or this file: `check`
   flags the two example Python Tutor links under "Facts packages need"
   ("no python block above this link"). That predates U4-A.
@@ -351,7 +368,7 @@ belong in the ledger.
 | T0 | tools/plan_check.py | S0 | done 2026-10-05 |
 | U4-PLAN | UNIT_4_PLAN.md | S0 | done 2026-10-05 |
 | U4-A | lessons 4.1-4.4, two reading quizzes | U4-PLAN approved | done 2026-10-05 |
-| U4-B | lessons 4.5-4.8, one reading quiz, learning check at 4.6 | U4-A | Oct 19 |
+| U4-B | lessons 4.5-4.8, one reading quiz, learning check at 4.6 | U4-A | done 2026-10-06 |
 | U4-C | lessons 4.9-4.12, two reading quizzes, learning check at 4.11 | U4-B | Oct 26 |
 | U4-D | project spec, lessons 4.13-4.16 | U4-C | Nov 3 |
 | U4-Q | Unit 4 quiz and its Codio review guide | U4-D | Nov 4 |
