@@ -10,15 +10,15 @@ and to be transparent with students about my use of AI.
 
 ## What it is
 
-This builds out what would have been "supplemental textbook materials" back 
-when I first started teaching math in 2004. Back then if I wanted to teach a 
-topic; for example using the quadratic formula to solve second degree 
-polynomials, I would have a library of examples to choose from and extra practice
-options for the students. This serves to give me those examples to use in this
-class as well as extra practice problems as needed. I also have it do some of 
-the "grunt work" such as creating the html for Canvas LMS so that it looks good 
-and follows a theme and creating the JSON that Codio understands when I want to 
-use assessment questions so I do not have to do each one by hand.
+This builds out what would have been "supplemental textbook materials" when I 
+first started teaching math in 2004. Back then if I wanted to teach a topic; for 
+example using the quadratic formula to solve second degree  polynomials, I would 
+have a library of examples to choose from and extra practice options for the 
+students. This serves to give me those examples to use in this class as well as 
+extra practice problems as needed. I also have it do some of  the "grunt work" such 
+as creating the html for Canvas LMS so that it looks good  and follows a theme and 
+creating the JSON that Codio understands when I want to use assessment questions so 
+I do not have to do each one by hand.
 
 ## How it works
 
