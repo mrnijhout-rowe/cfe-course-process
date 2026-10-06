@@ -167,7 +167,7 @@ question to `materials/PLICKERS_4_Questions.md`.
 | 4.1 | `11_strings` slide 12: what `mystery(s)` returns (the reverse) | new: a trace of a counting loop | her Q5 in 06_strings.md |
 | 4.2 | new: two versions of a search function, one with `return False` inside the loop (chapter 7's `uses_any_incorrect`) | none | |
 | 4.3 | `11_strings` slide 9: `s[3:-1]` of "Vampires" | `11_strings` slide 5 (`s[len(s)-1]`); slide 7 (`s[0:len(s)]`) | slide 9 is missing a closing parenthesis; the lesson adds it and confirms the answer by running the code (Dan, 2026-10-05) |
-| 4.4 | `11_strings` slide 14: which `space_remove` is correct | none | option B lacks `return new_s`; VERIFICATION_REPORT.md documents it, so the plan adds the line. `12_lists` slide 2 is the same question and is not used. |
+| 4.4 | `11_strings` slide 14: which `space_remove` is correct | none | all three options lack a `return` line (option B needs `return new_s`); VERIFICATION_REPORT.md documents it, so the plan adds one to each. `12_lists` slide 2 is the same question and is not used. |
 | 4.5 | `12_lists` slide 8: `C = A + B` with "pirate" | `13_morelists` slide 6 (`A * 3`); `13_morelists` slide 9 (`for e in A[1:]`); `14_Review` slide 12 (valid lists) | `12_lists` slide 16 repeats the `A * 3` question |
 | 4.6 | `25_review` slide 4: `append` returns `None` | `13_morelists` slide 7: index loop changes the list, element loop does not | |
 | 4.7 | new: a `split` and `join` trace | none | the outline said Taylor; the bank has nothing on `split`, `join`, or `sorted` |
