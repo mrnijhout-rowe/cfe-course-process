@@ -2,7 +2,7 @@
 
 This is the public copy of the planning repository for CS4120, an
 introductory Python course at the North Carolina School of Science and
-Mathematics, taught by Dan Nijhout-Rowe. It is published automatically
+Mathematics, taught by me, Dan Nijhout-Rowe. It is published automatically
 from a private repository on every change, so it is current.
 
 It exists for two reasons: to share the process with other teachers,
@@ -22,9 +22,9 @@ I do not have to do each one by hand.
 
 ## How it works
 
-The structure of the course, units and lessons are decided by Dan; 
-the model suggests activities that fill in the gaps, Dan edits or approves
-them, the model writes the content, Dan teaches it and records what
+The structure of the course, units and lessons are decided by me; 
+the model suggests activities that fill in the gaps, I edit or approves
+them, the model writes the content, I teach it and record what
 happened. The division of labor and the rules the model works under
 are all in `CLAUDE.md`, section 4 in particular.
 
@@ -37,12 +37,12 @@ are all in `CLAUDE.md`, section 4 in particular.
 - `FEEDBACK.md`, Dan's notes after teaching each lesson. It is left
   out as a precaution because it is written about real classes.
 - Codio's course material and the reference map built from it.
-- Dan's own assessments from this and other courses, and the fall 2026
+- My own assessments from this and other courses, and the fall 2026
   text adventure lab, which include keys and student-facing briefs.
 - The private repository's commit history. This copy is a snapshot
   per change, not a mirror of the history.
 
-Teachers who want to see generated materials can contact Dan through
+Teachers who want to see generated materials can contact me through
 his GitHub profile, https://github.com/mrnijhout-rowe.
 
 ## What is here
