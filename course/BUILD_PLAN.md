@@ -11,9 +11,9 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-05, after packages S0, T0, and U4-PLAN)
+## Where things stand (2026-10-05, after packages S0, T0, U4-PLAN, and U4-A)
 
-- The outline is approved. No lesson materials exist yet.
+- The outline is approved. Lesson materials exist for 4.1 to 4.4.
 - Package S0 is done. Everything Dan approved in step 0 is now in
   DECISIONS.md and CLAUDE.md: the coding content is Units 2, 3, and 4
   with data structures as Unit 4, each unit has reading quizzes,
@@ -31,8 +31,42 @@ those live in CLAUDE.md and DECISIONS.md.
   stages run, following Dan's FEEDBACK.md note on the text adventure.
 - One step 0 item is still open: three of the six fall 2026 tasters
   (0.6 below), needed by about October 30.
-- **Next:** package U4-A in a fresh session. Lessons 4.1 to 4.4 are
-  needed for class on October 12.
+- Package U4-A is done: lessons 4.1 to 4.4, QUIZ_4.1, QUIZ_4.3, and
+  the first questions on materials/PLICKERS_4_Questions.md. Dan's
+  answers to its report are in UNIT_4_PLAN.md (`not in` at 4.2) and
+  DECISIONS.md (two entries dated 2026-10-05). He also said plans whose
+  core runs longer than two rendered pages are fine for this package.
+- **Next:** package R on U4-A before October 12, then U4-B (needed
+  October 19).
+
+**Open after U4-A** (written at the end of the U4-A session, so the
+next session doesn't depend on that chat):
+
+- For Dan, before October 12:
+  - Chapter 7 is due at lesson 4.1. If students weren't told before
+    Fall Break, post a Canvas announcement; if that doesn't happen,
+    LP_4.1's Preparation moves its reading quiz to 4.2.
+  - Before assigning Codio U6.L5 at 4.4, open its Formative Assessment
+    2 and see whether its key counts "is is preferred for equality" as
+    correct (LP_4.4 Preparation). The export doesn't show the key.
+  - Run one saved Thonny file that opens `words.txt` on your own laptop
+    (LP_4.2 Preparation).
+  - Decide whether "lesson plans may run longer than two rendered
+    pages" becomes a DECISIONS.md entry. Until it does, CLAUDE.md
+    section 6 and "Done when" still say about two pages, and a new
+    package will aim for that.
+  - Step 0.6, the other three fall tasters, is due about October 30.
+- For package R on U4-A, things U4-A could not verify: the Python
+  Tutor button names "Next" and "Prev" in LP_4.3 (written from
+  memory); how a Plickers paste handles indented code. Every block was
+  run on Python 3.13, so error text shows the newer `~~~^^^` lines,
+  which Dan said is fine.
+- For REV-4: UNIT_4_PLAN.md's "Fall 2026 lines" lists the 4.2 file
+  setup and 4.4's `ord` and `chr` as fall-only, but spring needs both.
+  LP_4.2 and LP_4.4 leave them unlabeled, and REV-4 should keep them.
+- For whoever next edits tools/plan_check.py or this file: `check`
+  flags the two example Python Tutor links under "Facts packages need"
+  ("no python block above this link"). That predates U4-A.
 
 ## How to run a work package
 
@@ -303,7 +337,7 @@ belong in the ledger.
 | S0 | Dan's approvals applied to the ledger, charter, course facts, outline, and this file | Dan's answers to 0.1, 0.2, and 0.5 | done 2026-10-05 |
 | T0 | tools/plan_check.py | S0 | done 2026-10-05 |
 | U4-PLAN | UNIT_4_PLAN.md | S0 | done 2026-10-05 |
-| U4-A | lessons 4.1-4.4, two reading quizzes | U4-PLAN approved | Oct 12 |
+| U4-A | lessons 4.1-4.4, two reading quizzes | U4-PLAN approved | done 2026-10-05 |
 | U4-B | lessons 4.5-4.8, one reading quiz, learning check at 4.6 | U4-A | Oct 19 |
 | U4-C | lessons 4.9-4.12, two reading quizzes, learning check at 4.11 | U4-B | Oct 26 |
 | U4-D | project spec, lessons 4.13-4.16 | U4-C | Nov 3 |

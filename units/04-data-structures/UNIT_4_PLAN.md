@@ -120,7 +120,7 @@ line of explanation and is not practiced.
 | # | Python introduced | Terms introduced |
 |---|---|---|
 | 4.1 | `for letter in word`; `in` on a string; `len`; `+=`; `print(x, end=' ')` | sequence, character, counter |
-| 4.2 | `open('words.txt')`; `for line in file`; `line.strip()` on a line; `return` inside a loop | search, file, line |
+| 4.2 | `open('words.txt')`; `for line in file`; `line.strip()` on a line; `return` inside a loop; `not in` (shown) | search, file, line |
 | 4.3 | `word[0]`, `word[-1]`; `word[2:5]`, `word[:3]`, `word[3:]`; `IndexError`; `<` and `>` on strings (shown) | index, position, slice |
 | 4.4 | `.upper()`, `.lower()`, `.strip()`, `.replace()`, `.count()`; `TypeError` from `word[0] = 'x'`; `new = new + letter` in a loop; `ord` and `chr` (Caesar option only, shown) | immutable, a method returns a new value |
 | 4.5 | `[1, 2, 3]`, `[]`; `t[1] = x`; `+`, `*`, `in`, `len`, and slices on a list; `for item in t` | list, element, mutable, in place |
@@ -384,3 +384,11 @@ Kept as written. Each is applied above.
 
 5. How did the text adventure go? Dan wrote the entry in FEEDBACK.md
    the same day.
+
+Asked in chat on 2026-10-05, after package U4-A:
+
+6. Lesson 4.2's Spelling Bee key and lesson 4.4's demo use `not in`,
+   which the "New in this lesson" table did not list until 4.10. Add it
+   at 4.2?
+
+   Dan: Yes, put it in.
