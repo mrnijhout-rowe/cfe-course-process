@@ -174,9 +174,10 @@ full manual.
   `python` block and compares its output with the `text` block after
   it, runs each `python no-run` block that shows an error and compares
   the error line, flags syntax newer than Python 3.10, confirms each
-  Python Tutor link opens the code above it, flags em dashes, and
-  checks the sections of a lesson plan and the points of a learning
-  check. A package runs it on every file it wrote and fixes what it
+  Python Tutor link opens the code above it, flags em dashes, flags
+  each line inside a code block longer than 80 characters (CLAUDE.md
+  section 6), and checks the sections of a lesson plan and the points
+  of a learning check. A package runs it on every file it wrote and fixes what it
   reports before the session's report.
 - Each block runs on its own. `input()` shows the prompt and the
   answer on one line, as Thonny's shell does, so a `text` block for

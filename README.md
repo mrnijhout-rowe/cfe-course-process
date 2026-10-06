@@ -56,7 +56,8 @@ his GitHub profile, https://github.com/mrnijhout-rowe.
   the build plan that turns the outline into materials.
 - `units/*/UNIT_N_PLAN.md`: one plan per unit, listing lessons,
   readings, Codio slots, checks, and the project.
-- `tools/`: the checking script run on plans.
+- `tools/`: the checking script run on plans, and the guide to writing
+  markdown that the materials pipeline can format.
 - `sources/thinkpython/` and `sources/peer_instruction/`: Allen
   Downey's Think Python, 3rd edition, and a question bank drawn from
   Cynthia Taylor's CS1 peer instruction decks (via

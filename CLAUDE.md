@@ -196,8 +196,18 @@ build.
 
 All artifacts are markdown unless a file is meant to be opened by a
 student in an editor, in which case it is a .py file. Keep the set
-small. This section is the format authority; there is no separate style
-guide.
+small. This section is the format authority for what each artifact
+contains. tools/PREPARING_MATERIAL.md is the guide to markdown form.
+
+**[DEFAULT] Form.** Every markdown artifact is written to
+tools/PREPARING_MATERIAL.md, so the materials pipeline (a separate
+repository that turns markdown into Word files, Canvas pages, and
+slides) can format it without changes. Read the guide before authoring.
+A line inside a code block, code or output, is 80 characters or fewer,
+and tools/plan_check.py flags a longer one. Shorten a long comment or
+move it to its own line. Split long code using only what the lesson has
+taught. Real output that cannot be shorter keeps its length under a
+`plan_check wide` comment.
 
 **Naming.** Lessons are numbered Unit.Lesson (3.4 is Unit 3, lesson 4),
 never by week. Files: `LP_3.4_Short_Name.md`, `CODIO_3.4_Short_Name.md`,
@@ -279,7 +289,11 @@ divider, teacher notes: the lessons covered; for each Part A question,
 the answer, the lesson where students saw it, the common miss, and how
 the points split; for B1, the same plus the assignment or mini-project
 it draws on; a grading budget; and a scoring line saying Part A alone
-is 7 of 10. Questions and answers run to the length of the examples in
+is 7 of 10. The line `<!-- pipeline: only teacher -->` sits directly
+above the divider and `<!-- pipeline: end only -->` is the last line of
+the file, so the student copy the materials pipeline makes holds only
+the projected half. No other kind of artifact gets these two lines
+unless Dan asks for a student copy of it. Questions and answers run to the length of the examples in
 sources/assessments/learning_checks/: an answer is a value, an exact
 output, a sentence or two, a few lines of code, or a quick sketch, and
 a journal grades in about 90 seconds. Dan puts the questions on a
@@ -393,6 +407,7 @@ course/CALENDAR_MAP.md   the week grid for fall 2026 and spring 2027
 course/COURSE_OUTLINE.md the semester map: taught so far, and every unit and lesson ahead
 course/BUILD_PLAN.md     the work packages that turn the outline into materials
 sources/             Think Python notebooks, PI question bank, the school calendar
-tools/               plan_check.py, the checking tool (work package T0)
+tools/               plan_check.py, the checking tool (work package T0);
+                     PREPARING_MATERIAL.md, the guide to markdown form
 units/NN-name/       UNIT_N_PLAN.md at the top; lessons/, assessments/, materials/
 ```

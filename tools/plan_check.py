@@ -23,6 +23,9 @@ check
     - decodes every Python Tutor link, confirms it opens exactly the
       code block above it, and confirms it is under 5,600 bytes;
     - flags every em dash;
+    - flags every line inside a code block that is longer than 80
+      characters, the width that fits every output of the materials
+      pipeline (tools/PREPARING_MATERIAL.md);
     - in a lesson plan (LP_*.md), flags a missing or out-of-order
       section; in a learning check (CHECK_*.md), confirms four questions
       worth 2, 2, 3, and 3 points.
@@ -47,6 +50,10 @@ not show when the markdown is rendered.
     <!-- plan_check any-output: uses random -->
         Run the block and require that it finishes without an error,
         but do not compare its output.
+    <!-- plan_check wide: real output, printed on one line -->
+        Above a `text` block only. Its lines may be longer than 80
+        characters, because they are a program's real output. The block
+        is listed with a note. A long line of code is shortened instead.
 
 Programs that import turtle or tkinter are not run, because they open
 a window; the checker lists them as not verified. Programs run in a
@@ -75,6 +82,7 @@ TUTOR_BASE = "https://pythontutor.com/visualize.html"
 TUTOR_LIMIT = 5600          # encoded bytes, from pythontutor.com's own script
 LINK_LABEL = "Open in Python Tutor"
 EM_DASH = "\u2014"
+WIDTH_LIMIT = 80            # characters in a code-block line; tools/PREPARING_MATERIAL.md
 
 # Lesson plan sections, in the order CLAUDE.md section 6 gives them.
 LP_SECTIONS = ["Overview", "Objectives", "Preparation", "Reading", "Agenda", "Pitfalls"]
@@ -350,8 +358,11 @@ def read_directives(block, report):
             skip = value or "skip directive"
         elif key == "any-output":
             any_output = value or "any-output directive"
+        elif key == "wide":
+            report.fail(line, "the wide directive is for `text` blocks; shorten this code line instead")
         else:
-            report.fail(line, f"unknown plan_check directive '{key}' (use input, skip, or any-output)")
+            report.fail(line, f"unknown plan_check directive '{key}' "
+                              "(use input, skip, any-output, or wide)")
     return answers, skip, any_output
 
 
@@ -506,6 +517,23 @@ def check_links(blocks, prose, report, is_lesson_plan):
 
 # ---------------------------------------------------------------- format checks
 
+def check_widths(blocks, report):
+    """Flag code-block lines too long for the materials pipeline's outputs."""
+    for block in blocks:
+        long_lines = [(block.start + 1 + i, len(line))
+                      for i, line in enumerate(block.lines) if len(line) > WIDTH_LIMIT]
+        if not long_lines:
+            continue
+        allowed = next((value for _, key, value in block.directives if key == "wide"), None)
+        if allowed is not None and block.kind not in ("python", "no-run"):
+            report.note(block.start, f"{len(long_lines)} lines over {WIDTH_LIMIT} characters, "
+                                     f"allowed ({allowed or 'wide directive'})")
+            continue
+        for line, length in long_lines:
+            report.fail(line, f"line is {length} characters; the limit inside a code block "
+                              f"is {WIDTH_LIMIT}")
+
+
 def heading_name(title):
     """'Concept (10 min)' -> 'concept'."""
     return re.sub(r"\s*\([^)]*\)\s*$", "", title).strip().lower()
@@ -607,6 +635,8 @@ def check_file(path, options):
     dashes = [n for n, line in enumerate(text.split("\n"), 1) if EM_DASH in line]
     for n in dashes:
         report.fail(n, "em dash")
+
+    check_widths(blocks, report)
 
     if path.name.startswith("LP_"):
         check_lesson_plan(path, text, headings, report)
