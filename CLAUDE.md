@@ -249,7 +249,7 @@ marked "project this"; two or three options; what to look for while
 walking the room; and one commented sample solution.
 
 Spare peer instruction questions and extra variants go under Extras,
-so the first two pages stay what Dan needs in the room.
+so the top of the plan stays what Dan needs in the room.
 
 **Code blocks.** A block marked `python` runs exactly as written. A
 block marked `python no-run` is a fragment or fails on purpose, and the
@@ -258,9 +258,9 @@ real error message is shown under it. Output is shown in a block marked
 
 Section names and times are a starting point. Drop or rename a section
 when the day is shaped differently (a project work day, a quiz day) and
-leave a one-line comment saying why. Target length: two rendered pages.
-Keys stay in the plan; a separate .py starter file is made only when
-students need to open something.
+leave a one-line comment saying why. A lesson plan has no length
+limit. Keys stay in the plan; a separate .py starter file is made only
+when students need to open something.
 
 **Reading quiz** (`assessments/QUIZ_N.N_Short_Name.md`). Three to five
 questions on the assigned reading, answerable in five minutes by a

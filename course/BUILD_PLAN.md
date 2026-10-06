@@ -11,7 +11,7 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-05, after packages S0, T0, U4-PLAN, and U4-A)
+## Where things stand (2026-10-06, after packages S0, T0, U4-PLAN, and U4-A)
 
 - The outline is approved. Lesson materials exist for 4.1 to 4.4.
 - Package S0 is done. Everything Dan approved in step 0 is now in
@@ -29,41 +29,30 @@ those live in CLAUDE.md and DECISIONS.md.
   is APPROVED (2026-10-05) with Dan's answers recorded at its end.
   One item in it is open for U4-D: how much lighter the project's
   stages run, following Dan's FEEDBACK.md note on the text adventure.
-- One step 0 item is still open: three of the six fall 2026 tasters
-  (0.6 below), needed by about October 30.
-- Package U4-A is done: lessons 4.1 to 4.4, QUIZ_4.1, QUIZ_4.3, and
+- Package U4-A is done: lessons 4.1 to 4.4, QUIZ_4.2 and QUIZ_4.3, and
   the first questions on materials/PLICKERS_4_Questions.md. Dan's
   answers to its report are in UNIT_4_PLAN.md (`not in` at 4.2) and
-  DECISIONS.md (two entries dated 2026-10-05). He also said plans whose
-  core runs longer than two rendered pages are fine for this package.
+  DECISIONS.md (two entries dated 2026-10-05).
+- Dan's answers on 2026-10-06, already applied: the chapter 7 reading
+  quiz moved from 4.1 to 4.2 (the file is now QUIZ_4.2, and
+  UNIT_4_PLAN.md records the answer); a lesson plan has no length limit
+  (CLAUDE.md section 6 and "Done when" no longer give one); the Codio
+  U6.L5 Formative Assessment 2 check was dropped from LP_4.4.
 - **Next:** package R on U4-A before October 12, then U4-B (needed
   October 19).
 
-**Open after U4-A** (written at the end of the U4-A session, so the
-next session doesn't depend on that chat):
+**Open after U4-A:**
 
-- For Dan, before October 12:
-  - Chapter 7 is due at lesson 4.1. If students weren't told before
-    Fall Break, post a Canvas announcement; if that doesn't happen,
-    LP_4.1's Preparation moves its reading quiz to 4.2.
-  - Before assigning Codio U6.L5 at 4.4, open its Formative Assessment
-    2 and see whether its key counts "is is preferred for equality" as
-    correct (LP_4.4 Preparation). The export doesn't show the key.
-  - Run one saved Thonny file that opens `words.txt` on your own laptop
-    (LP_4.2 Preparation).
-  - Decide whether "lesson plans may run longer than two rendered
-    pages" becomes a DECISIONS.md entry. Until it does, CLAUDE.md
-    section 6 and "Done when" still say about two pages, and a new
-    package will aim for that.
-  - Step 0.6, the other three fall tasters, is due about October 30.
-- For package R on U4-A, things U4-A could not verify: the Python
-  Tutor button names "Next" and "Prev" in LP_4.3 (written from
-  memory); how a Plickers paste handles indented code. Every block was
-  run on Python 3.13, so error text shows the newer `~~~^^^` lines,
-  which Dan said is fine.
+- For Dan, before October 12: run one saved Thonny file that opens
+  `words.txt` on your own laptop (LP_4.2 Preparation).
+- For package R on U4-A: every block was run on Python 3.13, so error
+  text shows the newer `~~~^^^` lines, which Dan said is fine. The
+  Python Tutor button names "Next" and "Prev" are confirmed by Dan.
 - For REV-4: UNIT_4_PLAN.md's "Fall 2026 lines" lists the 4.2 file
   setup and 4.4's `ord` and `chr` as fall-only, but spring needs both.
   LP_4.2 and LP_4.4 leave them unlabeled, and REV-4 should keep them.
+  The chapter 7 quiz moved to 4.2 because 4.1 is the first class after
+  fall 2026's Fall Break; REV-4 may move it back for spring.
 - For whoever next edits tools/plan_check.py or this file: `check`
   flags the two example Python Tutor links under "Facts packages need"
   ("no python block above this link"). That predates U4-A.
@@ -96,9 +85,9 @@ applied them. Only 0.6 is left.
   Recursion is one of the six, because the catalog lists it and fall
   students have not been taught it. Dan has chosen three so far
   (recursion, classes and objects, and windows and buttons with
-  tkinter). Still needed: the other three, and whether recursion gets
-  the 90-minute meeting. Needed by about October 30, not before Unit 4
-  starts.
+  tkinter). The other three, and whether recursion gets the 90-minute
+  meeting, come from Dan when package U5-S runs. Sessions do not list
+  this as an open item for him before then (Dan, 2026-10-06).
 
   Dan: recursion, basic classes/objects and gui's like tkinter are decided so far
 
@@ -134,7 +123,8 @@ at the first step. Answers for `input()` can be pre-loaded by adding
 `&rawInputLstJSON=` and a URL-encoded JSON list of strings. The whole
 link must stay under 5,600 encoded bytes. Python Tutor does not run
 turtle, does not open files, and stops long loops at a step limit, so
-demo code for it is short and self-contained.
+demo code for it is short and self-contained. Its step buttons are
+labeled "Next" and "Prev" (Dan, 2026-10-06).
 
 This example opens a four-line aliasing demo:
 
@@ -214,7 +204,10 @@ spares marked as spares. A question there is plain text with no
 markdown marks: a line with the lesson number, the question, any code
 as plain lines, then the four options on four lines. The correct
 answers are in a key at the bottom of the sheet, not marked beside the
-options, so nothing has to be deleted after pasting.
+options, so nothing has to be deleted after pasting. Dan puts a
+question's code into Plickers as an image taken from the markdown, so
+packages don't need to check how Plickers handles indented code (Dan,
+2026-10-06).
 
 **Dan's assessment examples.** sources/assessments/ holds two models
 Dan added on 2026-10-05.
@@ -319,8 +312,8 @@ uses it.
   numbers.
 - Voice: no em dashes, acronyms expanded at first use, no invented
   labels, no invented classroom moments (CLAUDE.md section 7).
-- Each plan's core is about two rendered pages; the rest is under
-  Extras.
+- Spare peer instruction questions and extra variants are under
+  Extras. A plan has no length limit.
 
 ### Report
 
@@ -414,7 +407,8 @@ Dan.
 ### U4-A: strings (lessons 4.1 to 4.4)
 
 **Writes:** `LP_4.1` through `LP_4.4` in units/04-data-structures/
-lessons/; `QUIZ_4.1` (chapter 7) and `QUIZ_4.3` (chapter 8, through
+lessons/; `QUIZ_4.1` (chapter 7; moved to 4.2 as `QUIZ_4.2` on
+2026-10-06) and `QUIZ_4.3` (chapter 8, through
 "String methods") in assessments/.
 
 **Specific to this package:**

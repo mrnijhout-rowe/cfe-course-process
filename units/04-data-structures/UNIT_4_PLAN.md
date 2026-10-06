@@ -70,8 +70,8 @@ after it is assigned.
 
 | # | Title | Concept (one idea) | Reading due | Codio | Quiz or check | Outside Codio |
 |---|---|---|---|---|---|---|
-| 4.1 | A string is a sequence | `for letter in word` visits every character, with no `range` and no index | ch. 7 | U6.L4, its "for loop" pages, due 4.2; its "while loop" pages after 4.3, due 4.4 | reading quiz | Mini: a letter counter. The comparison table starts. |
-| 4.2 | Search | A loop that answers yes or no: `return True` inside the loop, `return False` after it. The loop runs over `words.txt`. | none | none | none | Mini: a Spelling Bee helper, or the words with no "e" |
+| 4.1 | A string is a sequence | `for letter in word` visits every character, with no `range` and no index | none | U6.L4, its "for loop" pages, due 4.2; its "while loop" pages after 4.3, due 4.4 | none | Mini: a letter counter. The comparison table starts. |
+| 4.2 | Search | A loop that answers yes or no: `return True` inside the loop, `return False` after it. The loop runs over `words.txt`. | ch. 7 | none | reading quiz | Mini: a Spelling Bee helper, or the words with no "e" |
 | 4.3 | Indexing and slicing | Positions start at 0, a slice stops before its end, and `IndexError` names the position that is not there | ch. 8 through "String methods" | U6.L1, due 4.4 | reading quiz | Python Tutor demo, then students drive it for the first time |
 | 4.4 | Strings cannot be changed | A method returns a new string and leaves the old one alone, so you build a new string in a loop | none | U6.L3 and U6.L5, due 4.5; U6.LAB and U6.EX, due 4.6 | none | Mini: a Caesar cipher, Pig Latin, or a palindrome checker |
 | 4.5 | Lists: the same rules, one difference | Everything from 4.1 to 4.3 runs on a list unchanged; a list can be changed in place | ch. 9 | U5.L1 and U5.L2, due 4.6 | reading quiz | Python Tutor demo. Table: lists. |
@@ -104,7 +104,7 @@ Dan confirmed this load on 2026-10-05.
 `LP_4.11_Dictionaries_Of_Lists`, `LP_4.12_Tuples`,
 `LP_4.13_Project_Day_1`, `LP_4.14_Project_Day_2a`,
 `LP_4.15_Project_Day_2b`, `LP_4.16_Project_Day_3`. Reading quizzes:
-`QUIZ_4.1`, `QUIZ_4.3`, `QUIZ_4.5`, `QUIZ_4.9`, `QUIZ_4.12`. Checks:
+`QUIZ_4.2`, `QUIZ_4.3`, `QUIZ_4.5`, `QUIZ_4.9`, `QUIZ_4.12`. Checks:
 `CHECK_4.6`, `CHECK_4.11`. Project: `PROJECT_4_Data_Structures` and
 its separate files. Quiz: `QUIZ_4_Unit_Quiz` and
 `materials/CODIO_4_Quiz_Review/`. Plickers sheet:
@@ -196,7 +196,7 @@ removes these for spring.
 - 4.2: the first time a program opens a file. Preparation says where
   `words.txt` comes from and where students save it so Thonny finds it.
 - 4.3: the first time students drive Python Tutor. Thirty seconds on
-  the Forward button is enough; they have watched it for a week.
+  the Next button is enough; they have watched it for a week.
 - 4.4: `ord` and `chr` are new. `%` is known.
 - 4.6: `random.randint` appeared in the text adventure's sample program
   and was not taught; the dice mini shows it in one line.
@@ -312,7 +312,7 @@ Package U4-Q is needed by November 4.
 
 | Work | Count | Category |
 |---|---|---|
-| Reading quizzes (4.1, 4.3, 4.5, 4.9, 4.12) | 5 | Tests and quizzes |
+| Reading quizzes (4.2, 4.3, 4.5, 4.9, 4.12) | 5 | Tests and quizzes |
 | Learning checks (4.6, 4.11) | 2 | Labs/Learning Checks |
 | Codio lessons, labs, and exercises | 12 lessons, 3 labs, 4 exercise sets | Labs/Learning Checks |
 | Small mini-projects (4.1, 4.2, 4.4, 4.6, 4.7, 4.10, 4.11) | 7 | not graded |
@@ -335,7 +335,9 @@ a day:
    U10.EX are assigned at 4.11. The chapter 11 reading and `QUIZ_4.12`
    are dropped.
 2. Merge 4.2 into 4.1: reading `words.txt` becomes a five-minute demo
-   at the end of 4.1, and the Spelling Bee mini is dropped.
+   at the end of 4.1, and the Spelling Bee mini is dropped. The
+   chapter 7 quiz is either dropped or given at 4.3 beside chapter
+   8's.
 3. Inside a lesson, the first thing to drop is the ceiling variant,
    then the mini-project's second option; 4.11's timing demo goes
    before its mini.
@@ -360,7 +362,7 @@ and where the text generator stops and a real language model begins.
    Dan's FEEDBACK.md note of 2026-10-05. Open until Dan approves the
    list under "Project."
 
-## Dan's answers, 2026-10-05
+## Dan's answers
 
 Kept as written. Each is applied above.
 
@@ -392,3 +394,10 @@ Asked in chat on 2026-10-05, after package U4-A:
    at 4.2?
 
    Dan: Yes, put it in.
+
+Asked in chat on 2026-10-06:
+
+7. Chapter 7 is due at 4.1, the first class after Fall Break. Keep the
+   reading quiz there, or move it?
+
+   Dan: Move the reading quiz to 4.2.
