@@ -50,7 +50,7 @@ GitHub profile: https://github.com/mrnijhout-rowe.
 - `CLAUDE.md`: the operating charter the AI model reads every session. It
   says how class runs, what every artifact must contain, and the voice
   rules.
-- `DECISIONS.md`: the standing decisions ledger. It grows only at Dan's
+- `DECISIONS.md`: the standing decisions ledger. It grows only at my
   explicit direction.
 - `course/`: course facts, the calendar grid, the course outline, and the
   build plan that turns the outline into materials.
