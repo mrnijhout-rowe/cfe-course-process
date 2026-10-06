@@ -181,6 +181,26 @@ section.
   purpose is marked `python no-run`. (Rationale: package U4-A added it
   so the checker covers quiz answers, not only lesson code.)
 
+## Decisions from the Codio fix session (Dan, 2026-10-06)
+
+- 2026-10-06 [DEFAULT] Codio fixes are their own kind of material.
+  This course assigns Codio's lessons in a different order from the
+  one Codio wrote them for, so a page can depend on something class
+  has not taught yet (a string method in a Functions level, for
+  example) or, as in U6.L5, teach something wrong. When an assigned
+  page or check needs a fix, Claude writes the replacement guide page
+  in markdown and replacement assessments as needed, and the lesson
+  plan's Preparation list tells Dan to make the fix before assigning.
+  A replacement assessment may be a different kind of question from
+  the original, such as a Parsons problem in place of a multiple-choice
+  question, when that fits better. Untaught material gets a fix only
+  when it makes a problem one students cannot do; anywhere else it
+  gets a one-line note in the lesson plan, or the page is hidden. The
+  format is in CLAUDE.md section 6. (Rationale: Dan, 2026-10-06, after
+  U6.L5 told students to compare strings with `is`; on untaught
+  material, "let's not stress about it unless it really makes a
+  problem undoable by the students.")
+
 ## Carried over from the first build
 
 Dan confirmed these eight as written on 2026-10-05.

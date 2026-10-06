@@ -194,7 +194,12 @@ Where the outline waives a problem, the lesson plan's Preparation list
 tells Dan to remove it before assigning, by Codio ID and problem
 number. Where the outline says class does not teach a page (the list
 comprehensions page in U5.L1, for example), the plan says Dan may hide
-it.
+it. Where a page or check needs more than hiding, because it teaches
+something wrong or asks for something class has not reached so that
+students cannot do it, the package writes a Codio fix (DECISIONS.md,
+2026-10-06; format in
+CLAUDE.md section 6). The first one is
+units/04-data-structures/materials/CODIO_FIX_4.4_String_Comparison.md.
 
 **Plickers.** Dan pastes questions into Plickers (Dan, 2026-10-05).
 Each unit keeps one paste-ready sheet, `materials/
@@ -266,7 +271,8 @@ uses it.
    also reads sources/assessments/learning_checks/.
 2. **Write** each lesson plan in the CLAUDE.md section 6 format, each
    reading quiz due in these lessons, and each learning check the unit
-   plan marks on these lessons. Add these lessons' peer instruction
+   plan marks on these lessons, and each Codio fix these lessons'
+   Codio assignments need. Add these lessons' peer instruction
    questions to the unit's Plickers sheet.
 3. **Check.** Run tools/plan_check.py `check` on every file written,
    then every item under "Done when."
@@ -291,7 +297,8 @@ uses it.
   due when, and repeats any caveat the outline gives for it. The
   session read that assignment's pages in the export before writing
   the block. Each waived problem is in the plan's Preparation list as
-  something for Dan to remove in Codio before assigning.
+  something for Dan to remove in Codio before assigning. Each Codio
+  fix is in the plan's Preparation list too, pointing at its file.
 - Each mini-project has its brief, its options, what to look for, and a
   sample solution that was run.
 - Each reading quiz question is multiple choice with four options and

@@ -201,10 +201,11 @@ guide.
 
 **Naming.** Lessons are numbered Unit.Lesson (3.4 is Unit 3, lesson 4),
 never by week. Files: `LP_3.4_Short_Name.md`, `CODIO_3.4_Short_Name.md`,
-`QUIZ_3.4_Short_Name.md` (reading quiz), `CHECK_4.6_Short_Name.md`
-(learning check, named by the lesson it is marked on),
-`QUIZ_4_Unit_Quiz.md` (unit quiz), `MINI_2.10_Short_Name.md` (larger
-mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`.
+`CODIO_FIX_4.4_Short_Name.md` (Codio fix, named by the lesson that
+assigns the Codio assignment), `QUIZ_3.4_Short_Name.md` (reading quiz),
+`CHECK_4.6_Short_Name.md` (learning check, named by the lesson it is
+marked on), `QUIZ_4_Unit_Quiz.md` (unit quiz), `MINI_2.10_Short_Name.md`
+(larger mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`.
 
 **Unit plan** (`units/NN-name/UNIT_N_PLAN.md`, one per unit). Status
 line (PROPOSAL or APPROVED with date). Scope: which Think Python
@@ -305,6 +306,23 @@ the built-in course has nothing that fits. Page by page: instructions
 as the student sees them, starter code, expected output, autograder
 rule (output match unless the spec says otherwise), points. Reference
 solution, commented, at the bottom.
+
+**Codio fix** (`materials/CODIO_FIX_N.N_Short_Name.md`, named by the
+lesson that assigns the Codio assignment, with the assignment's title
+as the short name). Written when an imported assignment needs changing
+before it is assigned (DECISIONS.md, 2026-10-06). In order: what is
+wrong and why, in a few sentences, with page numbers from the course
+export; a table of every page in the assignment with its edit (none,
+delete, replace, or a changed line); each replacement guide page as
+students see it, between horizontal rules, followed by notes for Dan
+with the answers to its challenges; each changed line, with the
+corrected code run; each replacement assessment, with its source line,
+the question, the answer, what each wrong answer catches, the guidance
+students see after answering, and how to put it in Codio. A
+multiple-choice replacement also comes as Codio's assessment JSON
+(JavaScript Object Notation), written with the codio-mcq skill, in
+`materials/CODIO_FIX_N.N_Assessments/`. Other kinds of question, such
+as Parsons problems, are written out for Codio's assessment editor.
 
 **Larger mini-project** (`assessments/MINI_N.N_Short_Name.md`).
 Student-facing brief, requirements, choice points, a rubric of about
