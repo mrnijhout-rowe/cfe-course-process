@@ -37,14 +37,25 @@ those live in CLAUDE.md and DECISIONS.md.
   quiz moved from 4.1 to 4.2 (the file is now QUIZ_4.2, and
   UNIT_4_PLAN.md records the answer); a lesson plan has no length limit
   (CLAUDE.md section 6 and "Done when" no longer give one); the Codio
-  U6.L5 Formative Assessment 2 check was dropped from LP_4.4.
+  U6.L5 Formative Assessment 2 check was dropped from LP_4.4 (back
+  later the same day; see the next item).
+- Codio fixes are a category of material (DECISIONS.md, 2026-10-06;
+  format in CLAUDE.md section 6). The first is
+  units/04-data-structures/materials/CODIO_FIX_4.4_String_Comparison.md:
+  it deletes one U6.L5 page, replaces another, changes one line on a
+  third, and has a replacement for Formative Assessment 2. Dan chose
+  to keep the step that checks that question's key, and LP_4.4's
+  Preparation list points at the fix.
 - **Next:** package R on U4-A before October 12, then U4-B (needed
-  October 19).
+  October 19). R on U4-A also reviews the lesson 4.4 Codio fix.
 
 **Open after U4-A:**
 
 - For Dan, before October 12: run one saved Thonny file that opens
   `words.txt` on your own laptop (LP_4.2 Preparation).
+- For Dan, before assigning U6.L5 at lesson 4.4: make the edits in
+  CODIO_FIX_4.4_String_Comparison.md, including the Formative
+  Assessment 2 key check (LP_4.4 Preparation).
 - For package R on U4-A: every block was run on Python 3.13, so error
   text shows the newer `~~~^^^` lines, which Dan said is fine. The
   Python Tutor button names "Next" and "Prev" are confirmed by Dan.
