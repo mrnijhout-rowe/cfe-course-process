@@ -2,7 +2,7 @@
 
 This is the public copy of the planning repository for CS4120, an
 introductory Python course at the North Carolina School of Science and
-Mathematics, taught by me, Dan Nijhout-Rowe. It is published automatically
+Mathematics, taught by me, Danial Nijhout-Rowe. It is published automatically
 from a private repository on every change, so it is current.
 
 It exists for two reasons: to share the process with other teachers,
@@ -10,21 +10,21 @@ and to be transparent with students about my use of AI.
 
 ## What it is
 
-This builds out what would have been "supplemental textbook materials" when I 
-first started teaching math in 2004. Back then if I wanted to teach a topic; for 
-example using the quadratic formula to solve second degree  polynomials, I would 
-have a library of examples to choose from and extra practice options for the 
-students. This serves to give me those examples to use in this class as well as 
-extra practice problems as needed. I also have it do some of  the "grunt work" such 
-as creating the html for Canvas LMS so that it looks good  and follows a theme and 
-creating the JSON that Codio understands when I want to use assessment questions so 
-I do not have to do each one by hand.
+This builds out what would have been "supplemental textbook materials" when 
+I first started teaching math in 2004. Back then if I wanted to teach a topic; 
+for example using the quadratic formula to solve second degree  polynomials, I 
+would have a library of examples to choose from and extra practice options for 
+the students. This serves to give me those examples to use in this class as 
+well as extra practice problems as needed. I also have it do some of the "grunt 
+work" such as creating the html for Canvas LMS so that it looks good and creating 
+the JSON that Codio understands when I want to use assessment questions so I do 
+not have to do each one by hand.
 
 ## How it works
 
 The structure of the course, units and lessons are decided by me; 
-the model suggests activities that fill in the gaps, I edit or approves
-them, the model writes the content, I teach it and record what
+the model suggests activities that fill in the gaps, I edit or approve
+them, the model writes the content, I teach it to my class and record what
 happened. The division of labor and the rules the model works under
 are all in `CLAUDE.md`, section 4 in particular.
 
