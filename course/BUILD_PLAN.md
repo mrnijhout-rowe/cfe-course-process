@@ -60,6 +60,13 @@ those live in CLAUDE.md and DECISIONS.md.
   that changed a file added a reminder about `range` with a step to
   LP_4.4's Codio section and LP_4.5's Preparation list. It has not
   been through package R.
+- The materials pipeline is wired up (2026-10-06). pipeline.yml at the
+  top of this repo holds the course settings, and CLAUDE.md section 6
+  says how to run the makers. Turning a finished file into a Word
+  file, Canvas page or deck is a separate step from writing it; a
+  package does it only when Dan asks, and the output goes in
+  rendered/, which git ignores. Nothing has been made for real yet;
+  LP_4.1 and CHECK_4.6 were run once as a test.
 - **Next:** R on U4-B, before Dan teaches from it (October 19), then
   U4-C (needed October 26).
 

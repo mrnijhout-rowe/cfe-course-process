@@ -209,6 +209,18 @@ move it to its own line. Split long code using only what the lesson has
 taught. Real output that cannot be shorter keeps its length under a
 `plan_check wide` comment.
 
+**[DEFAULT] Making the outputs.** The pipeline lives at
+~/Documents/projects/pipeline. `pipeline.yml` at the top of this repo
+gives every file the author, the course name, and the course's styles
+(the `cfe` look for Canvas pages and slides, the pipeline's plain default
+for documents), so a maker needs no style flag. Run the makers from the
+top of this repo, as in `~/Documents/projects/pipeline/make doc
+units/04-data-structures/lessons/LP_4.1_String_Sequence.md`; output
+lands in `rendered/`, which git ignores. Before running one, read
+docs/making-materials.md in the pipeline repo: it says how to read what
+a maker prints, how to look at the result, and why an output is never
+edited by hand.
+
 **Naming.** Lessons are numbered Unit.Lesson (3.4 is Unit 3, lesson 4),
 never by week. Files: `LP_3.4_Short_Name.md`, `CODIO_3.4_Short_Name.md`,
 `CODIO_FIX_4.4_Short_Name.md` (Codio fix, named by the lesson that
@@ -402,6 +414,7 @@ CLAUDE.md            this file
 DECISIONS.md         the ledger; grows only at Dan's direction
 FEEDBACK.md          what Dan said after teaching, newest on top
 README.md            what this repo is and what was carried over
+pipeline.yml         course-wide settings for the materials pipeline
 course/COURSE.md     course facts: catalog, audience, meetings, grading, sources
 course/CALENDAR_MAP.md   the week grid for fall 2026 and spring 2027
 course/COURSE_OUTLINE.md the semester map: taught so far, and every unit and lesson ahead
@@ -410,4 +423,5 @@ sources/             Think Python notebooks, PI question bank, the school calend
 tools/               plan_check.py, the checking tool (work package T0);
                      PREPARING_MATERIAL.md, the guide to markdown form
 units/NN-name/       UNIT_N_PLAN.md at the top; lessons/, assessments/, materials/
+rendered/            what the materials pipeline made; ignored by git, never edited
 ```

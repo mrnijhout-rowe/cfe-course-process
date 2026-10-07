@@ -66,7 +66,9 @@ its Overview, Preparation and Agenda sections would each become a slide.
 Whatever should be projected goes in a separate deck file.
 
 The output takes the file's name, so `LP_4.1_String_Sequence.md` becomes
-`LP_4.1_String_Sequence.docx`. Use names without spaces.
+`LP_4.1_String_Sequence.docx`. Use names without spaces, and make each name
+unique across the course, not just within its folder: two files called
+`handout.md` in different units would produce the same output file.
 
 ## Rules for every file
 
