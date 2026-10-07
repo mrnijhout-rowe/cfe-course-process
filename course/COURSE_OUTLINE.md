@@ -119,10 +119,12 @@ asked for sit inside it.
   stored where (assignment, a function call, a list with two names),
   the plan also gives a Python Tutor link that opens the same code,
   ready to step through.
-- **Peer instruction.** One Plickers question per concept lesson, from
-  Cynthia Taylor's bank where it has one. "Taylor" in the tables below
-  means the bank has questions that fit. "New" means it does not, and a
-  question is written for this course and labeled that way.
+- **Peer instruction.** Two or three Plickers questions per concept
+  lesson (DECISIONS.md, 2026-10-07), from Cynthia Taylor's bank where
+  it has them. "Taylor" in the tables below means the bank has
+  questions that fit. "New" means it does not, and a question is
+  written for this course and labeled that way. "Taylor, plus new"
+  means the bank covers part of the set.
 - **Try it and partner challenge.** Typed in Thonny, not Codio.
 - **Mini-project.** On the days marked below, a small build takes the
   partner-challenge slot, or the work half of a 90-minute meeting.
@@ -413,14 +415,14 @@ it can be changed in place, and whether `len`, `in`, and `for` work.
 | 4.1 | A string is a sequence: `for` over a string, `len`, `in`, counting. | ch. 7, quiz | U6.L4 | Taylor, plus new | Mini: a letter counter. The comparison table starts. |
 | 4.2 | Search: reading `words.txt` line by line; a loop that answers yes or no. | none | none | new | Mini: a Spelling Bee helper, or find the words with no "e" |
 | 4.3 | Indexing and slicing; negative indices; `IndexError`. | ch. 8 through "String methods," quiz | U6.L1 | Taylor | Python Tutor demo |
-| 4.4 | Strings cannot be changed in place; methods return new strings; building a string in a loop. | none | U6.L3, U6.L5; then U6.LAB, U6.EX | Taylor | Mini: a Caesar cipher, Pig Latin, or a palindrome checker |
+| 4.4 | Strings cannot be changed in place; methods return new strings; building a string in a loop. | none | U6.L3, U6.L5; then U6.LAB, U6.EX | Taylor, plus new | Mini: a Caesar cipher, Pig Latin, or a palindrome checker |
 | 4.5 | Lists: the same rules, and one difference. A list can be changed in place. | ch. 9, quiz | U5.L1, U5.L2 | Taylor | Python Tutor demo. Table: lists. |
-| 4.6 | List methods; building a list in a loop; `sum`, `min`, `max`. | none; **learning check** on 4.1 to 4.5 | U5.L3, U5.L4, U5.L5; then U5.LAB | Taylor | Mini: a dice-roll histogram or a playlist manager |
-| 4.7 | Lists and strings: `split`, `join`, `sorted`. | none | U5.EX, waive problem 5 | Taylor | Mini: an anagram finder or a word scramble |
+| 4.6 | List methods; building a list in a loop; `sum`, `min`, `max`. | none; **learning check** on 4.1 to 4.5 | U5.L3, U5.L4, U5.L5; then U5.LAB | Taylor, plus new | Mini: a dice-roll histogram or a playlist manager |
+| 4.7 | Lists and strings: `split`, `join`, `sorted`. | none | U5.EX, waive problem 5 | new | Mini: an anagram finder or a word scramble |
 | 4.8 | Aliasing: two names, one list; lists as arguments. | none | U8.EX, waive problem 4; U12.EX in spring | Taylor | Students drive Python Tutor |
 | 4.9 | Dictionaries: keys in place of positions; look up, add, change; `KeyError`. | ch. 10, quiz | U10.L1 | Taylor, plus new | Python Tutor demo. Table: dictionaries. |
 | 4.10 | A dictionary of counters; looping over a dictionary. | none | U10.L2 | new | Mini: letter frequencies of a text you pick |
-| 4.11 | Dictionaries and lists together; why dictionary lookup is fast. | none; **learning check** on 4.6 to 4.10 | U10.L3 | new | Mini: anagram families or a Scrabble scorer |
+| 4.11 | Dictionaries and lists together; why dictionary lookup is fast. | none; **learning check** on 4.6 to 4.10 | U10.L3 | Taylor, plus new | Mini: anagram families or a Scrabble scorer |
 | 4.12 | Tuples: swap, two return values, `items()`. `zip` and `enumerate` for pairs who are ready. | ch. 11, selected sections, quiz | U9.L1; then U10.EX, waive problem 5 | new | Table: tuples. The table is complete. |
 | 4.13 | Project day 1: the option or options Dan chose, write the plan, another pair reviews it. | ch. 12 as project reference, no quiz | none | none | Unit project begins |
 | 4.14 | Project day 2, first half: sign-off, work plan, comments before code. | none | none | none | Unit project |

@@ -158,26 +158,32 @@ coming (Dan, 2026-10-07). Lessons 4.1 to 4.4 fill the String column,
 
 ## Peer instruction
 
-One question per concept lesson, from Cynthia Taylor's bank in
-sources/peer_instruction/ where it has one. Deck and slide numbers
-are hers. Each bank question is used once in the unit. "New" means
-written for CS4120 and labeled so. The lesson packages add every
-question to `materials/PLICKERS_4_Questions.md`.
+Two or three questions per concept lesson, run together, from Cynthia
+Taylor's bank in sources/peer_instruction/ where it has them. Deck and
+slide numbers are hers. Each bank question is used once in the unit.
+"New" means written for CS4120 and labeled so. The lesson packages add
+every question to `materials/PLICKERS_4_Questions.md`, numbered in the
+order the lesson runs them.
 
-| # | Question | Spares | Notes |
-|---|---|---|---|
-| 4.1 | `11_strings` slide 12: what `mystery(s)` returns (the reverse) | new: a trace of a counting loop | her Q5 in 06_strings.md |
-| 4.2 | new: two versions of a search function, one with `return False` inside the loop (chapter 7's `uses_any_incorrect`) | none | |
-| 4.3 | `11_strings` slide 9: `s[3:-1]` of "Vampires" | `11_strings` slide 5 (`s[len(s)-1]`); slide 7 (`s[0:len(s)]`) | slide 9 is missing a closing parenthesis; the lesson adds it and confirms the answer by running the code (Dan, 2026-10-05) |
-| 4.4 | `11_strings` slide 14: which `space_remove` is correct | none | all three options lack a `return` line (option B needs `return new_s`); VERIFICATION_REPORT.md documents it, so the plan adds one to each. `12_lists` slide 2 is the same question and is not used. |
-| 4.5 | `12_lists` slide 8: `C = A + B` with "pirate" | `13_morelists` slide 6 (`A * 3`); `13_morelists` slide 9 (`for e in A[1:]`); `14_Review` slide 12 (valid lists) | `12_lists` slide 16 repeats the `A * 3` question |
-| 4.6 | `25_review` slide 4: `append` returns `None` | `13_morelists` slide 7: index loop changes the list, element loop does not | |
-| 4.7 | new: a `split` and `join` trace | none | the outline said Taylor; the bank has nothing on `split`, `join`, or `sorted` |
-| 4.8 | `13_morelists` slide 2: `B = A`, `B[0] = 100`, `C = B + A` | `13_morelists` slide 5 (copy by loop against alias); `12_lists` slide 10 (`inc(A, x)`: the list changes, the number does not) | `12_lists` slides 12 and 15 repeat the two `13_morelists` questions |
-| 4.9 | `30_DictionariesSets` slide 8: `d["c"] = 3` then `d["b"] = 4` | `30_DictionariesSets` slide 5 (parallel lists for bird counts) as the problem dictionaries solve | |
-| 4.10 | new: a trace of the counter pattern on a short word | none | the outline said new |
-| 4.11 | `30_DictionariesSets` slide 10: `d.get(4, 8)` | none | needs `.get`, which 4.11 introduces; the outline said new |
-| 4.12 | new: `a, b = b, a` or unpacking a returned pair | none | |
+*Changed 2026-10-07 (DECISIONS.md): until then each lesson carried one
+question, with spares in Extras. Lessons 4.1 to 4.8 now carry the sets
+below; the sets for 4.9 to 4.12 are this plan's assignment for package
+U4-C, and Dan sees them in that package's report.*
+
+| # | Questions, in the order run | Notes |
+|---|---|---|
+| 4.1 | new: a trace of a counting loop; new: `len` and `in` on `'banana'`; `11_strings` slide 12: what `mystery(s)` returns (the reverse) | her Q5 in 06_strings.md |
+| 4.2 | new: two versions of a search function, one with `return False` inside the loop (chapter 7's `uses_any_incorrect`); new: a `return` inside the loop ends a count at the first "e"; new: `not` in front of the search function. Spare in Extras: `len` of a line before and after `strip`, which fits after Concept step 3 | the bank has nothing on search |
+| 4.3 | `11_strings` slide 5 (`s[len(s)-1]`); slide 7 (`s[0:len(s)]`); slide 9: `s[3:-1]` of "Vampires" | slide 9 is missing a closing parenthesis; the lesson adds it and confirms the answer by running the code (Dan, 2026-10-05) |
+| 4.4 | new: `word.upper()` with nothing in front of it; new: a loop that doubles each letter; `11_strings` slide 14: which `space_remove` is correct | all three options lack a `return` line (option B needs `return new_s`); VERIFICATION_REPORT.md documents it, so the plan adds one to each. `12_lists` slide 2 is the same question and is not used. |
+| 4.5 | `14_Review` slide 12 (valid lists); `12_lists` slide 8: `C = A + B` with "pirate"; `13_morelists` slide 6 (`A * 3`). Spare in Extras: `13_morelists` slide 9 (`for e in A[1:]`) | `12_lists` slide 16 repeats the `A * 3` question |
+| 4.6 | new: `len`, `in`, and `[-1]` after two `append` calls; `13_morelists` slide 7: index loop changes the list, element loop does not; `25_review` slide 4: `append` returns `None` | |
+| 4.7 | new: `len` and `[0]` of a `split`; new: a `split` and `join` trace; new: `sort` returns `None`. The step runs after `sorted` is shown | the outline said Taylor; the bank has nothing on `split`, `join`, or `sorted` |
+| 4.8 | `13_morelists` slide 2: `B = A`, `B[0] = 100`, `C = B + A`; `13_morelists` slide 5 (copy by loop against alias); `12_lists` slide 10 (`inc(A, x)`: the list changes, the number does not). The step runs after lists as arguments are shown | `12_lists` slides 12 and 15 repeat the two `13_morelists` questions |
+| 4.9 | `30_DictionariesSets` slide 5 (parallel lists for bird counts) as the problem dictionaries solve; `30_DictionariesSets` slide 8: `d["c"] = 3` then `d["b"] = 4`; new: `len(d)` and `in` on a dictionary, which tests keys and not values | |
+| 4.10 | new: a trace of the counter pattern on a short word; new: `for key in d` gives keys, not values; new: what `sum(d.values())` gives | the outline said new |
+| 4.11 | `30_DictionariesSets` slide 10: `d.get(4, 8)`; new: `d[key].append(x)` changes the list inside the dictionary; new: `d[key]` on a missing key against `d.get(key, 0)` | needs `.get`, which 4.11 introduces; the outline said new |
+| 4.12 | new: `a, b = b, a`; new: unpacking a returned pair, `low, high = f()`; new: `t[0] = 5` on a tuple | |
 
 Not used: `11_strings` slide 3 (string `+` and `*`, a Unit 2 idea),
 `13_morelists` slides 10 to 13 (lists of lists), `30_DictionariesSets`

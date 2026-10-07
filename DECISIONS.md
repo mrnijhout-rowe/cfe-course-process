@@ -219,6 +219,15 @@ section.
   frame into the journal and can see that more is coming. (Rationale:
   Dan, 2026-10-07: students asked to copy a one-column table would not
   realize there is more to come.)
+- 2026-10-07 [DEFAULT] A lesson that runs Plickers runs at least two
+  peer instruction questions, and three where the lesson's ideas
+  supply them. Not every lesson runs Plickers; one that does carries
+  its two or three questions together in the plan, numbered in the
+  order to run them, and the unit's Plickers sheet lists them the same
+  way. Until this entry, a lesson carried one question, with spares in
+  Extras. (Rationale: Dan, 2026-10-07; he generally runs Plickers in
+  the warm-up part of the lesson, and when he does, "at least 2 and
+  preferably 3 questions.")
 
 ## Carried over from the first build
 

@@ -242,9 +242,10 @@ units/04-data-structures/materials/CODIO_FIX_4.4_String_Comparison.md.
 **Plickers.** Dan pastes questions into Plickers (Dan, 2026-10-05).
 Each unit keeps one paste-ready sheet, `materials/
 PLICKERS_4_Questions.md` for Unit 4. Each lesson package adds its
-lessons' peer instruction questions to it, in lesson order, with
-spares marked as spares. A question there is plain text with no
-markdown marks: a line with the lesson number, the question, any code
+lessons' peer instruction questions to it, in lesson order and, within
+a lesson, numbered in the order the plan runs them; anything beyond
+the three is marked as a spare. A question there is plain text with no
+markdown marks: a line with the lesson number and question number, the question, any code
 as plain lines, then the four options on four lines. The correct
 answers are in a key at the bottom of the sheet, not marked beside the
 options, so nothing has to be deleted after pasting. Dan puts a
@@ -323,10 +324,13 @@ uses it.
   remembered.
 - Student-facing code and sample solutions use only what the unit
   plan's "new in this lesson" column has introduced by that lesson.
-- Each peer instruction question has its source line, four options, an
-  answer confirmed by running the code, and one line per wrong answer.
-  No bank question is used in two lessons. The unit's Plickers sheet
-  has each of these questions, word for word as in the plan.
+- A lesson that runs Plickers has at least two peer instruction
+  questions, three where the lesson's ideas supply them (DECISIONS.md,
+  2026-10-07), together in one Concept step and numbered in the order
+  to run them. Each has its source line, four options, an answer
+  confirmed by running the code, and one line per wrong answer. No
+  bank question is used in two lessons. The unit's Plickers sheet has
+  each of these questions, word for word as in the plan.
 - Each Python Tutor link was produced by tools/plan_check.py `link`,
   and `check` confirms it decodes to exactly the code block above it.
 - `check` reports no problems on any file the package wrote, and every

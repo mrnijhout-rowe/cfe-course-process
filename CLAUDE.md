@@ -70,10 +70,14 @@ be answered by reading the old repo, ask Dan.
   multiple-choice question with distractors built from real
   misconceptions, individual vote, partner argument, revote, then the
   reveal. Use it in the Concept block when the idea has a common wrong
-  answer worth surfacing, and give the question, the answer, and what
-  each distractor catches. sources/peer_instruction/ is a bank to draw
-  from: Cynthia Taylor's questions, used first (DECISIONS.md). Rules
-  for using them:
+  answer worth surfacing. A lesson that runs Plickers runs at least
+  two questions, and three where the lesson's ideas supply them
+  (DECISIONS.md, 2026-10-07). The plan carries them together in one
+  step, numbered in the order to run them, each with its question, its
+  answer, and what each distractor catches; any beyond three are
+  spares in Extras. sources/peer_instruction/ is a bank to draw from:
+  Cynthia Taylor's questions, used first (DECISIONS.md). Rules for
+  using them:
   - Plickers cards carry A to D. Drop her "I don't know" option. Where
     she has five real options, cut one and say which.
   - Otherwise keep her wording, code, and answer. Allowed changes:
@@ -254,27 +258,29 @@ two pages.
                               with a pointer to the CHECK file on the lessons the
                               unit plan marks; or "none today"
 ### Concept (10 min)          the code as typed, step by step, with what to say;
-                              the peer instruction question; Python Tutor link
+                              the peer instruction questions (two or three);
+                              Python Tutor link
 ### Try it (10 min)           the problem, then the key, commented
 ### Partner challenge (15 min) the problem, ceiling variants, then the key, commented
 ### Mini-project (15 min)     optional, on days the unit plan marks
 ### Codio (10 min)            which exercises, imported or authored, and what is due when
 ## Pitfalls
 ## Quick check       one exit-ticket question with its answer, optional
-## Extras            spare peer instruction questions and extra variants
+## Extras            peer instruction questions beyond the three, and extra variants
 ```
 
-The Concept section holds the peer instruction question: its source
-line, the question, options A to D, the answer, and one line per wrong
-answer saying what it catches. Where the outline calls for one, a link
+The Concept section holds the lesson's peer instruction questions,
+two or three, in one step and numbered in the order to run them. Each
+has its source line, the question, options A to D, the answer, and one
+line per wrong answer saying what it catches. Where the outline calls for one, a link
 labeled "Open in Python Tutor" sits directly under the code it opens.
 
 The optional Mini-project section gives the brief as students see it,
 marked "project this"; two or three options; what to look for while
 walking the room; and one commented sample solution.
 
-Spare peer instruction questions and extra variants go under Extras,
-so the top of the plan stays what Dan needs in the room.
+Peer instruction questions beyond the three, and extra variants, go
+under Extras, so the top of the plan stays what Dan needs in the room.
 
 **Code blocks.** A block marked `python` runs exactly as written. A
 block marked `python no-run` is a fragment or fails on purpose, and the
@@ -384,8 +390,9 @@ slides, in order:
    Canvas and start the quiz.
 4. Plickers: one slide telling students to get their cards out, worded
    differently in each deck so it does not become a fixed phrase. The
-   question itself is not projected; it runs in Plickers. The question
-   and answer go in the slide's notes.
+   questions themselves are not projected; they run in Plickers. The
+   questions, in the order the plan runs them, and their answers go in
+   the slide's notes.
 5. Anything the plan's Concept section marks "project this," such as
    the unit's comparison table. A table that grows across lessons is
    shown with its full frame every time, including empty columns, and
