@@ -11,9 +11,12 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-06, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, and U4-B)
+## Where things stand (2026-10-07, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, and U4-DP)
 
-- The outline is approved. Lesson materials exist for 4.1 to 4.8.
+- The outline is approved. Lesson materials exist for 4.1 to 4.8: for
+  each lesson a plan, a deck, and a Canvas page, plus the unit's
+  Canvas page, three reading quizzes with their Codio files, one
+  learning check, one Codio fix, and the unit's Plickers sheet.
 - Package S0 is done. Everything Dan approved in step 0 is now in
   DECISIONS.md and CLAUDE.md: the coding content is Units 2, 3, and 4
   with data structures as Unit 4, each unit has reading quizzes,
@@ -65,18 +68,68 @@ those live in CLAUDE.md and DECISIONS.md.
   says how to run the makers. Turning a finished file into a Word
   file, Canvas page or deck is a separate step from writing it; a
   package does it only when Dan asks, and the output goes in
-  rendered/, which git ignores. Nothing has been made for real yet;
-  LP_4.1 and CHECK_4.6 were run once as a test.
-- **Next:** R on U4-B, before Dan teaches from it (October 19), then
-  U4-C (needed October 26).
+  rendered/, which git ignores. On 2026-10-07 Dan asked for all of
+  4.1 to 4.8: every plan as a Word file and PDF, every deck as a
+  PowerPoint file and PDF, and every Canvas page and the unit page as
+  HTML are in rendered/. A file edited after its output was made is
+  made again before Dan uses it.
+- Peer instruction changed on 2026-10-07 (DECISIONS.md): a lesson
+  that runs Plickers runs two or three questions, together in one
+  Concept step and numbered in the order to run them, instead of one
+  question with spares. Lessons 4.1 to 4.8 each carry three; nine new
+  questions were written for CS4120 and confirmed by running the code.
+  The Plickers sheet is renumbered with a per-question key, and
+  UNIT_4_PLAN.md proposes the sets for 4.9 to 4.12 for package U4-C.
+- Package U4-DP is done (2026-10-07, in sessions with Dan rather than
+  as a cold package). It added two kinds of artifact, both recorded
+  in DECISIONS.md and CLAUDE.md section 6 that day, and wrote them for
+  lessons 4.1 to 4.8:
+  - A **deck** per lesson (`DECK_4.1` to `DECK_4.8`), written after
+    the plan and copying it, in the slide order CLAUDE.md section 6
+    lists. The comparison table is projected with its full four-column
+    frame from 4.1 (DECISIONS.md, 2026-10-07), and a table that grows
+    is two slides, before and after, until the slide maker can reveal
+    cells. LP_4.1, LP_4.4, LP_4.5, and the unit plan were edited to
+    match.
+  - A **Canvas page** per lesson (`PAGE_4.1` to `PAGE_4.8`) and the
+    unit's page, `PAGE_4_Unit.md`. The pages carry what happened in
+    class, the links the plan says to post, and the deck's Tonight
+    list, and never say when anything is due. The Preparation list of
+    each plan that posts something now names its page.
+  - **Reading quizzes run in Codio** (DECISIONS.md, 2026-10-07,
+    closing the open entries of 2026-09-27 and 2026-10-05). The quiz
+    file stays the master; its Codio files were made with the
+    codio-mcq skill into `rendered/codio/QUIZ_4.2_Iteration_And_Search/`,
+    `rendered/codio/QUIZ_4.3_Strings/`, and
+    `rendered/codio/QUIZ_4.5_Lists/`, each a guide page and one JSON
+    (JavaScript Object Notation) file per question. LP_4.2, LP_4.3, and
+    LP_4.5 tell Dan to put them in Codio. course/COURSE.md and
+    COURSE_OUTLINE.md were updated the same day.
+  None of these decks, pages, or Codio quiz files has been through
+  package R; R on U4-A ran before they existed.
+- **Next:** R on U4-B, before Dan teaches from it (October 19). That
+  run also reviews the decks, pages, and Codio quiz files for 4.1 to
+  4.8, since no review has seen them. Then U4-C (needed October 26),
+  which writes decks, pages, and Codio quiz files along with its plans.
 
-**Open after U4-A and U4-B:**
+**Open after U4-A, U4-B, and U4-DP:**
 
 - For Dan, before October 12: run one saved Thonny file that opens
   `words.txt` on your own laptop (LP_4.2 Preparation).
+- For Dan, before each lesson: post its Canvas page, and for 4.2, 4.3,
+  and 4.5, put the reading quiz's Codio files into the Codio
+  assignment and link it from Canvas (each plan's Preparation list).
 - For Dan, before assigning U6.L5 at lesson 4.4: make the edits in
   CODIO_FIX_4.4_String_Comparison.md, including the Formative
   Assessment 2 key check (LP_4.4 Preparation).
+- For the pipeline repo (~/Documents/projects/pipeline): the decks
+  want two things the slide maker does not do yet, table cells that
+  appear on click and a box around a revealed list; the ask is written
+  up in that repo's test_output/README.md. Until then a growing table
+  is two slides, before and after. Also found while writing decks 4.2
+  to 4.8: in the cfe slide style, a list item made only of inline code
+  renders tiny, so each such item carries a few plain words after the
+  code, changed in the plan first. That one is not yet reported there.
 - For REV-4: UNIT_4_PLAN.md's "Fall 2026 lines" lists the 4.2 file
   setup and 4.4's `ord` and `chr` as fall-only, but spring needs both.
   LP_4.2 and LP_4.4 leave them unlabeled, and REV-4 should keep them.
@@ -92,7 +145,11 @@ those live in CLAUDE.md and DECISIONS.md.
   challenge taught the index loop that U5.EX problem 1 needs.
 - For whoever next edits tools/plan_check.py or this file: `check`
   flags the two example Python Tutor links under "Facts packages need"
-  ("no python block above this link"). That predates U4-A.
+  ("no python block above this link"). That predates U4-A and still
+  stands on 2026-10-07. `check` also prints a note, not a failure, for
+  each code block on a Canvas page that has a Python Tutor link and no
+  output block under it (PAGE_4.3 and PAGE_4.8); those blocks are
+  there for their links, and the note is expected.
 
 ## How to run a work package
 
@@ -105,7 +162,9 @@ with the package's name in place of T0.
 One package per session. The session reads CLAUDE.md, DECISIONS.md,
 course/COURSE.md, and course/COURSE_OUTLINE.md, then "Facts packages
 need" and "What every lesson package does" below, then its own
-package. It works linearly and does not spawn subagents (CLAUDE.md).
+package. A package that writes a deck or a Canvas page also reads
+tools/PREPARING_MATERIAL.md, the guide to markdown form for the
+materials pipeline. It works linearly and does not spawn subagents (CLAUDE.md).
 It does not open ../cfe_redesign (CLAUDE.md section 1). It does not
 commit unless Dan tells it to; Dan drives git. It ends with the report
 described under "Report."
@@ -184,8 +243,12 @@ full manual.
   Python Tutor link opens the code above it, flags em dashes, flags
   each line inside a code block longer than 80 characters (CLAUDE.md
   section 6), and checks the sections of a lesson plan and the points
-  of a learning check. A package runs it on every file it wrote and fixes what it
-  reports before the session's report.
+  of a learning check. A package runs it on every file it wrote,
+  decks and Canvas pages included, and fixes what it reports before
+  the session's report. On a deck or a page it checks em dashes and
+  line width, and runs any code block; a code block that sits on a
+  Canvas page only to carry its Python Tutor link gets a note about
+  the missing output block, which is expected.
 - Each block runs on its own. `input()` shows the prompt and the
   answer on one line, as Thonny's shell does, so a `text` block for
   an input program is pasted that way. An HTML comment directly above
@@ -201,6 +264,34 @@ full manual.
   add `~~~^^^` lines under the code). That is fine: paste what the run
   gave. Dan said on 2026-10-05 that students should be comfortable
   reading error messages in different environments.
+
+**The materials pipeline.** ~/Documents/projects/pipeline turns a
+markdown file here into a Word file and PDF (a plan, quiz, check,
+handout), a PowerPoint file (a deck), or HTML for Canvas (a page).
+pipeline.yml at the top of this repo gives every file the author, the
+course name, and the `cfe` style, so a maker needs no flag; CLAUDE.md
+section 6 says how to run one, and the pipeline's
+docs/making-materials.md says how to read what it prints. Output lands
+in rendered/, which git ignores, and is never edited by hand. Making
+outputs is a separate step from writing: a package writes the markdown
+and makes outputs only when Dan asks (he asked for all of 4.1 to 4.8
+on 2026-10-07). tools/PREPARING_MATERIAL.md is the guide to the
+markdown form each kind of file takes: frontmatter for a page and a
+deck, the notes the makers act on (`notes`, `reveal`, `split`,
+`layout` for a deck; `only teacher` regions for a student copy), and
+the sizes that fit. Two things the slide maker cannot do yet are under
+"Open" above, with the workarounds the Unit 4 decks use.
+
+**Codio quiz files.** A reading quiz runs in Codio (DECISIONS.md,
+2026-10-07). After the quiz file is final, the codio-mcq skill makes
+its Codio files into `rendered/codio/QUIZ_N.N_Short_Name/`: a guide
+page that embeds the questions, and `MC_Assessments/` with one JSON
+file per question. Each question's guidance is its key explanation,
+the answers keep the quiz file's order, and the questions are not
+shuffled. They are output: made again when the quiz changes, never
+edited by hand, and kept out of git with the rest of rendered/. The
+lesson plan's Preparation list tells Dan to put them in Codio, and the
+deck's reading quiz slide sends students to the link in Canvas.
 
 **Thonny.** Students run Thonny on their own laptops. Code in the
 materials uses nothing newer than Python 3.10. Turtle programs run in
@@ -307,15 +398,27 @@ uses it.
    involved, the codio_course_reference.md entries for the Codio
    assignments named, and the peer instruction questions the unit plan
    assigned to these lessons. A package that writes a learning check
-   also reads sources/assessments/learning_checks/.
+   also reads sources/assessments/learning_checks/. Every package
+   reads tools/PREPARING_MATERIAL.md and the decks and Canvas pages
+   already written in the unit, so its own match them in form.
 2. **Write** each lesson plan in the CLAUDE.md section 6 format, each
    reading quiz due in these lessons, and each learning check the unit
    plan marks on these lessons, and each Codio fix these lessons'
    Codio assignments need. Add these lessons' peer instruction
-   questions to the unit's Plickers sheet.
+   questions to the unit's Plickers sheet. Then, after each plan is
+   finished, its deck and its Canvas page, which copy the plan
+   (DECISIONS.md, 2026-10-07); a change to a slide's or a page's
+   wording is first a change to the plan. After each reading quiz is
+   final, its Codio files, made with the codio-mcq skill into
+   rendered/codio/.
 3. **Check.** Run tools/plan_check.py `check` on every file written,
    then every item under "Done when."
 4. **Report.**
+
+Since 2026-10-07 every lesson package writes these decks, pages, and
+Codio quiz files; the "Writes" lines below and the table's "Writes"
+column do not repeat it. Making Word, PowerPoint, or HTML output is
+not part of a package unless Dan asks.
 
 ### Done when
 
@@ -363,14 +466,38 @@ uses it.
   labels, no invented classroom moments (CLAUDE.md section 7).
 - Spare peer instruction questions and extra variants are under
   Extras. A plan has no length limit.
+- Each lesson has a deck beside its plan, in the slide order CLAUDE.md
+  section 6 lists, and every word on a slide is in the plan. What the
+  teacher says is in `notes`. The Plickers slide's notes list the
+  lesson's questions in the order run, with their answers, and its
+  wording differs from the other decks' Plickers slides. A table that
+  grows across the unit shows its full frame, as two slides, before
+  and after. A quick check keeps the shape the plan gives it.
+- Each lesson has a Canvas page beside its plan, student-facing, with
+  the `cfe` frontmatter (`type: class recap`, `unit`, `summary`,
+  `details`), and every link the plan's Preparation list says to post,
+  each with its full address. No page says when anything is due, in
+  any form. The plan's Preparation list tells Dan to post the page
+  whenever the plan posts something.
+- Each reading quiz has its Codio files in
+  `rendered/codio/QUIZ_N.N_Short_Name/`, made from the final quiz
+  file: each JSON file parses and has exactly one correct answer, its
+  guidance is the key's explanation, and the guide page names every
+  JSON file. The plan's Preparation list tells Dan to put them in
+  Codio.
+- `check` passes on the decks and pages too, with only the expected
+  notes about code blocks that carry a Python Tutor link.
 
 ### Report
 
-The session ends by telling Dan: the files written; every departure
-from a [DEFAULT] and why; anything it could not verify (for example,
-turtle code it could not run because no window was available);
-questions for Dan; and any pattern it noticed recurring that might
-belong in the ledger.
+The session ends by telling Dan: the files written, saying for each
+whether it is a document, a deck, or a Canvas page and whether a
+student copy is wanted, as the hand-off section of
+tools/PREPARING_MATERIAL.md asks, so Dan can run the makers; every
+departure from a [DEFAULT] and why; anything it could not verify (for
+example, turtle code it could not run because no window was
+available); questions for Dan; and any pattern it noticed recurring
+that might belong in the ledger.
 
 ## Work packages
 
@@ -381,8 +508,9 @@ belong in the ledger.
 | U4-PLAN | UNIT_4_PLAN.md | S0 | done 2026-10-05 |
 | U4-A | lessons 4.1-4.4, two reading quizzes | U4-PLAN approved | done 2026-10-05 |
 | U4-B | lessons 4.5-4.8, one reading quiz, learning check at 4.6 | U4-A | done 2026-10-06 |
+| U4-DP | decks, Canvas pages, and Codio quiz files for 4.1-4.8; the Unit 4 Canvas page | U4-B | done 2026-10-07 |
 | U4-C | lessons 4.9-4.12, two reading quizzes, learning check at 4.11 | U4-B | Oct 26 |
-| U4-D | project spec, lessons 4.13-4.16 | U4-C | Nov 3 |
+| U4-D | project spec and its pages, lessons 4.13-4.16 | U4-C | Nov 3 |
 | U4-Q | Unit 4 quiz and its Codio review guide | U4-D | Nov 4 |
 | R | a review of one finished package | that package | before Dan teaches from it |
 | U5-S | six taster plans | 0.6 | Nov 9 |
@@ -400,7 +528,10 @@ belong in the ledger.
 
 The "needed by" dates are the first class day that uses the material.
 A review guide is needed a few days before its quiz, so the quiz
-packages are dated for the guide.
+packages are dated for the guide. From U4-C on, each lesson package's
+"Writes" entry also means the decks, Canvas pages, and Codio quiz
+files for its lessons ("What every lesson package does"), and each
+unit plan package also writes the unit's Canvas page.
 
 ### S0: apply what Dan approved
 
@@ -425,6 +556,8 @@ the repository.
 Done 2026-10-05, in a session with Dan rather than as a cold package,
 so his answers went straight into the plan. The plan is APPROVED. Its
 one open item, the project's stages, waits under "Project" for U4-D.
+The unit's Canvas page, `PAGE_4_Unit.md`, was added on 2026-10-07 by
+package U4-DP; later unit plan packages write theirs with the plan.
 
 **Writes:** `units/04-data-structures/UNIT_4_PLAN.md`, in the CLAUDE.md
 section 6 unit-plan format, from the outline's Unit 4 section.
@@ -487,6 +620,8 @@ lessons/; `QUIZ_4.1` (chapter 7; moved to 4.2 as `QUIZ_4.2` on
 
 ### U4-B: lists (lessons 4.5 to 4.8)
 
+Done 2026-10-06. Not yet through package R.
+
 **Writes:** `LP_4.5` through `LP_4.8`; `QUIZ_4.5` (chapter 9);
 `CHECK_4.6`, the learning check on lessons 4.1 to 4.5.
 
@@ -511,14 +646,37 @@ lessons/; `QUIZ_4.1` (chapter 7; moved to 4.2 as `QUIZ_4.2` on
 - U8.EX is assigned at 4.8 with problem 4 waived (it needs CSV files).
   U12.EX joins it in spring; package REV-4 adds that, not this one.
 
+### U4-DP: decks, pages, and Codio quiz files for 4.1 to 4.8
+
+Done 2026-10-07, in sessions with Dan rather than as a cold package,
+while the deck and Canvas page artifacts were being defined. It wrote
+`DECK_4.1` to `DECK_4.8`, `PAGE_4.1` to `PAGE_4.8`, and `PAGE_4_Unit.md`;
+made the Codio files for `QUIZ_4.2`, `QUIZ_4.3`, and `QUIZ_4.5` into
+rendered/codio/; and edited the plans so each slide and page has its
+words in the plan (the comparison table's full frame at 4.1, a few
+plain words after any list item that was only inline code, and the
+Preparation steps that post the page and put the quiz in Codio). It
+also carried the Plickers change of the same day into lessons 4.1 to
+4.8 and the Plickers sheet. "Where things stand" has the details.
+Later lesson packages do this work as part of writing their lessons,
+so this package is not repeated.
+
 ### U4-C: dictionaries and tuples (lessons 4.9 to 4.12)
 
 **Writes:** `LP_4.9` through `LP_4.12`; `QUIZ_4.9` (chapter 10) and
 `QUIZ_4.12` (chapter 11, the sections lesson 4.12 uses); `CHECK_4.11`,
-the learning check on lessons 4.6 to 4.10.
+the learning check on lessons 4.6 to 4.10. With them, the four decks,
+the four Canvas pages, and the Codio files for both quizzes.
 
 **Specific to this package:**
 
+- The peer instruction sets for 4.9 to 4.12 are proposed in
+  UNIT_4_PLAN.md's "Peer instruction" table, two or three questions a
+  lesson. The package writes them from that table and Dan sees them in
+  the report.
+- Lessons 4.9 and 4.12 add a column to the comparison table. Each deck
+  shows the table before and after, with the full frame, as decks 4.1
+  and 4.5 do.
 - Taylor's bank has three dictionary questions and none on tuples.
   Most questions here are new, so each one's wrong answers need extra
   care.
@@ -567,9 +725,13 @@ pair, and an individual reflection graded on its own. The student
 handout, both feedback forms, the rubric, the run sheet, and one brief
 per option are separate markdown files beside the spec, named as the
 CLAUDE.md section 6 says; Dan asks for Word versions separately
-(outline answer 10). The lesson plans are short because they are
-project days (CLAUDE.md section 6 allows dropping sections with a
-one-line note).
+(outline answer 10). The project's Canvas page,
+`assessments/PROJECT_4_Page.md` (`type: project`), summarizes the
+handout and links the project's files, and names no option. The
+lesson plans are short because they are project days (CLAUDE.md
+section 6 allows dropping sections with a one-line note); each still
+gets a deck and a Canvas page, and the decks are short too, since the
+brief and the day's steps are most of what gets projected.
 
 **Specific to this package:**
 
@@ -650,9 +812,15 @@ block, re-solves every peer instruction, reading quiz, learning check,
 and unit quiz question before looking at the key, opens nothing from
 the first build, and checks every "Done when" item. For a learning
 check it also opens the lesson each Part A question cites and confirms
-students saw the idea there. It fixes small errors in place and lists
-what it changed. It does not rewrite a lesson's approach; it reports
-that to Dan.
+students saw the idea there. For each deck and Canvas page it reads
+the plan beside it and confirms that every slide and every sentence
+on the page comes from the plan, that the deck follows the slide order
+in CLAUDE.md section 6, and that no page says when anything is due.
+For each reading quiz it confirms the Codio files in rendered/codio/
+match the quiz file question for question, or makes them again with
+the codio-mcq skill if the quiz changed. It fixes small errors in
+place and lists what it changed. It does not rewrite a lesson's
+approach; it reports that to Dan.
 
 ### U5-S: speed-run tasters
 
@@ -685,7 +853,9 @@ Unit 3 sections.
 
 - **U2-PLAN and U3-PLAN** each add the same six things as U4-PLAN,
   less the comparison table and the fall 2026 notes, and list the
-  departures from book order with their reasons.
+  departures from book order with their reasons. Each also writes the
+  unit's Canvas page (`PAGE_2_Unit.md`, `PAGE_3_Unit.md`), as
+  `PAGE_4_Unit.md` does for Unit 4.
 - **U2-A** (2.1 to 2.4): reading quizzes for chapters 1 and 2. Lesson
   2.1 includes getting Thonny installed and a first file saved.
 - **U2-B** (2.5 to 2.10): reading quizzes for chapters 3 and 4;
@@ -708,7 +878,8 @@ Unit 3 sections.
   the five habits from the text adventure's lesson on handling what
   the player types, with a `while` loop doing the asking again.
 - **U3-C** (3.10 to 3.13): `PROJECT_3_Text_Game.md` with the three
-  options, one brief per option.
+  options, one brief per option, and its Canvas page
+  `PROJECT_3_Page.md`.
   sources/fall_2026_text_based_adventure/ is the starting point: same
   stages, same times, same rubric shape. Two things change because of
   where the project now sits: `.strip().lower()` and asking again are
