@@ -49,6 +49,8 @@ annotated, so the history reads in one place.
   choice and are taken in Canvas or as a Codio multiple-choice
   assessment; which of the two stays open. See the reading quiz entry
   of that date below.*
+  *Closed 2026-10-07: Codio. See the reading quiz entry of that date
+  below.*
 - 2026-09-27 [DEFAULT] Unit 3 teaches strings, lists, and dictionaries
   as one family: shared grammar once (iteration, `in`, `len`, indexing
   and slicing for the ordered ones), then each new container as "same
@@ -143,6 +145,8 @@ section.
   Codio multiple-choice assessments and grade themselves. Which of the
   two is used stays open. (Rationale: Dan, 2026-10-05; narrows the open
   entry of 2026-09-27 about where reading quizzes are taken.)
+  *Closed 2026-10-07: Codio. See the reading quiz entry of that date
+  below.*
 - 2026-10-05 [DEFAULT] A learning check runs about every five or six
   class meetings. Four questions, projected, answered in the paper
   journal, which Dan collects. Ten points: three questions (2, 2, and 3
@@ -228,6 +232,29 @@ section.
   Extras. (Rationale: Dan, 2026-10-07; he generally runs Plickers in
   the warm-up part of the lesson, and when he does, "at least 2 and
   preferably 3 questions.")
+
+## Decisions from the Canvas pages session (Dan, 2026-10-07)
+
+- 2026-10-07 [DEFAULT] Every coding lesson has a Canvas page, one
+  markdown file beside its plan and deck, made into HTML by the
+  materials pipeline and pasted into Canvas by Dan before class. It
+  copies the plan: what happened in class, the links the plan says to
+  post, and the deck's Tonight list. A unit has a unit page and a
+  project has a project page. No Canvas page says when anything is
+  due, in any form; due dates live in Canvas and Codio. The format is
+  in CLAUDE.md section 6. (Rationale: Dan, 2026-10-07; the Unit 4
+  plans already sent students to "today's Canvas page" for links, and
+  nothing authored it. Posting before class is what makes the links
+  usable in class. This replaces COURSE.md's line that lesson
+  materials were posted by hand after class.)
+- 2026-10-07 [DEFAULT] Reading quizzes are taken in Codio as
+  multiple-choice assessments. The quiz file stays the master; its
+  Codio files (a guide page and one JSON file per question) are made
+  from it with the codio-mcq skill into rendered/codio/, one folder
+  per quiz, and remade when the quiz changes. (Rationale: Dan,
+  2026-10-07; closes the open entries of 2026-09-27 and 2026-10-05,
+  and supersedes his 2026-10-05 choice in COURSE_OUTLINE.md to write
+  the master only and enter questions by hand.)
 
 ## Carried over from the first build
 

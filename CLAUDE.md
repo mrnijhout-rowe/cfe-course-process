@@ -105,8 +105,9 @@ first build planned.
 **[DEFAULT] The period shape.** A 50-minute coding lesson runs:
 
 1. **Reading quiz** (5 minutes) when a reading was due. Short, graded,
-   taken in Canvas or as a Codio multiple-choice assessment (which one
-   is [OPEN] in DECISIONS.md). On the lessons a unit plan marks, a
+   taken in Codio as multiple-choice assessments, reached through a
+   link in Canvas (DECISIONS.md, 2026-10-07). On the lessons a unit
+   plan marks, a
    **learning check** (DECISIONS.md) takes the first ten minutes in
    place of the reading quiz, and the plan says in one line what to
    shorten.
@@ -233,7 +234,9 @@ assigns the Codio assignment), `QUIZ_3.4_Short_Name.md` (reading quiz),
 marked on), `QUIZ_4_Unit_Quiz.md` (unit quiz), `MINI_2.10_Short_Name.md`
 (larger mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`,
 `DECK_3.4_Short_Name.md` (the lesson's slides, same short name as the
-lesson plan).
+lesson plan), `PAGE_3.4_Short_Name.md` (the lesson's Canvas page, same
+short name again), `PAGE_3_Unit.md` (the unit's Canvas page),
+`PROJECT_3_Page.md` (the project's Canvas page).
 
 **Unit plan** (`units/NN-name/UNIT_N_PLAN.md`, one per unit). Status
 line (PROPOSAL or APPROVED with date). Scope: which Think Python
@@ -263,7 +266,7 @@ two pages.
 ### Try it (10 min)           the problem, then the key, commented
 ### Partner challenge (15 min) the problem, ceiling variants, then the key, commented
 ### Mini-project (15 min)     optional, on days the unit plan marks
-### Codio (10 min)            which exercises, imported or authored, and what is due when
+### Codio (10 min)            which exercises, imported or authored
 ## Pitfalls
 ## Quick check       one exit-ticket question with its answer, optional
 ## Extras            peer instruction questions beyond the three, and extra variants
@@ -299,7 +302,16 @@ student who did the reading and not by one who did not. Mix one recall
 question with questions that require having run or traced the chapter's
 code. Every question is multiple choice with four options, A to D, and
 exactly one correct answer. The key, below the questions, is a table:
-question, answer, one-line explanation.
+question, answer, one-line explanation. Students take the quiz in
+Codio (DECISIONS.md, 2026-10-07). Its Codio files are made from the
+quiz file with the codio-mcq skill, after the quiz is final, into
+`rendered/codio/QUIZ_N.N_Short_Name/`: a guide page that embeds the
+questions and `MC_Assessments/` with one JSON (JavaScript Object
+Notation) file per question. Each question's guidance is its key
+explanation, the answers keep the order the quiz file gives them, and
+the questions are not shuffled. Those files are output, remade from the
+quiz file when it changes, and never edited by hand; the lesson plan's
+Preparation list tells Dan to put them in Codio.
 
 **Learning check** (`assessments/CHECK_N.N_Short_Name.md`). The top
 half is what gets projected: the line "Answer in your journal. Label
@@ -387,7 +399,9 @@ slides, in order:
    the file's frontmatter.
 2. Objectives, as in the plan.
 3. Reading quiz, only when a reading was due: tells students to open
-   Canvas and start the quiz.
+   the link to the chapter's reading quiz in Canvas. The quiz runs in
+   Codio, and students reach Codio through Canvas, so the slide names
+   Canvas.
 4. Plickers: one slide telling students to get their cards out, worded
    differently in each deck so it does not become a fixed phrase. The
    questions themselves are not projected; they run in Plickers. The
@@ -410,12 +424,51 @@ slides, in order:
    notes. Otherwise the question on one slide, and the answer on the
    next slide or on click. A quick check is not rewritten into four
    choices for the deck's sake.
-10. Tonight: the reading and the Codio work due, with the due dates.
+10. Tonight: the reading and the Codio work.
 
 A diagram that a concept needs goes in the deck as well as in the plan.
 The deck's markdown form is in tools/PREPARING_MATERIAL.md, "Writing a
 deck file," and the slide maker makes the PowerPoint file (and a Slidev
 deck when asked with `--slidev`).
+
+**Canvas page** (`lessons/PAGE_N.N_Short_Name.md`, one per coding
+lesson, beside its plan and deck; DECISIONS.md, 2026-10-07). Dan posts
+it in Canvas before class, so anything the plan tells him to post for
+students is on it. It is student-facing: "you" is the student, the
+teacher is Mr. Nijhout-Rowe, and the words are the ones students have
+been taught. Like the deck, it is written after the plan and copies
+it; a change to its wording is first a change to the plan. The
+markdown form is in tools/PREPARING_MATERIAL.md, "Writing a Canvas
+page file," with the `cfe` style's frontmatter: `type: class recap`,
+`unit`, a one-line `summary`, and `details` for the header row. The
+body, in order:
+
+1. **What happened in class.** Three to five sentences in students'
+   words: the idea, the error hit on purpose if there was one, and
+   what students built.
+2. **Links.** Everything the plan's Preparation list says to post: the
+   Python Tutor links students open themselves, files they download,
+   anything else "too long to type." Each link has its full address
+   and a few words saying what it is. Left out when the plan posts
+   nothing.
+3. **Tonight.** The reading and the Codio work, in the words of the
+   deck's Tonight slide.
+
+A Canvas page never says when anything is due. Not a date, not "before
+next class," not "before lesson 4.4." Dan sets due dates in Canvas and
+Codio and says them in the room. The `details` row names the Codio
+assignment, the reading, and what opens the next class, with no dates.
+
+A unit also has a Canvas page, `units/NN-name/PAGE_N_Unit.md`, with
+`type: unit`: what the unit covers, what to bring, what is graded and
+in which category, how the unit's lessons run, and any table students
+keep in the journal across the unit, as the empty frame with the
+lesson each part is added in, since the cells are filled in class. A
+project
+has one too, `assessments/PROJECT_N_Page.md`, with `type: project`: it
+summarizes the handout and holds the links to the project's files; it
+does not replace the handout, and it names no option, since Dan
+chooses which options a class is offered.
 
 ## 7. Voice
 
@@ -443,7 +496,7 @@ say what happens, in plain sentences.
    words (ASCII) are exempt.
 6. **No em dashes.** Commas, colons, semicolons, or a new sentence.
 
-Required actions (due dates, points, materials, restrictions,
+Required actions (points, materials, restrictions,
 submission steps) are stated explicitly enough to survive handoff.
 Technical substance (code, output, formulas, attribution, licensing)
 stays exact through every edit.

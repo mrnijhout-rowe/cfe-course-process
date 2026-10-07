@@ -47,8 +47,12 @@ when Dan approved the course structure.
 - **[RULE]** Codio is the assignment platform. Homework is traditional
   Codio guides with .py files and autograders. No Jupyter notebooks in
   this build.
-- Canvas carries the course page; Dan posts lesson materials by hand
-  after class.
+- Canvas carries the course page. Each coding lesson has a Canvas page,
+  written here (CLAUDE.md section 6) and pasted in by Dan before class,
+  with a unit page at the top of each unit and a project page for each
+  project. Due dates live only in Canvas and Codio, never on the pages.
+- Reading quizzes are Codio multiple-choice assessments. Unit quizzes
+  are taken in Canvas.
 - **[RULE]** The course Gemini Gem is the sanctioned AI tutor, allowed on
   every assignment all semester. Its prompt is Dan's; it is not authored
   here. It answers syntax questions directly, turns problem-solving

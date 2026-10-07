@@ -168,10 +168,10 @@ third are in sources/assessments/.
 - **Reading quiz.** Three to five questions at the start of the lesson
   a reading is due for, about five minutes. Every question is multiple
   choice with four options and one correct answer, so the quiz can be
-  given in Canvas or as Codio multiple-choice assessments, and it
-  grades itself. Which of the two Dan uses is still [OPEN] in
-  DECISIONS.md. The file written here is the markdown master with its
-  key; Dan enters the questions in Canvas or Codio himself.
+  given as Codio multiple-choice assessments, and it grades itself
+  (DECISIONS.md, 2026-10-07). The file written here is the markdown
+  master with its key; its Codio files are made from it with the
+  codio-mcq skill (CLAUDE.md section 6).
 - **Learning check.** About every five or six class meetings. Four
   questions, projected, answered in the paper journal, which Dan
   collects. Ten points. The first three questions (2, 2, and 3 points)
@@ -658,6 +658,8 @@ BUILD_PLAN.md:
 21. **Should lesson packages also write reading quizzes as Codio
     files?** Dan chose: master only. He enters the questions in Canvas
     or Codio himself.
+    *Superseded 2026-10-07: the quizzes run in Codio, and the Codio
+    files are made from the master (DECISIONS.md, 2026-10-07).*
 
 ## Choices made while applying the answers
 
@@ -693,6 +695,7 @@ it on 2026-10-05 (BUILD_PLAN.md, step 0.1), so all ten stand.
 9. **Reading quizzes are all multiple choice.** That is what lets them
    run in Canvas or Codio with no hand grading. The choice between
    Canvas and Codio stays [OPEN].
+   *Closed 2026-10-07: Codio (DECISIONS.md).*
 10. **Project handouts.** Because Dan chooses the options, each
     option's brief is its own file, and the shared handout does not
     mention the options a class was not given.
