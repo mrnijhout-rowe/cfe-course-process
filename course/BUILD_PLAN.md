@@ -11,7 +11,7 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-07, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, and U4-DP)
+## Where things stand (2026-10-07, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, U4-DP, and R on U4-B)
 
 - The outline is approved. Lesson materials exist for 4.1 to 4.8: for
   each lesson a plan, a deck, and a Canvas page, plus the unit's
@@ -61,8 +61,8 @@ those live in CLAUDE.md and DECISIONS.md.
   check's fourth question draws on U6.EX problem 5. Dan's four
   answers to its report are in UNIT_4_PLAN.md (items 8 to 11); the one
   that changed a file added a reminder about `range` with a step to
-  LP_4.4's Codio section and LP_4.5's Preparation list. It has not
-  been through package R.
+  LP_4.4's Codio section and LP_4.5's Preparation list. Package R
+  reviewed it on 2026-10-07; see the R on U4-B item below.
 - The materials pipeline is wired up (2026-10-06). pipeline.yml at the
   top of this repo holds the course settings, and CLAUDE.md section 6
   says how to run the makers. Turning a finished file into a Word
@@ -105,12 +105,27 @@ those live in CLAUDE.md and DECISIONS.md.
     (JavaScript Object Notation) file per question. LP_4.2, LP_4.3, and
     LP_4.5 tell Dan to put them in Codio. course/COURSE.md and
     COURSE_OUTLINE.md were updated the same day.
-  None of these decks, pages, or Codio quiz files has been through
-  package R; R on U4-A ran before they existed.
-- **Next:** R on U4-B, before Dan teaches from it (October 19). That
-  run also reviews the decks, pages, and Codio quiz files for 4.1 to
-  4.8, since no review has seen them. Then U4-C (needed October 26),
-  which writes decks, pages, and Codio quiz files along with its plans.
+- Package R on U4-B is done (2026-10-07). It covered lessons 4.5 to
+  4.8, QUIZ_4.5, CHECK_4.6, the Plickers sheet, and the decks, Canvas
+  pages, and Codio quiz files for 4.1 to 4.8, including the nine
+  questions U4-DP wrote for 4.1 to 4.8. Every key, answer, Codio claim,
+  and word list was right. Small fixes: four Overviews (4.5 to 4.8)
+  and LP_4.5's Connections still spoke of one peer instruction
+  question; one wrong-answer line in LP_4.2's question 3; LP_4.2's
+  spare now carries the sentence about `\n` that the Plickers sheet
+  has; DECK_4.1's note on which lesson fills the String rows; a teacher
+  line moved off a DECK_4.7 slide; and lesson numbers taken out of the
+  body of PAGE_4.1, 4.4, 4.6, and 4.7 and DECK_4.7's Tonight slide.
+  Dan's answers to its report, the same day: he makes the learning
+  check slide himself; decks and pages may reword the plan's
+  teacher-facing text for students; titles keep the spring numbering
+  (three DECISIONS.md entries, with CLAUDE.md section 6 to match). And
+  lesson 4.3 now fills the table's two String rows on position and
+  order, leaving 4.4 one cell: LP_4.3, LP_4.4, DECK_4.3, DECK_4.4,
+  PAGE_4.3, and UNIT_4_PLAN.md were edited. Outputs in rendered/ for
+  every file named in this item are older than the markdown.
+- **Next:** U4-C (needed October 26), which writes decks, pages, and
+  Codio quiz files along with its plans.
 
 **Open after U4-A, U4-B, and U4-DP:**
 
@@ -149,7 +164,10 @@ those live in CLAUDE.md and DECISIONS.md.
   stands on 2026-10-07. `check` also prints a note, not a failure, for
   each code block on a Canvas page that has a Python Tutor link and no
   output block under it (PAGE_4.3 and PAGE_4.8); those blocks are
-  there for their links, and the note is expected.
+  there for their links, and the note is expected. The same note on a
+  deck (DECK_4.1, 4.3, and 4.4) marks a code block in a question or a
+  try-it prompt whose answer comes on a later slide, and is expected
+  too.
 
 ## How to run a work package
 
@@ -206,7 +224,10 @@ have never heard of a Unit 4. Teacher-facing files use the numbers.
 Student-facing text (handouts, briefs, quiz and learning check
 questions, review guide pages) names a unit by its topic, such as "the
 data structures project," and does not use lesson numbers, so Dan has
-little to change by hand.
+little to change by hand. Deck titles and Canvas page titles, with
+their `unit` fields, are the exception: they keep the spring numbering
+("Lesson 4.5," "Unit 4"), and Dan changes them by hand for fall where
+he wants to (DECISIONS.md, 2026-10-07).
 
 **Python Tutor links.** Checked against pythontutor.com's own script
 on 2026-10-05. A link has this form:
@@ -407,8 +428,9 @@ uses it.
    Codio assignments need. Add these lessons' peer instruction
    questions to the unit's Plickers sheet. Then, after each plan is
    finished, its deck and its Canvas page, which copy the plan
-   (DECISIONS.md, 2026-10-07); a change to a slide's or a page's
-   wording is first a change to the plan. After each reading quiz is
+   (DECISIONS.md, 2026-10-07). Text the plan addresses to the teacher
+   may be reworded for students; a change in substance to a slide or a
+   page is first a change to the plan. After each reading quiz is
    final, its Codio files, made with the codio-mcq skill into
    rendered/codio/.
 3. **Check.** Run tools/plan_check.py `check` on every file written,
@@ -467,8 +489,10 @@ not part of a package unless Dan asks.
 - Spare peer instruction questions and extra variants are under
   Extras. A plan has no length limit.
 - Each lesson has a deck beside its plan, in the slide order CLAUDE.md
-  section 6 lists, and every word on a slide is in the plan. What the
-  teacher says is in `notes`. The Plickers slide's notes list the
+  section 6 lists, and everything on a slide is in the plan, reworded
+  for students only where the plan speaks to the teacher. What the
+  teacher says is in `notes`. There is no learning check slide; Dan
+  makes that one himself. The Plickers slide's notes list the
   lesson's questions in the order run, with their answers, and its
   wording differs from the other decks' Plickers slides. A table that
   grows across the unit shows its full frame, as two slides, before
@@ -620,7 +644,7 @@ lessons/; `QUIZ_4.1` (chapter 7; moved to 4.2 as `QUIZ_4.2` on
 
 ### U4-B: lists (lessons 4.5 to 4.8)
 
-Done 2026-10-06. Not yet through package R.
+Done 2026-10-06. Reviewed by package R on 2026-10-07.
 
 **Writes:** `LP_4.5` through `LP_4.8`; `QUIZ_4.5` (chapter 9);
 `CHECK_4.6`, the learning check on lessons 4.1 to 4.5.
@@ -814,7 +838,8 @@ the first build, and checks every "Done when" item. For a learning
 check it also opens the lesson each Part A question cites and confirms
 students saw the idea there. For each deck and Canvas page it reads
 the plan beside it and confirms that every slide and every sentence
-on the page comes from the plan, that the deck follows the slide order
+on the page comes from the plan (reworded for students is fine; new
+or changed substance is not), that the deck follows the slide order
 in CLAUDE.md section 6, and that no page says when anything is due.
 For each reading quiz it confirms the Codio files in rendered/codio/
 match the quiz file question for question, or makes them again with

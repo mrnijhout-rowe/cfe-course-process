@@ -328,8 +328,9 @@ the projected half. No other kind of artifact gets these two lines
 unless Dan asks for a student copy of it. Questions and answers run to the length of the examples in
 sources/assessments/learning_checks/: an answer is a value, an exact
 output, a sentence or two, a few lines of code, or a quick sketch, and
-a journal grades in about 90 seconds. Dan puts the questions on a
-slide; the file sets no limit for that.
+a journal grades in about 90 seconds. Dan makes the slide that
+projects the questions himself, so the lesson's deck has none; the
+file sets no limit for that.
 
 **Unit quiz** (`assessments/QUIZ_N_Unit_Quiz.md`), laid out like
 sources/assessments/unit_2_quiz/Cumulative_Quiz_Units1-2_LLM.md: an
@@ -389,11 +390,18 @@ and the teacher section with sample solutions.
 
 **Deck** (`lessons/DECK_N.N_Short_Name.md`, one per coding lesson,
 beside its lesson plan; DECISIONS.md, 2026-10-07). It holds what gets
-projected during the period and nothing else. Every word on a slide
+projected during the period and nothing else. Everything on a slide
 comes from the lesson plan; the deck is written after the plan and
-copies it, so a change to a slide's wording is first a change to the
-plan. What the teacher says goes in `notes`, not on the slide. The
-slides, in order:
+copies it, so a change to what a slide says is first a change to the
+plan. Text the plan addresses to the teacher may be reworded for
+students on the slide: "you" for the student, the words students have
+been taught, and nothing added or changed in substance, code, values,
+or answers (DECISIONS.md, 2026-10-07). What the teacher says goes in
+`notes`, not on the slide. A deck has no slide for a learning check;
+Dan makes that slide himself (DECISIONS.md, 2026-10-07). The title
+slide and the frontmatter use the spring numbering ("Lesson 4.5,"
+"Unit 4"), and Dan changes them by hand for fall where he wants to.
+The slides, in order:
 
 1. Title: the lesson number and title, with the unit as subtitle, from
    the file's frontmatter.
@@ -437,7 +445,9 @@ it in Canvas before class, so anything the plan tells him to post for
 students is on it. It is student-facing: "you" is the student, the
 teacher is Mr. Nijhout-Rowe, and the words are the ones students have
 been taught. Like the deck, it is written after the plan and copies
-it; a change to its wording is first a change to the plan. The
+it, reworded for students as a deck may be; a change in substance is
+first a change to the plan. Its `title` and `unit` use the spring
+numbering, as a deck's do. The
 markdown form is in tools/PREPARING_MATERIAL.md, "Writing a Canvas
 page file," with the `cfe` style's frontmatter: `type: class recap`,
 `unit`, a one-line `summary`, and `details` for the header row. The

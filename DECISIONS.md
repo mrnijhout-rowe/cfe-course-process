@@ -256,6 +256,26 @@ section.
   and supersedes his 2026-10-05 choice in COURSE_OUTLINE.md to write
   the master only and enter questions by hand.)
 
+## Decisions from package R on U4-B (Dan, 2026-10-07)
+
+- 2026-10-07 [DEFAULT] Dan makes the slide that projects a learning
+  check himself. A lesson's deck has no learning check slide; the
+  plan's Preparation list reminds him to make it. (Rationale: Dan,
+  2026-10-07, after the review found DECK_4.6 had none.)
+- 2026-10-07 [DEFAULT] Decks and Canvas pages may reword text that
+  the lesson plan addresses to the teacher so that it speaks to
+  students: "you" for the student, the words students have been
+  taught. Nothing is added or changed in substance, code, values, or
+  answers; a change in substance is still first a change to the plan.
+  (Rationale: Dan, 2026-10-07; the 4.1 and 4.8 decks already did this,
+  and the rule that every word comes from the plan did not allow it.)
+- 2026-10-07 [DEFAULT] Deck titles, Canvas page titles, and their
+  `unit` fields keep the spring numbering ("Lesson 4.5," "Unit 4"),
+  even though fall 2026 students know the unit by another number. Dan
+  changes them by hand where he wants to. (Rationale: Dan, 2026-10-07;
+  one set of numbers serves both semesters, as in the 2026-10-05
+  unit-numbering entry.)
+
 ## Carried over from the first build
 
 Dan confirmed these eight as written on 2026-10-05.

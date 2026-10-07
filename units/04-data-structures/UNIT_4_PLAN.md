@@ -143,8 +143,10 @@ in `sorted`, `del`, sets.
 One table grows across the unit. It is projected and students copy
 it into the journal, a cell at a time. In 4.1 students copy the whole
 frame, with all four columns empty, so they can see that more is
-coming (Dan, 2026-10-07). Lessons 4.1 to 4.4 fill the String column,
-4.5 adds lists, 4.9 adds dictionaries, and 4.12 adds tuples. Lesson
+coming (Dan, 2026-10-07). Lessons 4.1 to 4.4 fill the String column:
+4.1 the first and last rows, 4.3 the two rows about position and
+order, and 4.4 "Can be changed in place" (Dan, 2026-10-07). 4.5 adds
+lists, 4.9 adds dictionaries, and 4.12 adds tuples. Lesson
 4.12 shows it complete.
 
 | | String | List | Dictionary | Tuple |
