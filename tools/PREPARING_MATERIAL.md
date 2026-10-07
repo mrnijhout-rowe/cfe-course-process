@@ -16,9 +16,9 @@ kind of output:
 
 | Maker | Reads | Produces |
 |---|---|---|
-| document maker | a lesson plan, handout, quiz, rubric, form | a Word file, and a PDF if asked |
+| document maker | a lesson plan, handout, quiz, rubric, form | a Word file and a PDF of it |
 | Canvas maker | a page for students | HTML that the teacher pastes into Canvas |
-| slide maker | a deck file | a Slidev deck for projecting and a PowerPoint file |
+| slide maker | a deck file | a PowerPoint file, and a Slidev deck for projecting if asked |
 
 The makers format and do nothing else. That has consequences for how you
 write:
@@ -68,7 +68,8 @@ Whatever should be projected goes in a separate deck file.
 The output takes the file's name, so `LP_4.1_String_Sequence.md` becomes
 `LP_4.1_String_Sequence.docx`. Use names without spaces, and make each name
 unique across the course, not just within its folder: two files called
-`handout.md` in different units would produce the same output file.
+`handout.md` in different units would claim the same output file, and the
+maker stops on the second rather than replace the first.
 
 ## Rules for every file
 

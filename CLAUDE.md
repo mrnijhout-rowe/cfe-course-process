@@ -414,8 +414,8 @@ slides, in order:
 
 A diagram that a concept needs goes in the deck as well as in the plan.
 The deck's markdown form is in tools/PREPARING_MATERIAL.md, "Writing a
-deck file," and the slide maker makes the Slidev deck and the
-PowerPoint file.
+deck file," and the slide maker makes the PowerPoint file (and a Slidev
+deck when asked with `--slidev`).
 
 ## 7. Voice
 
