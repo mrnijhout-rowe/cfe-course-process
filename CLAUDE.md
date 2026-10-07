@@ -227,7 +227,9 @@ never by week. Files: `LP_3.4_Short_Name.md`, `CODIO_3.4_Short_Name.md`,
 assigns the Codio assignment), `QUIZ_3.4_Short_Name.md` (reading quiz),
 `CHECK_4.6_Short_Name.md` (learning check, named by the lesson it is
 marked on), `QUIZ_4_Unit_Quiz.md` (unit quiz), `MINI_2.10_Short_Name.md`
-(larger mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`.
+(larger mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`,
+`DECK_3.4_Short_Name.md` (the lesson's slides, same short name as the
+lesson plan).
 
 **Unit plan** (`units/NN-name/UNIT_N_PLAN.md`, one per unit). Status
 line (PROPOSAL or APPROVED with date). Scope: which Think Python
@@ -367,9 +369,46 @@ options he chose; the shared handout names no option. The spec itself,
 `PROJECT_4_Short_Name.md`, keeps the requirements, the list of options,
 and the teacher section with sample solutions.
 
-**Slides.** None by default. When a concept needs a diagram or a table
-on the wall, the lesson plan's Concept section includes it and marks it
-"project this."
+**Deck** (`lessons/DECK_N.N_Short_Name.md`, one per coding lesson,
+beside its lesson plan; DECISIONS.md, 2026-10-07). It holds what gets
+projected during the period and nothing else. Every word on a slide
+comes from the lesson plan; the deck is written after the plan and
+copies it, so a change to a slide's wording is first a change to the
+plan. What the teacher says goes in `notes`, not on the slide. The
+slides, in order:
+
+1. Title: the lesson number and title, with the unit as subtitle, from
+   the file's frontmatter.
+2. Objectives, as in the plan.
+3. Reading quiz, only when a reading was due: tells students to open
+   Canvas and start the quiz.
+4. Plickers: one slide telling students to get their cards out, worded
+   differently in each deck so it does not become a fixed phrase. The
+   question itself is not projected; it runs in Plickers. The question
+   and answer go in the slide's notes.
+5. Anything the plan's Concept section marks "project this," such as
+   the unit's comparison table. A table that grows across lessons is
+   shown with its full frame every time, including empty columns, and
+   the cells added today appear on click: until the pipeline can do
+   that, as two slides, the table before and the table after.
+6. The try-it prompt, as the plan gives it, with the ceiling variants
+   appearing on click below it.
+7. The try-it key, with its output.
+8. The partner challenge or mini-project brief, as students see it,
+   when the plan marks it "project this."
+9. The quick check, when the plan has one. If it has four choices,
+   two slides: one explaining that the answer is a number from 1 to 4
+   and students hold up that many fingers on "show me," then the
+   question with its choices numbered 1 to 4, and the answer in the
+   notes. Otherwise the question on one slide, and the answer on the
+   next slide or on click. A quick check is not rewritten into four
+   choices for the deck's sake.
+10. Tonight: the reading and the Codio work due, with the due dates.
+
+A diagram that a concept needs goes in the deck as well as in the plan.
+The deck's markdown form is in tools/PREPARING_MATERIAL.md, "Writing a
+deck file," and the slide maker makes the Slidev deck and the
+PowerPoint file.
 
 ## 7. Voice
 

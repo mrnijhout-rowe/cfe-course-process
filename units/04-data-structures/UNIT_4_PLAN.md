@@ -141,9 +141,11 @@ in `sorted`, `del`, sets.
 ## The comparison table
 
 One table grows across the unit. It is projected and students copy
-it into the journal, a row at a time. Lessons 4.1 to 4.4 fill the
-string row, 4.5 adds lists, 4.9 adds dictionaries, and 4.12 adds
-tuples. Lesson 4.12 shows it complete.
+it into the journal, a cell at a time. In 4.1 students copy the whole
+frame, with all four columns empty, so they can see that more is
+coming (Dan, 2026-10-07). Lessons 4.1 to 4.4 fill the String column,
+4.5 adds lists, 4.9 adds dictionaries, and 4.12 adds tuples. Lesson
+4.12 shows it complete.
 
 | | String | List | Dictionary | Tuple |
 |---|---|---|---|---|

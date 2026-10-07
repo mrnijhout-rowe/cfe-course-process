@@ -201,6 +201,25 @@ section.
   material, "let's not stress about it unless it really makes a
   problem undoable by the students.")
 
+## Decisions from the slides session (Dan, 2026-10-07)
+
+- 2026-10-07 [DEFAULT] Every coding lesson has a deck, one markdown
+  file beside its lesson plan, made into slides by the materials
+  pipeline. The deck projects only what the lesson plan already says,
+  in the slide order CLAUDE.md section 6 lists; the plan stays the
+  source and the deck copies it. The quick check keeps whatever shape
+  the plan gives it: four choices get the fingers-up vote, anything
+  else gets its answer on the next slide or on click. (Rationale: Dan,
+  2026-10-06 and 2026-10-07, after the first deck for lesson 4.1; this
+  supersedes the "no slides by default" line that stood in CLAUDE.md
+  from the kickoff.)
+- 2026-10-07 [DEFAULT] A table that grows across lessons, such as
+  Unit 4's comparison table, is projected with its full frame from the
+  first lesson, empty columns included, so students copy the whole
+  frame into the journal and can see that more is coming. (Rationale:
+  Dan, 2026-10-07: students asked to copy a one-column table would not
+  realize there is more to come.)
+
 ## Carried over from the first build
 
 Dan confirmed these eight as written on 2026-10-05.
