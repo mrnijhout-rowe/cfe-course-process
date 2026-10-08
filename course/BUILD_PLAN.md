@@ -11,12 +11,12 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-07, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, U4-DP, and R on U4-B)
+## Where things stand (2026-10-08, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, U4-DP, R on U4-B, and U4-C)
 
-- The outline is approved. Lesson materials exist for 4.1 to 4.8: for
+- The outline is approved. Lesson materials exist for 4.1 to 4.12: for
   each lesson a plan, a deck, and a Canvas page, plus the unit's
-  Canvas page, three reading quizzes with their Codio files, one
-  learning check, one Codio fix, and the unit's Plickers sheet.
+  Canvas page, five reading quizzes with their Codio files, two
+  learning checks, one Codio fix, and the unit's Plickers sheet.
 - Package S0 is done. Everything Dan approved in step 0 is now in
   DECISIONS.md and CLAUDE.md: the coding content is Units 2, 3, and 4
   with data structures as Unit 4, each unit has reading quizzes,
@@ -124,8 +124,21 @@ those live in CLAUDE.md and DECISIONS.md.
   order, leaving 4.4 one cell: LP_4.3, LP_4.4, DECK_4.3, DECK_4.4,
   PAGE_4.3, and UNIT_4_PLAN.md were edited. Outputs in rendered/ for
   every file named in this item are older than the markdown.
-- **Next:** U4-C (needed October 26), which writes decks, pages, and
-  Codio quiz files along with its plans.
+- Package U4-C is done (2026-10-08): lessons 4.9 to 4.12, each with
+  its deck and Canvas page; QUIZ_4.9 and QUIZ_4.12 with their Codio
+  files in rendered/codio/; CHECK_4.11_Lists_And_Dictionaries, whose
+  fourth question draws on U5.EX problem 4; and twelve questions on the
+  Plickers sheet (three Taylor, nine written for CS4120). Dan's answers
+  the same day: these four lessons are written as they run in spring,
+  with no fall lines (he handles fall in the room), so chapter 10 is
+  read whole, "Memos" included, and QUIZ_4.9 has a question on it;
+  U10.EX keeps problems 3 and 4, which use `isinstance`; and
+  `words.txt` is just a file the course uses, so the 2026-10-05 ledger
+  rule about checking and narrowing printed word lists was removed,
+  along with the notes in lessons 4.2, 4.7, and 4.11 that followed
+  from it.
+- **Next:** R on U4-C, then U4-D (needed November 3). U4-D waits on
+  the open "Lighter stages" item in UNIT_4_PLAN.md.
 
 **Open after U4-A, U4-B, and U4-DP:**
 
@@ -533,7 +546,7 @@ that might belong in the ledger.
 | U4-A | lessons 4.1-4.4, two reading quizzes | U4-PLAN approved | done 2026-10-05 |
 | U4-B | lessons 4.5-4.8, one reading quiz, learning check at 4.6 | U4-A | done 2026-10-06 |
 | U4-DP | decks, Canvas pages, and Codio quiz files for 4.1-4.8; the Unit 4 Canvas page | U4-B | done 2026-10-07 |
-| U4-C | lessons 4.9-4.12, two reading quizzes, learning check at 4.11 | U4-B | Oct 26 |
+| U4-C | lessons 4.9-4.12, two reading quizzes, learning check at 4.11 | U4-B | done 2026-10-08 |
 | U4-D | project spec and its pages, lessons 4.13-4.16 | U4-C | Nov 3 |
 | U4-Q | Unit 4 quiz and its Codio review guide | U4-D | Nov 4 |
 | R | a review of one finished package | that package | before Dan teaches from it |
@@ -686,6 +699,8 @@ Later lesson packages do this work as part of writing their lessons,
 so this package is not repeated.
 
 ### U4-C: dictionaries and tuples (lessons 4.9 to 4.12)
+
+Done 2026-10-08.
 
 **Writes:** `LP_4.9` through `LP_4.12`; `QUIZ_4.9` (chapter 10) and
 `QUIZ_4.12` (chapter 11, the sections lesson 4.12 uses); `CHECK_4.11`,

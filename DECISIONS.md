@@ -170,13 +170,6 @@ section.
 
 ## Decisions from package U4-A (Dan, 2026-10-05)
 
-- 2026-10-05 [RULE] Lesson plans, keys, and briefs never print an
-  unchecked list of words from `words.txt` or any other text file. Any
-  list a plan prints, or tells students to print, is read in full
-  before it goes in, and a list that holds a slur or crude word is
-  narrowed (by length or another test) until it is clean. (Rationale:
-  `words.txt` is an unfiltered crossword list; in package U4-A, the
-  lesson 4.2 list of words with no vowels included slurs.)
 - 2026-10-05 [DEFAULT] A reading quiz file ends with a "Code check"
   section below its key: each question's code, run, with its output or
   its error in a `text` block, so tools/plan_check.py confirms every
