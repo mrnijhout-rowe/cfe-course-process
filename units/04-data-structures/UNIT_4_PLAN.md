@@ -3,7 +3,8 @@
 Status: APPROVED 2026-10-05. Dan answered the plan's questions that
 day; his answers are folded into the text and recorded at the end.
 The last open item, the project's lighter stages under "Project," was
-approved on 2026-10-08. Written from the Unit 4 section of
+approved on 2026-10-08, and the same day option B of the project
+became Connect Four (answer 14). Written from the Unit 4 section of
 course/COURSE_OUTLINE.md (APPROVED 2026-10-05) with the six additions
 course/BUILD_PLAN.md asks of package U4-PLAN. Where this plan goes
 beyond the outline, "Departures from the outline" at the end says so.
@@ -36,14 +37,17 @@ five coding exercises.
 
 **Mentioned only** (a sentence or a pointer, no practice): regular
 expressions and writing files (chapter 8), sets, `enumerate`, lists of
-lists (Codio U5.L6), `try` and `except`, list and dictionary
+lists (Codio U5.L6; the project's Connect Four option introduces them
+in its brief), `try` and `except`, list and dictionary
 comprehensions (they appear in Codio pages), `del`, `while` with an
 index over a string (Codio U6.L4).
 
 **Out.** Chapter 8 from "Writing files" on. Chapter 11 "Argument packing," "Comparing and
-Sorting," and "Inverting a dictionary." Codio U5.L6, U6.L2, Unit 7,
+Sorting," and "Inverting a dictionary." Codio U6.L2, Unit 7,
 U8.LAB, U9.L2 to U9.L4 with U9.LAB and U9.EX, U10.L4, and Unit 11.
-U10.LAB (ASCII art with the Pillow library) is optional enrichment.
+U5.L6 (2D Lists) is imported only as reference for the project's
+Connect Four option, and U10.LAB (ASCII art with the Pillow library)
+is optional enrichment.
 
 **Where fall 2026 students start.** See
 units/02-python-foundations/UNIT_2_AS_TAUGHT.md. They write functions
@@ -81,7 +85,7 @@ after it is assigned.
 | 4.10 | A dictionary of counters | `if key not in d: d[key] = 1`, `else: d[key] += 1`; `for key in d` | none | U10.L2, due 4.11 | none | Mini: letter frequencies of a text you pick |
 | 4.11 | Dictionaries holding lists | A value can be a list; `in` on a dictionary is fast, and the class times it | none | U10.L3, due 4.12 | **learning check** on 4.6 to 4.10 | Mini: anagram families or a Scrabble scorer |
 | 4.12 | Tuples | `a, b = b, a`; a function that returns two values returns a tuple; `.items()` | ch. 11, the five sections | U9.L1, due 4.13; U10.EX with problem 5 removed, due 4.14 | reading quiz | Table: tuples. The table is complete. |
-| 4.13 | Project day 1 | Brief, write the plan and the partner agreement, another pair reviews it | ch. 12 as reference for option A only | none | none | Project begins |
+| 4.13 | Project day 1 | Brief, write the plan and the partner agreement, another pair reviews it | ch. 12 as reference for option A only | U5.L6 as reference for option B only, assigned at 4.12 and not graded | none | Project begins |
 | 4.14 | Project day 2, first half | Comments, then code, from the plan; Dan looks at each plan while walking the room | none | none | none | Project |
 | 4.15 | Project day 2, second half | Code | none | none | none | Project |
 | 4.16 | Project day 3 | Finish, another pair runs and reviews it, fix, turn in | none | none | none | Project due. Reflection is homework. Review guide assigned. |
@@ -135,7 +139,9 @@ Not introduced anywhere in the unit, so not used in keys: nested
 loops (fall students have not had lesson 3.7; a ceiling variant may
 use one and says so), `while` with an index over a sequence, `break`,
 `try`/`except`, `isinstance`, list comprehensions, `lambda`, `key=`
-in `sorted`, `del`, sets.
+in `sorted`, `del`, sets. The project's Connect Four option is the one
+exception: its brief introduces a list of lists, and its keys use
+nested loops, which spring students have from lesson 3.7.
 
 ## The comparison table
 
@@ -274,8 +280,12 @@ Projects.
 - **A. Text generator.** Count word frequencies in a text, build a
   table of which word follows which, generate new text. Think Python
   chapter 12 as a project.
-- **B. Codebreaker.** Write a Caesar cipher, then break one by letter
-  frequencies in a real text. Connects to Unit 1.
+- **B. Connect Four.** Two players take turns dropping pieces into a
+  board of seven columns and six rows, shown in the terminal after
+  every move, until one has four in a row or the board is full. From
+  the brief Dan ran in spring 2026, in
+  sources/connect_four_spring_2026/brief.md. It replaced a
+  codebreaker option on 2026-10-08 (answer 14).
 - **C. Word game.** Wordle, Hangman, or Spelling Bee, with the word
   list from a file and a dictionary that tracks letters or statistics
   across rounds.
@@ -286,6 +296,45 @@ Monday out.
 
 Dan confirmed on 2026-10-05 that the rotation puts a 90-minute
 meeting in that week.
+
+**Connect Four, what package U4-D writes [APPROVED 2026-10-08].** The
+source brief's starter code was in Canvas and is not in this
+repository; the option is written without one. Decided in chat on
+2026-10-08, with Dan's go-ahead in answer 14:
+
+- The shared requirements are met this way. The board is a list of
+  lists, one list per row. Each row is displayed with `join`, and
+  what the player types is checked with string operations before
+  `int` sees it. A dictionary maps each piece to its player's name,
+  or keeps a scoreboard across games with the counter pattern from
+  4.10; the brief names both. Dropping a piece returns its row and
+  column as a tuple, and the win check returns who won and where.
+  The text file is a saved board position, six lines of seven
+  characters, read a line at a time as in 4.2 and turned into rows
+  with `list(line)` as in 4.7. Dan provides test positions, one for
+  each kind of win and one draw, so a pair can test the win check
+  without playing twenty moves.
+- Draw detection is required, not a stretch goal: a full board with
+  no winner ends the game. Without it a full board rejects every
+  column forever.
+- The brief's save and load becomes load only. Writing files is out
+  of the unit.
+- Ceiling variants, from the brief's stretch goals: undo, highlighting
+  the winning pieces, a scoreboard across games, a simple computer
+  opponent, a nicer board.
+- The brief's Partner 1 and Partner 2 roles become the suggested
+  split on the plan page, balanced: win detection is the heavy half,
+  so column validation and the draw check go to the other partner.
+- No starter code. The option's brief gives the functions by name
+  with what each takes and returns, and the pair writes the comment
+  skeleton, since comments before code is a rubric row.
+- A list of lists is new. The option's brief carries a short section
+  on making the board and reaching `board[row][col]`, with a Python
+  Tutor link, and names the aliasing trap from 4.8: a board made
+  with `*` is six names for one row. Codio U5.L6 (2D Lists) is
+  imported as reference when the option is offered, assigned at
+  4.12 beside chapter 12, and not graded. Keys use nested loops,
+  which spring students have from lesson 3.7.
 
 **Lighter stages [APPROVED 2026-10-08].** Dan's note in
 FEEDBACK.md (2026-10-05) on the text adventure: the activities around
@@ -458,3 +507,19 @@ package R on U4-C:
     Applied: lessons 4.9 to 4.12 have no fall lines, chapter 10 is
     read whole with "Memos," `QUIZ_4.9` has a question on it, and
     U10.EX keeps problems 3 and 4, which use `isinstance`.
+
+Asked in chat on 2026-10-08, when Dan pasted the Connect Four brief
+he ran in spring 2026 and asked whether it could be a Unit 4 project
+option in place of the codebreaker:
+
+14. Replace the codebreaker option with Connect Four, with the
+    changes Claude proposed?
+
+    Dan: OK, let's mover forward with your plan for adding this project. Lets drop Codebreaker
+
+    Applied: option B and the "Connect Four" paragraph under
+    "Project," the Scope and "New in this lesson" lines on lists of
+    lists and U5.L6, the 4.13 row, the outline's project paragraph,
+    the Connections lines in LP_4.4 and LP_4.10, LP_4.12's
+    Preparation and Codio sections with its deck and page, and the
+    brief saved in sources/connect_four_spring_2026/.

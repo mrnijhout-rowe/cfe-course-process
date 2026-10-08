@@ -149,6 +149,12 @@ those live in CLAUDE.md and DECISIONS.md.
   student did 4.5's swap ceiling and a typo in Extras. UNIT_4_PLAN.md
   now reads chapter 10 whole, "Memos" included, and records Dan's
   answer of 2026-10-08 on writing for spring as its answer 13.
+- Dan's decision of 2026-10-08, applied the same day: the project's
+  option B is Connect Four, from the brief he ran in spring 2026, in
+  place of the codebreaker. The brief is in
+  sources/connect_four_spring_2026/, UNIT_4_PLAN.md's "Project"
+  section says what the option needs (answer 14), and the outline,
+  LP_4.4, LP_4.10, and LP_4.12 with its deck and page were updated.
 - **Next:** U4-D (needed November 3). The project's lighter stages in
   UNIT_4_PLAN.md are approved (2026-10-08).
 
@@ -421,6 +427,12 @@ history here; where they differ from this repository's CLAUDE.md,
 this repository's wins. Its subfolder
 Examples/sample_styled_canvas_pages/ holds two styled Canvas pages.
 Dan said on 2026-10-05 that they are fair to open.
+
+**The spring 2026 Connect Four brief.**
+sources/connect_four_spring_2026/brief.md is the brief Dan ran last
+semester, the source for option B of the Unit 4 project. Its starter
+code is not in the repository. UNIT_4_PLAN.md's "Project" section
+says how the option is reshaped for this course.
 
 **Where fall 2026 students are.** units/02-python-foundations/
 UNIT_2_AS_TAUGHT.md is the record. In short: functions with return
@@ -786,6 +798,13 @@ brief and the day's steps are most of what gets projected.
   three are written. Each option's brief stands alone, and the shared
   handout names no option, so nothing has to be rewritten when Dan
   gives out one or two.
+- Option B is Connect Four (Dan, 2026-10-08), from
+  sources/connect_four_spring_2026/brief.md. UNIT_4_PLAN.md's
+  "Connect Four" paragraph under "Project" lists what the option
+  needs: how it meets the shared requirements, draw detection
+  required, load only, the suggested partner split, no starter code,
+  the section on a list of lists, and the test position files, which
+  this package writes beside the option's brief.
 - One rubric serves all three options, because it scores the stages
   and the shared requirements. It keeps the text adventure's shape:
   rows in the order the work happens, each scored 1 to 5.

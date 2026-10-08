@@ -229,7 +229,8 @@ right, and both files were corrected that day.
 6. **Whole assignments.** A Codio Lab or Coding Exercises set is one
    assignment. Where one problem in a set does not fit, the table
    names the problem to waive.
-7. **Not assigned in Units 2, 3, and 4:** U5.L6 (2D lists), U6.L2
+7. **Not assigned in Units 2, 3, and 4:** U5.L6 (2D lists, except as
+   reference for the Unit 4 project's Connect Four option), U6.L2
    (`min` and `max` on strings), Codio Unit 7 (files), U8.LAB, U9.L2 to
    U9.L4 with U9.LAB and U9.EX (nested tuples, `zip`, and `lambda`),
    U10.L4 (nested dictionaries and JSON), Codio Unit 11 (sets), and
@@ -424,7 +425,7 @@ it can be changed in place, and whether `len`, `in`, and `for` work.
 | 4.10 | A dictionary of counters; looping over a dictionary. | none | U10.L2 | new | Mini: letter frequencies of a text you pick |
 | 4.11 | Dictionaries and lists together; why dictionary lookup is fast. | none; **learning check** on 4.6 to 4.10 | U10.L3 | Taylor, plus new | Mini: anagram families or a Scrabble scorer |
 | 4.12 | Tuples: swap, two return values, `items()`. `zip` and `enumerate` for pairs who are ready. | ch. 11, selected sections, quiz | U9.L1; then U10.EX, waive problem 5 | new | Table: tuples. The table is complete. |
-| 4.13 | Project day 1: the option or options Dan chose, write the plan, another pair reviews it. | ch. 12 as project reference, no quiz | none | none | Unit project begins |
+| 4.13 | Project day 1: the option or options Dan chose, write the plan, another pair reviews it. | ch. 12 as project reference, no quiz | U5.L6 as reference for the Connect Four option | none | Unit project begins |
 | 4.14 | Project day 2, first half: sign-off, work plan, comments before code. | none | none | none | Unit project |
 | 4.15 | Project day 2, second half: code. | none | none | none | Unit project |
 | 4.16 | Project day 3: finish, another pair runs and reviews it, fix, turn in. Reflection is homework. | none | none | none | Unit project due |
@@ -470,8 +471,12 @@ organized into functions.
   build a model of which word follows which and generate new text from
   it. This is Think Python chapter 12, done as a project. It connects
   to how tools like ChatGPT work.
-- **B. Codebreaker.** Write a Caesar cipher, then break one by counting
-  letter frequencies in a real text. It connects back to Unit 1.
+- **B. Connect Four.** Two players take turns dropping pieces into a
+  board of seven columns and six rows, shown in the terminal after
+  every move, until one has four in a row or the board is full. The
+  board is a list of lists, and saved positions load from text files.
+  It is the brief Dan ran in spring 2026; it replaced a codebreaker
+  option on 2026-10-08, and UNIT_4_PLAN.md says what the option needs.
 - **C. Word game.** Wordle, Hangman, or a Spelling Bee, with the word
   list read from a file and a dictionary that tracks letters or
   statistics across rounds.
