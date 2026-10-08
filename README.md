@@ -42,6 +42,8 @@ kind of material must contain is in `course/formats/`.
 - My own assessments from this and other courses, and the fall 2026 text
   adventure lab, which include keys and student-facing briefs.
 - My planning calendar. The materials are written in lessons, not weeks.
+- `course/archive/`, the build log and my working notes behind the
+  outline.
 - The private repository's commit history. This copy is a snapshot per
   change, not a mirror of the history.
 
@@ -59,7 +61,7 @@ GitHub profile: https://github.com/mrnijhout-rowe.
 - `course/COURSE.md`, the course facts; `course/COURSE_OUTLINE.md`, every
   unit and lesson; `course/BUILD_PLAN.md` and `course/packages/`, how a
   work package runs and the packages themselves; `course/formats/`, what
-  each kind of material contains; `course/archive/`, the history.
+  each kind of material contains.
 - `units/*/UNIT_N_PLAN.md`: one plan per unit, listing lessons, readings,
   Codio slots, checks, and the project. `units/04-data-structures/lessons/`
   holds the lesson 4.1 sample: `LP_4.1_String_Sequence.md`,
@@ -94,7 +96,7 @@ To make it yours:
    habits in "How class runs" that are mine rather than yours.
 3. Delete `DECISIONS.md` and start your own ledger; the rules it
    records are already stated in the charter and the format files, so
-   nothing is lost. Delete `FEEDBACK.md` and `course/archive/` too.
+   nothing is lost. Delete `FEEDBACK.md` too.
 4. Write your own `course/COURSE_OUTLINE.md` and unit plans in the
    formats given; the Unit 4 plan here is a worked example.
 5. Open Claude Code at the top of the repository and say

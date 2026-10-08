@@ -3,7 +3,7 @@
 Status: APPROVED 2026-10-05. Written 2026-10-05 and revised the same
 day to apply Dan's answers, which are recorded at the end of this file;
 Dan approved it in the build plan's step 0.1 (now in
-course/archive/BUILD_LOG_2026-10-07.md). It replaces the 2026-09-27
+course/archive/BUILD_LOG.md). It replaces the 2026-09-27
 outline.
 
 This file is the course structure: the units, every lesson in one line,
