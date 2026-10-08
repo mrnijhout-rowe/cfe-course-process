@@ -565,3 +565,23 @@ the program:
     missing," which scores a missing reflection 1 point. Change it?
 
     Dan: Keep it as is for now
+
+Asked in chat on 2026-10-08, after package U4-Q:
+
+22. Keep the review guide's first page, "Before Data Structures," on
+    the earlier topics that make up a fifth of the quiz?
+
+    Dan: Yes
+
+23. The quiz's Q13, on choosing a list or a dictionary, is easy for
+    anyone who was in class. All right?
+
+    Dan: Fine
+
+24. Save the script that makes the review guide's JSON files in
+    tools/?
+
+    Dan: Yes, please
+
+    Applied: `tools/review_json.py`, which reads the guide's answers
+    page, named in README.md and course/formats/ASSESSMENTS.md.

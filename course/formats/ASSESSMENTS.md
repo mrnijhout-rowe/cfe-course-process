@@ -114,6 +114,9 @@ and is not the same question: different code, different values. Every
 `{Check It!|assessment}` line on a guide page names a JSON file that
 exists, and each JSON file parses with exactly one correct answer.
 Guide pages are student-facing and name the unit by its topic.
+The answers page writes out every practice question in full, and
+`tools/review_json.py` makes the JSON files from it, so a change to a
+question is made on the answers page and the tool is run again.
 
 ## Done when
 
