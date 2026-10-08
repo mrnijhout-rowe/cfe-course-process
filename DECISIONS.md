@@ -8,6 +8,12 @@ Nothing outside this file and CLAUDE.md is a standing requirement, no
 matter how many times it has happened before. Superseded entries stay,
 annotated, so the history reads in one place.
 
+*Revised 2026-10-08, in the governance audit: standing rules are stated
+in CLAUDE.md, course/COURSE.md, and course/formats/, each citing its entry
+here by date, and this file is the record behind them (CLAUDE.md, "Where
+rules live"). Current entries come first; superseded and closed ones are
+under the last heading. No entry's wording was changed.*
+
 ## Decisions from the second-build kickoff (Dan, 2026-09-27)
 
 - 2026-09-27 [RULE] This repository is the second build of CS4120. The
@@ -22,8 +28,7 @@ annotated, so the history reads in one place.
   (Rationale: Unit 1 taught well and is not part of the redesign.)
 - 2026-09-27 [DEFAULT] Coding lessons run concept, try it, partner
   challenge, Codio exercises, with a short reading quiz at the top when
-  a reading was due. Timings and the full shape are in CLAUDE.md
-  section 3. (Rationale: two months of teaching showed the class needs
+  a reading was due. Timings and the full shape are in CLAUDE.md, "How class runs". (Rationale: two months of teaching showed the class needs
   more reps and a faster pace than the discovery-first plan gave it,
   especially for the basics through conditionals and loops.)
 - 2026-09-27 [DEFAULT] Homework is traditional coding exercises in
@@ -42,15 +47,6 @@ annotated, so the history reads in one place.
   five questions, at the start of the class after the reading is due.
   (Rationale: Dan's choice among quiz, journal, and peer instruction
   options; readings from Think Python continue.)
-- 2026-09-27 [OPEN] Where reading quizzes are taken: paper, Canvas, or a
-  Codio multiple choice assessment. Masters are written platform-neutral
-  (questions plus key in markdown) until this is decided.
-  *Narrowed 2026-10-05: paper is out. Reading quizzes are all multiple
-  choice and are taken in Canvas or as a Codio multiple-choice
-  assessment; which of the two stays open. See the reading quiz entry
-  of that date below.*
-  *Closed 2026-10-07: Codio. See the reading quiz entry of that date
-  below.*
 - 2026-09-27 [DEFAULT] Unit 3 teaches strings, lists, and dictionaries
   as one family: shared grammar once (iteration, `in`, `len`, indexing
   and slicing for the ordered ones), then each new container as "same
@@ -63,10 +59,16 @@ annotated, so the history reads in one place.
   formats), DECISIONS.md (this ledger), FEEDBACK.md (post-teaching
   notes). No per-session transcripts; git history is the record.
   (Rationale: the first build's governance outgrew its usefulness.)
+  *Superseded in part 2026-10-08: standing rules now live in CLAUDE.md,
+  course/COURSE.md, and course/formats/, with this file as the dated
+  record. No transcripts, git as the record: still stands.*
 - 2026-09-27 [RULE] Guiding documents are written to be self-contained
   for any model, with no reliance on chat history or earlier builds.
   Materials will be generated with Claude Opus 5.5. (Rationale: Dan's
   stated plan; the docs must brief a fresh model cold.)
+  *Annotated 2026-10-08: the documents still brief a new session cold
+  (CLAUDE.md, opening lines). The model is Dan's current choice and
+  changes; it is no longer named in the charter or the build plan.*
 
 ## Decisions from the course-structure session (Dan, 2026-10-05)
 
@@ -193,7 +195,7 @@ section.
   question, when that fits better. Untaught material gets a fix only
   when it makes a problem one students cannot do; anywhere else it
   gets a one-line note in the lesson plan, or the page is hidden. The
-  format is in CLAUDE.md section 6. (Rationale: Dan, 2026-10-06, after
+  format is in course/formats/LESSON.md. (Rationale: Dan, 2026-10-06, after
   U6.L5 told students to compare strings with `is`; on untaught
   material, "let's not stress about it unless it really makes a
   problem undoable by the students.")
@@ -203,7 +205,7 @@ section.
 - 2026-10-07 [DEFAULT] Every coding lesson has a deck, one markdown
   file beside its lesson plan, made into slides by the materials
   pipeline. The deck projects only what the lesson plan already says,
-  in the slide order CLAUDE.md section 6 lists; the plan stays the
+  in the slide order course/formats/STUDENT_FACING.md lists; the plan stays the
   source and the deck copies it. The quick check keeps whatever shape
   the plan gives it: four choices get the fingers-up vote, anything
   else gets its answer on the next slide or on click. (Rationale: Dan,
@@ -235,7 +237,7 @@ section.
   post, and the deck's Tonight list. A unit has a unit page and a
   project has a project page. No Canvas page says when anything is
   due, in any form; due dates live in Canvas and Codio. The format is
-  in CLAUDE.md section 6. (Rationale: Dan, 2026-10-07; the Unit 4
+  in course/formats/STUDENT_FACING.md. (Rationale: Dan, 2026-10-07; the Unit 4
   plans already sent students to "today's Canvas page" for links, and
   nothing authored it. Posting before class is what makes the links
   usable in class. This replaces COURSE.md's line that lesson
@@ -273,6 +275,9 @@ section.
 
 Dan confirmed these eight as written on 2026-10-05.
 
+*One of the eight, the difficulty default, is under "Superseded and
+closed" since 2026-10-08.*
+
 - 2026-10-05 [RULE] The semester's last ~12 meeting days are reserved:
   ~6 for a speed run of taster topics (Dan picks each semester), then ~6
   for student final-project work. Presentations finish by the last full
@@ -298,18 +303,40 @@ Dan confirmed these eight as written on 2026-10-05.
   easily. The easiest path to an A must be honest work, not delegating
   the work to an AI. (Rationale: standing rule in the first build;
   confirmed by Dan.)
+- 2026-10-05 [DEFAULT] Each unit names at least one final-project
+  pointer: a topic the course points at but does not teach, so students
+  accumulate project ideas all semester. (Rationale: standing rule in
+  the first build; confirmed by Dan.)
+
+## Superseded and closed
+
+Entries that no longer govern, kept as written with the annotations that
+closed or superseded them. Gathered here on 2026-10-08.
+
+### From the second-build kickoff (Dan, 2026-09-27)
+
+- 2026-09-27 [OPEN] Where reading quizzes are taken: paper, Canvas, or a
+  Codio multiple choice assessment. Masters are written platform-neutral
+  (questions plus key in markdown) until this is decided.
+  *Narrowed 2026-10-05: paper is out. Reading quizzes are all multiple
+  choice and are taken in Canvas or as a Codio multiple-choice
+  assessment; which of the two stays open. See the reading quiz entry
+  of that date below.*
+  *Closed 2026-10-07: Codio. See the reading quiz entry of that date
+  below.*
+
+### Carried over from the first build (Dan, 2026-10-05)
+
 - 2026-10-05 [DEFAULT] Difficulty: single-step, hand-held problems are
   not an assessment tier. Graded problem sets open with one to three
   warm-ups that are multi-step with a little help or single-step with
   none, then lead with multi-step problems where the method is not
   given. (Rationale: standing rule in the first build; confirmed by
   Dan.)
-- 2026-10-05 [DEFAULT] Each unit names at least one final-project
-  pointer: a topic the course points at but does not teach, so students
-  accumulate project ideas all semester. (Rationale: standing rule in
-  the first build; confirmed by Dan.)
+  *Archived 2026-10-08: no artifact in this build is a graded problem
+  set; Codio supplies them (Dan).*
 
-## Open questions not yet on the ledger
+### Open questions from the kickoff
 
 Dan closed all three on 2026-10-05. His answers stay under each
 question, with the entry that closes it.

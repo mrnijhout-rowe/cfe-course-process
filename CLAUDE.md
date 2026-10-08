@@ -1,488 +1,157 @@
-# CLAUDE.md - CS4120 Course Development, second build
+# CLAUDE.md - CS4120 course development, second build
 
-Operating charter for AI-assisted development of CS4120: Computing for
-Everyone (NCSSM, Dan Nijhout-Rowe). Read this file first, every session.
-It is written for whichever model is doing the work; nothing here assumes
-memory of an earlier session or an earlier model.
+How this repository builds CS4120: Computing for Everyone, an
+introductory Python course at the North Carolina School of Science and
+Mathematics (NCSSM), taught by Dan Nijhout-Rowe. Claude writes the
+materials and Dan decides. A new session with no memory of any earlier
+one should be able to do a work package from these files alone.
 
-Read in this order: this file, DECISIONS.md, course/COURSE.md, then the
-unit folder you are working in. FEEDBACK.md holds what Dan said after
-teaching; read the entries for the unit you are touching.
+## What to read
 
-Work linearly. Do not spawn subagents unless Dan asks for them.
+Every session reads this file, course/COURSE.md, course/BUILD_PLAN.md,
+and the FEEDBACK.md entries for the unit it touches, if any. Then, by
+package:
 
-## 1. How to read this repository
+| Package | Also read, in this order |
+|---|---|
+| Lesson (U4-C and the like) | course/COURSE_OUTLINE.md, the unit's section and "Where the book and the Codio course do not line up"; your file in course/packages/; course/formats/LESSON.md, ASSESSMENTS.md, and STUDENT_FACING.md; tools/PREPARING_MATERIAL.md; then the unit plan and every lesson, deck, and page already in the unit |
+| Review (R) | the outline's unit section; course/packages/R.md; all four files in course/formats/; then the files under review |
+| Unit plan | course/COURSE_OUTLINE.md; your package file; course/formats/UNIT_AND_PROJECT.md and STUDENT_FACING.md; tools/PREPARING_MATERIAL.md |
+| Quiz | the outline's unit section; your package file; course/formats/ASSESSMENTS.md; then every plan, quiz, and check in the unit |
+| Project | the outline's unit section; your package file; course/formats/UNIT_AND_PROJECT.md and STUDENT_FACING.md; tools/PREPARING_MATERIAL.md |
 
-Every standing statement carries a tag. Untagged statements are
-description, not obligation.
+Each package file names the course material it needs beyond that.
 
-- **[RULE]** Always true. Deviating requires asking Dan first.
-- **[DEFAULT]** True unless a unit plan, a lesson plan, or Dan says
-  otherwise. Deviating is normal; note the deviation where it happens.
-- **[EXAMPLE]** Illustrative only. Zero precedent weight. One example
-  does not mean Dan wants more like it.
-- **[OPEN]** Undecided. Do not resolve it silently; ask, or propose with
-  a recommendation.
+DECISIONS.md is Dan's record of every decision, dated. A rule in this
+file, in course/COURSE.md, or in a format file cites the entry behind
+it, as in (DECISIONS.md, 2026-10-07). Open the ledger when you want the
+reason behind a cited date, when you propose changing a rule, and in
+package R. It is not read front to back every session (Dan, 2026-10-08).
 
-**[RULE] Standing requirements live in exactly two files: this one and
-DECISIONS.md.** A past lesson plan, a generated artifact, a pattern that
-has appeared three times, or something said in chat creates no
-obligation. When you notice yourself inferring a recurring pattern, say
-so and ask whether it belongs in the ledger. Dan decides; you do not.
+README.md has the layout of the repository, what was carried over from
+the first build, and how outputs are made.
 
-**[RULE] DECISIONS.md grows only at Dan's explicit direction.** Entries
-are dated, tagged, and carry a one-line rationale.
+## How we work
 
-**[RULE] The previous build is off limits as material.** The first build
-of this course lives in ../cfe_redesign. Its generated lesson plans,
-slides, pages, notebooks, assessments, and specs are not to be opened,
-quoted, or imitated when authoring here. The only things carried over
-are listed in README.md. Unit 1 stays there, untouched, and
-units/01-information/README.md here points at it. If a question can only
-be answered by reading the old repo, ask Dan.
+- **Claude proposes, Dan decides.** Claude proposes the skeleton, a
+  unit's lesson list or a lesson's, and flags anything that departs
+  from a default. Dan edits or approves; disagreement is cheap here and
+  expensive after generation. Claude writes the content. After Dan
+  teaches it, his notes go in FEEDBACK.md, newest on top; they inform
+  later proposals and become rules only when he promotes them to the
+  ledger. Ask about consequential choices, decide trivia yourself, and
+  when torn between two defensible approaches, propose both with a
+  recommendation.
+- **Where rules live.** Standing rules are in this file,
+  course/COURSE.md, and course/formats/. DECISIONS.md is the dated
+  record behind them. A statement marked **[RULE]** needs Dan's
+  permission to deviate from. Everything else in those files is a
+  default: true unless a unit plan, a lesson plan, or Dan says
+  otherwise, with the deviation noted where it happens. A past plan, a
+  generated artifact, a pattern that has appeared three times, or
+  something said in chat creates no obligation. **[RULE]** DECISIONS.md
+  grows only at Dan's explicit direction (DECISIONS.md, 2026-09-27).
+- **[RULE] Content-complete markdown.** Every key, every explanation,
+  every commented solution, and every quiz answer sits in the same file
+  as the thing it answers. All artifacts are markdown, except a .py
+  file a student opens in an editor.
+- **Time estimates run tight:** minutes inside a lesson, days for a
+  project, lessons for a unit. Dan stretches them in the room. Claude
+  tends to badly overestimate how much time students need (DECISIONS.md,
+  2026-10-05).
+- **[RULE] The first build is off limits as material.** It lives in
+  ../cfe_redesign. Its lesson plans, slides, pages, notebooks,
+  assessments, and specs are not opened, quoted, or imitated here; its
+  materials carried voice problems Dan does not want back. README.md
+  lists the only things carried over. Unit 1 stays there, pointed at
+  from units/01-information/README.md. If a question can only be
+  answered by reading the old repository, ask Dan (DECISIONS.md,
+  2026-09-27).
+- **Git.** Dan drives it unless he says otherwise. Commits are the
+  project record; there are no session transcripts.
+- **Making outputs** (Word files, slides, Canvas HTML) is a separate
+  step, taken only when Dan asks. README.md says how.
+- **Work linearly.** One package per session. No subagents unless Dan
+  asks for them.
 
-## 2. Who Dan is
+## How class runs
 
-- **[RULE]** Veteran math teacher (17 years, AP Calculus BC and AP
-  Statistics lineage), now full-time computer science teacher at NCSSM,
-  a residential STEM magnet school. Strong teaching craft; CS depth is
-  solid and still growing. Materials should hand him what a long-time
-  CS teacher carries in their head (see section 5), never assume it.
-- **[RULE]** Core identity: lead learner and facilitator. The thinking
-  belongs to the students, and movement and talk are how it happens:
-  students explain to a partner, stand at a whiteboard, argue about a
-  prediction, before and while they type. A period where students only
-  watch and then type alone has lost this. Live coding shows the real
-  process: reasoning aloud, hitting errors, reading documentation,
-  fixing things. Never present only the polished final version.
-- **[DEFAULT]** Room reality: tables with partner-size and individual
-  whiteboards, several large wall whiteboards, a class set of
-  micro:bits that stay in the box unless a concept genuinely lands
-  better on a device. Students keep paper journals.
-- **[DEFAULT] Journal first, then partner, then room.** Before any
-  whole-class or partner discussion of a question, students think and
-  write in the journal for 30 to 60 seconds, then share with an elbow
-  partner, then the room hears a few. Write discussion questions to
-  survive this: concrete enough to write about in a minute, rich enough
-  to disagree about.
-- **[DEFAULT] Peer instruction.** Concept checks run as peer instruction
-  in the spirit of peerinstruction4cs.org, via Plickers: a
-  multiple-choice question with distractors built from real
-  misconceptions, individual vote, partner argument, revote, then the
-  reveal. Use it in the Concept block when the idea has a common wrong
-  answer worth surfacing. A lesson that runs Plickers runs at least
-  two questions, and three where the lesson's ideas supply them
-  (DECISIONS.md, 2026-10-07). The plan carries them together in one
-  step, numbered in the order to run them, each with its question, its
-  answer, and what each distractor catches; any beyond three are
-  spares in Extras. sources/peer_instruction/ is a bank to draw from:
-  Cynthia Taylor's questions, used first (DECISIONS.md). Rules for
-  using them:
-  - Plickers cards carry A to D. Drop her "I don't know" option. Where
-    she has five real options, cut one and say which.
-  - Otherwise keep her wording, code, and answer. Allowed changes:
-    fixing a slide typo that sources/peer_instruction/
-    VERIFICATION_REPORT.md documents, and renaming something that
-    depends on a topic this course has not taught yet. Note each change
-    in one line.
-  - Do not use the two questions the verification report lists as
-    unresolved discrepancies. Skip questions that depend on her
-    course's graphics library.
-  - Each question in a plan carries a source line: her deck and slide
-    number, or "written for CS4120." A new question is never credited
-    to her.
-  - A new question follows her pattern: a short piece of code to trace,
-    or a choice among versions of a function, with each wrong answer
-    produced by one specific wrong idea.
+Dan is a veteran math teacher (17 years, AP Calculus BC and AP
+Statistics), now full-time computer science teacher at NCSSM, a
+residential STEM magnet school. His teaching craft is strong; his CS
+depth is solid and still growing. Materials hand him what a long-time
+CS teacher carries in their head, the errors students will hit and
+where an idea goes later, and never assume it.
 
-## 3. How class runs in the coding units
+**[RULE] The thinking belongs to the students.** Dan is lead learner
+and facilitator. Students explain to a partner, stand at a whiteboard,
+argue about a prediction, before and while they type. A period where
+students only watch and then type alone has lost this. Live coding
+shows the real process: reasoning aloud, hitting errors, reading
+documentation, fixing things. Never present only the polished final
+version.
 
-This is the change that motivated the second build. Unit 1 (unplugged,
-readings-driven) is done and unchanged. From the first coding unit on,
-class is direct and practice-heavy, and the pace is faster than the
-first build planned.
+**Journal first, then partner, then room.** Before any discussion of a
+question, students think and write in the paper journal for 30 to 60
+seconds, then share with an elbow partner, then the room hears a few.
+Write discussion questions to survive this: concrete enough to write
+about in a minute, rich enough to disagree about.
 
-**[DEFAULT] The period shape.** A 50-minute coding lesson runs:
+**Peer instruction.** Concept checks run as peer instruction in the
+spirit of peerinstruction4cs.org, with Plickers: a multiple-choice
+question whose distractors come from real misconceptions, an
+individual vote, partner argument, a revote, then the reveal. It fits
+the Concept block when the idea has a common wrong answer worth
+surfacing. How many questions a lesson runs, where they come from, and
+how a plan carries them is in course/formats/LESSON.md.
 
-1. **Reading quiz** (5 minutes) when a reading was due. Short, graded,
-   taken in Codio as multiple-choice assessments, reached through a
-   link in Canvas (DECISIONS.md, 2026-10-07). On the lessons a unit
-   plan marks, a
-   **learning check** (DECISIONS.md) takes the first ten minutes in
-   place of the reading quiz, and the plan says in one line what to
-   shorten.
-2. **Concept** (10 minutes). Dan live-codes one idea. One idea, not
-   three. The plan gives the code in the order it gets typed, with what
-   to say at each step and the error to hit on purpose if there is one.
-   A peer instruction question (section 2) fits here when the idea has
-   a common wrong answer.
+**The period.** From the first coding unit on, class is direct and
+practice-heavy. A 50-minute coding lesson runs (DECISIONS.md,
+2026-09-27):
+
+1. **Reading quiz** (5 minutes) when a reading was due. On the lessons
+   a unit plan marks, a
+   **learning check** (10 minutes) takes its place, and the plan says
+   in one line what to shorten.
+2. **Concept** (10 minutes). Dan live-codes one idea, not three. The
+   plan gives the code in the order it gets typed, what to say at each
+   step, and the error to hit on purpose if there is one. The peer
+   instruction questions run here.
 3. **Try it** (10 minutes). Every student writes a short program that
-   mirrors the demo with one thing changed. Individual, at the keyboard,
-   in Thonny.
+   mirrors the demo with one thing changed. Individual, in Thonny.
 4. **Partner challenge** (15 minutes). One harder problem for pairs.
    Logic before syntax: pairs talk it through and sketch the steps on
-   the table whiteboard before either of them types, then type it in
-   Thonny. Ceiling variants for pairs that finish.
-5. **Codio** (10 minutes). Students start the day's Codio exercises;
-   the rest is homework.
+   the table whiteboard before either types. Ceiling variants for
+   pairs that finish. On the days a unit plan marks, a mini-project
+   takes this slot.
+5. **Codio** (10 minutes). Students start the day's Codio work; the
+   rest is homework.
 
-A 90-minute meeting runs two lessons, or one lesson plus sustained work
-time. Plans are written in 50-minute lessons and never depend on a long
-block. How lessons map onto real meetings is Dan's call in the room.
+Materials are written in lessons, never in weeks or dates. A 90-minute
+meeting runs two lessons or one lesson plus work time; how lessons fall
+on real meetings, and what to drop when time runs short, is Dan's call
+in the room. This repository keeps no calendar (Dan, 2026-10-08).
+course/COURSE.md has the meeting rhythm the materials are sized to.
 
-**[DEFAULT] Mini-projects.** On the days a unit plan marks, a
-mini-project (DECISIONS.md) takes the partner-challenge slot or the
-work half of a 90-minute meeting.
-
-**[DEFAULT] Unit quiz.** Each coding unit ends with one, after the
-project (DECISIONS.md). Dan schedules it, and plans do not budget its
-time.
-
-**[DEFAULT] Discovery where the content supplies a real problem, plain
-instruction where it does not.** Dan's earlier defaults (experience
-before formalization, a real headache before its tool) still describe
-how he prefers learning to happen when the content affords it. They are
-dispositions, not per-lesson requirements. A manufactured mystery,
-staged withholding, or teaser is worse than a plain explanation. When a
-concept has an organic problem behind it, use it; when it does not, say
-"here is the concept" and move to practice.
+**Discovery where the content supplies a real problem, plain
+instruction where it does not.** When a concept has an organic problem
+behind it, use it. When it does not, say "here is the concept" and
+move to practice. A manufactured mystery, staged withholding, or teaser
+is worse than a plain explanation.
 
 **[RULE] Over-provision.** A lesson plan is a menu, not a script. Give
-more try-it variants and challenge ceilings than fit, clearly marked, so
-Dan can cut live. Dan skipping a component is normal use, not feedback.
+more try-it variants and challenge ceilings than fit, clearly marked,
+so Dan can cut live. Dan skipping a component is normal use, not
+feedback.
 
-**[DEFAULT] Sources.** Think Python, 3rd edition, is the reading and the
-source of examples. Codio's built-in course "Python Programming from
-Codio" supplies imported exercises and labs; when a lesson's Codio block
-can be served by importing, the plan says which exercises, and no new
-guide is written. Codio guides are authored here only when the built-in
-course has nothing that fits. Python Tutor (pythontutor.com) is the
-default for demos about what a program stores as it runs.
+Mini-projects run from the first coding week, and each coding unit ends
+with a project and then a unit quiz. What each of those is, and what
+every other artifact contains, is in course/formats/.
 
-**[DEFAULT] Unit projects** bring a unit's ideas together and leave room
-for student choice. They are graded by rubric, never autograded. The
-fall 2026 text adventure lab is the model of the shape, not of the
-content. Each project is written with several options, and Dan chooses
-which of them a class is offered.
+## Voice
 
-## 4. Working loop
-
-1. **Propose.** Claude proposes the unit skeleton (lesson list, one line
-   each, readings, Codio slots, project idea) or the lesson skeleton.
-   Flag anything that departs from a [DEFAULT].
-2. **Approve.** Dan edits or approves. Disagreement is cheap here and
-   expensive after generation.
-3. **Author.** Content-complete markdown, with every key, every
-   commented solution, and every quiz answer in the same file as the
-   thing it answers.
-4. **Feedback.** After Dan teaches it, his notes go in FEEDBACK.md,
-   newest on top. Notes inform later proposals; they become rules only
-   when Dan promotes them to DECISIONS.md.
-
-Claude proposes structure, Dan approves it, Claude generates content.
-Ask about consequential choices; decide trivia yourself; when torn
-between two defensible approaches, propose both with a recommendation.
-
-Git: Dan drives it unless he says otherwise. Commits are the project
-record; there is no separate session-transcript requirement in this
-build.
-
-## 5. What every teacher-facing artifact carries
-
-- **[RULE]** Answers and explanations for every question; commented
-  code for every snippet and solution.
-- **[DEFAULT]** A short **Pitfalls** list: the errors students will
-  actually hit in this lesson, what the message looks like, and what to
-  say. Keep it to the errors this lesson produces.
-- **[DEFAULT]** One or two **Connections** lines when they earn their
-  place: where this idea goes later, what a CS colleague would point out.
-
-## 6. Artifact formats
-
-All artifacts are markdown unless a file is meant to be opened by a
-student in an editor, in which case it is a .py file. Keep the set
-small. This section is the format authority for what each artifact
-contains. tools/PREPARING_MATERIAL.md is the guide to markdown form.
-
-**[DEFAULT] Form.** Every markdown artifact is written to
-tools/PREPARING_MATERIAL.md, so the materials pipeline (a separate
-repository that turns markdown into Word files, Canvas pages, and
-slides) can format it without changes. Read the guide before authoring.
-A line inside a code block, code or output, is 80 characters or fewer,
-and tools/plan_check.py flags a longer one. Shorten a long comment or
-move it to its own line. Split long code using only what the lesson has
-taught. Real output that cannot be shorter keeps its length under a
-`plan_check wide` comment.
-
-**[DEFAULT] Making the outputs.** The pipeline lives at
-~/Documents/projects/pipeline. `pipeline.yml` at the top of this repo
-gives every file the author, the course name, and the course's styles
-(the `cfe` look for Canvas pages and slides, the pipeline's plain default
-for documents), so a maker needs no style flag. Run the makers from the
-top of this repo, as in `~/Documents/projects/pipeline/make doc
-units/04-data-structures/lessons/LP_4.1_String_Sequence.md`; output
-lands in `rendered/`, which git ignores. Before running one, read
-docs/making-materials.md in the pipeline repo: it says how to read what
-a maker prints, how to look at the result, and why an output is never
-edited by hand.
-
-**Naming.** Lessons are numbered Unit.Lesson (3.4 is Unit 3, lesson 4),
-never by week. Files: `LP_3.4_Short_Name.md`, `CODIO_3.4_Short_Name.md`,
-`CODIO_FIX_4.4_Short_Name.md` (Codio fix, named by the lesson that
-assigns the Codio assignment), `QUIZ_3.4_Short_Name.md` (reading quiz),
-`CHECK_4.6_Short_Name.md` (learning check, named by the lesson it is
-marked on), `QUIZ_4_Unit_Quiz.md` (unit quiz), `MINI_2.10_Short_Name.md`
-(larger mini-project), `PROJECT_3_Short_Name.md`, `UNIT_3_PLAN.md`,
-`DECK_3.4_Short_Name.md` (the lesson's slides, same short name as the
-lesson plan), `PAGE_3.4_Short_Name.md` (the lesson's Canvas page, same
-short name again), `PAGE_3_Unit.md` (the unit's Canvas page),
-`PROJECT_3_Page.md` (the project's Canvas page).
-
-**Unit plan** (`units/NN-name/UNIT_N_PLAN.md`, one per unit). Status
-line (PROPOSAL or APPROVED with date). Scope: which Think Python
-chapters and topics, which are in, out, or mentioned only. Lesson table:
-number, title, concept, reading due, Codio block, quiz yes or no; it
-also marks each learning check. For each check the plan names the
-lessons it covers and the assignment its fourth question draws on.
-Project paragraph, and a line saying the unit quiz comes after the
-project. Grading summary. Cut points if the calendar shrinks. One to
-two pages.
-
-**Lesson plan** (`lessons/LP_N.N_Short_Name.md`). Sections, in order:
-
-```markdown
-# Lesson N.N: Title
-## Overview          2-4 sentences, what students do, in order
-## Objectives        "Students will be able to:" then 2-4 observable verbs
-## Preparation       checkbox list, concrete actions
-## Reading           Due today: ... / Assign tonight: ... ("nothing" is a real answer)
-## Agenda
-### Reading quiz (5 min)      pointer to the QUIZ file; or "Learning check (10 min)"
-                              with a pointer to the CHECK file on the lessons the
-                              unit plan marks; or "none today"
-### Concept (10 min)          the code as typed, step by step, with what to say;
-                              the peer instruction questions (two or three);
-                              Python Tutor link
-### Try it (10 min)           the problem, then the key, commented
-### Partner challenge (15 min) the problem, ceiling variants, then the key, commented
-### Mini-project (15 min)     optional, on days the unit plan marks
-### Codio (10 min)            which exercises, imported or authored
-## Pitfalls
-## Quick check       one exit-ticket question with its answer, optional
-## Extras            peer instruction questions beyond the three, and extra variants
-```
-
-The Concept section holds the lesson's peer instruction questions,
-two or three, in one step and numbered in the order to run them. Each
-has its source line, the question, options A to D, the answer, and one
-line per wrong answer saying what it catches. Where the outline calls for one, a link
-labeled "Open in Python Tutor" sits directly under the code it opens.
-
-The optional Mini-project section gives the brief as students see it,
-marked "project this"; two or three options; what to look for while
-walking the room; and one commented sample solution.
-
-Peer instruction questions beyond the three, and extra variants, go
-under Extras, so the top of the plan stays what Dan needs in the room.
-
-**Code blocks.** A block marked `python` runs exactly as written. A
-block marked `python no-run` is a fragment or fails on purpose, and the
-real error message is shown under it. Output is shown in a block marked
-`text`.
-
-Section names and times are a starting point. Drop or rename a section
-when the day is shaped differently (a project work day, a quiz day) and
-leave a one-line comment saying why. A lesson plan has no length
-limit. Keys stay in the plan; a separate .py starter file is made only
-when students need to open something.
-
-**Reading quiz** (`assessments/QUIZ_N.N_Short_Name.md`). Three to five
-questions on the assigned reading, answerable in five minutes by a
-student who did the reading and not by one who did not. Mix one recall
-question with questions that require having run or traced the chapter's
-code. Every question is multiple choice with four options, A to D, and
-exactly one correct answer. The key, below the questions, is a table:
-question, answer, one-line explanation. Students take the quiz in
-Codio (DECISIONS.md, 2026-10-07). Its Codio files are made from the
-quiz file with the codio-mcq skill, after the quiz is final, into
-`rendered/codio/QUIZ_N.N_Short_Name/`: a guide page that embeds the
-questions and `MC_Assessments/` with one JSON (JavaScript Object
-Notation) file per question. Each question's guidance is its key
-explanation, the answers keep the order the quiz file gives them, and
-the questions are not shuffled. Those files are output, remade from the
-quiz file when it changes, and never edited by hand; the lesson plan's
-Preparation list tells Dan to put them in Codio.
-
-**Learning check** (`assessments/CHECK_N.N_Short_Name.md`). The top
-half is what gets projected: the line "Answer in your journal. Label
-each answer clearly (A1, A2, A3, B1)."; Part A with A1 (2 points), A2
-(2 points), and A3 (3 points); Part B with B1 (3 points). Below a
-divider, teacher notes: the lessons covered; for each Part A question,
-the answer, the lesson where students saw it, the common miss, and how
-the points split; for B1, the same plus the assignment or mini-project
-it draws on; a grading budget; and a scoring line saying Part A alone
-is 7 of 10. The line `<!-- pipeline: only teacher -->` sits directly
-above the divider and `<!-- pipeline: end only -->` is the last line of
-the file, so the student copy the materials pipeline makes holds only
-the projected half. No other kind of artifact gets these two lines
-unless Dan asks for a student copy of it. Questions and answers run to the length of the examples in
-sources/assessments/learning_checks/: an answer is a value, an exact
-output, a sentence or two, a few lines of code, or a quick sketch, and
-a journal grades in about 90 seconds. Dan makes the slide that
-projects the questions himself, so the lesson's deck has none; the
-file sets no limit for that.
-
-**Unit quiz** (`assessments/QUIZ_N_Unit_Quiz.md`), laid out like
-sources/assessments/unit_2_quiz/Cumulative_Quiz_Units1-2_LLM.md: an
-"About this file" block (total points, coverage, conditions, Canvas
-question types), the multiple-choice questions, the short-answer
-questions, an answer key table with topic and explanation, the spread
-of answers across A to D, and a point-by-point rubric for each short
-answer. Ten to thirteen multiple-choice questions at 2 points and two
-short-answer questions at 7 points, sized for about 30 minutes.
-
-**Quiz review guide** (folder `materials/CODIO_N_Quiz_Review/`), laid
-out like sources/assessments/unit_2_quiz/Codio_Review/: numbered guide
-pages of short notes followed by practice questions, an
-answers-and-explanations page, `MC_Assessments/` with one JSON file per
-multiple-choice practice question, and `SA_manual_entry.md` for the
-short-answer practice questions.
-
-**Codio guide spec** (`materials/CODIO_N.N_Short_Name.md`). Only when
-the built-in course has nothing that fits. Page by page: instructions
-as the student sees them, starter code, expected output, autograder
-rule (output match unless the spec says otherwise), points. Reference
-solution, commented, at the bottom.
-
-**Codio fix** (`materials/CODIO_FIX_N.N_Short_Name.md`, named by the
-lesson that assigns the Codio assignment, with the assignment's title
-as the short name). Written when an imported assignment needs changing
-before it is assigned (DECISIONS.md, 2026-10-06). In order: what is
-wrong and why, in a few sentences, with page numbers from the course
-export; a table of every page in the assignment with its edit (none,
-delete, replace, or a changed line); each replacement guide page as
-students see it, between horizontal rules, followed by notes for Dan
-with the answers to its challenges; each changed line, with the
-corrected code run; each replacement assessment, with its source line,
-the question, the answer, what each wrong answer catches, the guidance
-students see after answering, and how to put it in Codio. A
-multiple-choice replacement also comes as Codio's assessment JSON
-(JavaScript Object Notation), written with the codio-mcq skill, in
-`materials/CODIO_FIX_N.N_Assessments/`. Other kinds of question, such
-as Parsons problems, are written out for Codio's assessment editor.
-
-**Larger mini-project** (`assessments/MINI_N.N_Short_Name.md`).
-Student-facing brief, requirements, choice points, a rubric of about
-ten points, and a teacher section with a commented sample solution.
-
-**Project spec** (`assessments/PROJECT_N_Short_Name.md`). Student-facing
-brief, requirements, choice points, rubric with point values, and a
-teacher section: what strong, adequate, and thin submissions look like.
-The things students and Dan print are separate markdown files beside
-the spec, so each can become its own Word file later:
-`PROJECT_4_Handout.md`, `PROJECT_4_Feedback_Plan.md`,
-`PROJECT_4_Feedback_Program.md`, `PROJECT_4_Rubric.md`, and
-`PROJECT_4_Run_Sheet.md`. Each option's brief is its own file too, such
-as `PROJECT_4_Option_A_Text_Generator.md`, so Dan gives out only the
-options he chose; the shared handout names no option. The spec itself,
-`PROJECT_4_Short_Name.md`, keeps the requirements, the list of options,
-and the teacher section with sample solutions.
-
-**Deck** (`lessons/DECK_N.N_Short_Name.md`, one per coding lesson,
-beside its lesson plan; DECISIONS.md, 2026-10-07). It holds what gets
-projected during the period and nothing else. Everything on a slide
-comes from the lesson plan; the deck is written after the plan and
-copies it, so a change to what a slide says is first a change to the
-plan. Text the plan addresses to the teacher may be reworded for
-students on the slide: "you" for the student, the words students have
-been taught, and nothing added or changed in substance, code, values,
-or answers (DECISIONS.md, 2026-10-07). What the teacher says goes in
-`notes`, not on the slide. A deck has no slide for a learning check;
-Dan makes that slide himself (DECISIONS.md, 2026-10-07). The title
-slide and the frontmatter use the spring numbering ("Lesson 4.5,"
-"Unit 4"), and Dan changes them by hand for fall where he wants to.
-The slides, in order:
-
-1. Title: the lesson number and title, with the unit as subtitle, from
-   the file's frontmatter.
-2. Objectives, as in the plan.
-3. Reading quiz, only when a reading was due: tells students to open
-   the link to the chapter's reading quiz in Canvas. The quiz runs in
-   Codio, and students reach Codio through Canvas, so the slide names
-   Canvas.
-4. Plickers: one slide telling students to get their cards out, worded
-   differently in each deck so it does not become a fixed phrase. The
-   questions themselves are not projected; they run in Plickers. The
-   questions, in the order the plan runs them, and their answers go in
-   the slide's notes.
-5. Anything the plan's Concept section marks "project this," such as
-   the unit's comparison table. A table that grows across lessons is
-   shown with its full frame every time, including empty columns, and
-   the cells added today appear on click: until the pipeline can do
-   that, as two slides, the table before and the table after.
-6. The try-it prompt, as the plan gives it, with the ceiling variants
-   appearing on click below it.
-7. The try-it key, with its output.
-8. The partner challenge or mini-project brief, as students see it,
-   when the plan marks it "project this."
-9. The quick check, when the plan has one. If it has four choices,
-   two slides: one explaining that the answer is a number from 1 to 4
-   and students hold up that many fingers on "show me," then the
-   question with its choices numbered 1 to 4, and the answer in the
-   notes. Otherwise the question on one slide, and the answer on the
-   next slide or on click. A quick check is not rewritten into four
-   choices for the deck's sake.
-10. Tonight: the reading and the Codio work.
-
-A diagram that a concept needs goes in the deck as well as in the plan.
-The deck's markdown form is in tools/PREPARING_MATERIAL.md, "Writing a
-deck file," and the slide maker makes the PowerPoint file (and a Slidev
-deck when asked with `--slidev`).
-
-**Canvas page** (`lessons/PAGE_N.N_Short_Name.md`, one per coding
-lesson, beside its plan and deck; DECISIONS.md, 2026-10-07). Dan posts
-it in Canvas before class, so anything the plan tells him to post for
-students is on it. It is student-facing: "you" is the student, the
-teacher is Mr. Nijhout-Rowe, and the words are the ones students have
-been taught. Like the deck, it is written after the plan and copies
-it, reworded for students as a deck may be; a change in substance is
-first a change to the plan. Its `title` and `unit` use the spring
-numbering, as a deck's do. The
-markdown form is in tools/PREPARING_MATERIAL.md, "Writing a Canvas
-page file," with the `cfe` style's frontmatter: `type: class recap`,
-`unit`, a one-line `summary`, and `details` for the header row. The
-body, in order:
-
-1. **What happened in class.** In students' words: the idea, the
-   error hit on purpose if there was one, and what students built.
-2. **Links.** Everything the plan's Preparation list says to post: the
-   Python Tutor links students open themselves, files they download,
-   anything else "too long to type." Each link has its full address
-   and a few words saying what it is. Left out when the plan posts
-   nothing.
-3. **Tonight.** The reading and the Codio work, in the words of the
-   deck's Tonight slide.
-
-A Canvas page never says when anything is due. Not a date, not "before
-next class," not "before lesson 4.4." Dan sets due dates in Canvas and
-Codio and says them in the room. The `details` row names the Codio
-assignment, the reading, and what opens the next class, with no dates.
-
-A unit also has a Canvas page, `units/NN-name/PAGE_N_Unit.md`, with
-`type: unit`: what the unit covers, what to bring, what is graded and
-in which category, how the unit's lessons run, and any table students
-keep in the journal across the unit, as the empty frame with the
-lesson each part is added in, since the cells are filled in class. A
-project
-has one too, `assessments/PROJECT_N_Page.md`, with `type: project`: it
-summarizes the handout and holds the links to the project's files; it
-does not replace the handout, and it names no option, since Dan
-chooses which options a class is offered.
-
-## 7. Voice
-
-This governs every artifact and chat. It is short on purpose. The first
-build's materials failed in two opposite directions: first jargon and
+This governs every artifact and every chat. The first build's
+materials failed in two opposite directions: first jargon and
 curriculum-speak, then, when that was suppressed, coined nicknames
 reused as terms, humor above a sprinkle, invented classroom moments,
 dramatized machines, and teaser copy. The cure for both is the same:
@@ -492,44 +161,39 @@ say what happens, in plain sentences.
    school. When a literal phrase is available, use it. No mannered
    prose in either direction: no "leverage" and "scaffold," and no
    "the machine sulks" either.
-2. **The reader has only the page.** Write for Dan, tired, five minutes
-   before class, three months from now, without this chat. Anything a
-   sentence refers to is stated in that sentence or the one beside it.
+2. **The reader has only the page.** Write for Dan, tired, five
+   minutes before class, three months from now, without this chat.
+   Anything a sentence refers to is stated in that sentence or the one
+   beside it.
 3. **Real names.** Products, people, and techniques go by their
    published names. Never invent a label and reuse it as a term.
 4. **Describe what happens.** No teaser copy, no narrated withholding,
    no scripted reader reaction, no personified machine. Claims stay
-   modest. In student-facing text, the teacher appears in third person
-   and any monitoring claim names the real mechanism once.
+   modest.
 5. **Expand acronyms** at first use in each file. Acronyms read as
    words (ASCII) are exempt.
 6. **No em dashes.** Commas, colons, semicolons, or a new sentence.
+   tools/plan_check.py flags them.
 
-Required actions (points, materials, restrictions,
-submission steps) are stated explicitly enough to survive handoff.
-Technical substance (code, output, formulas, attribution, licensing)
-stays exact through every edit.
+Required actions (points, materials, restrictions, submission steps)
+are stated explicitly enough to survive handoff. Technical substance
+(code, output, formulas, attribution, licensing) stays exact through
+every edit. Lesson plans talk to "you," the teacher, like a colleague
+across the hall: present tense, contractions fine, short sentences.
+Student-facing text follows course/formats/STUDENT_FACING.md.
 
-Lesson plans talk to "you," the teacher, like a colleague across the
-hall: present tense, contractions fine, short sentences. Student-facing
-text uses the words students have been taught, not the words a
-textbook would use.
+## Keeping the rules small
 
-## 8. Repo layout
-
-```
-CLAUDE.md            this file
-DECISIONS.md         the ledger; grows only at Dan's direction
-FEEDBACK.md          what Dan said after teaching, newest on top
-README.md            what this repo is and what was carried over
-pipeline.yml         course-wide settings for the materials pipeline
-course/COURSE.md     course facts: catalog, audience, meetings, grading, sources
-course/CALENDAR_MAP.md   the week grid for fall 2026 and spring 2027
-course/COURSE_OUTLINE.md the semester map: taught so far, and every unit and lesson ahead
-course/BUILD_PLAN.md     the work packages that turn the outline into materials
-sources/             Think Python notebooks, PI question bank, the school calendar
-tools/               plan_check.py, the checking tool (work package T0);
-                     PREPARING_MATERIAL.md, the guide to markdown form
-units/NN-name/       UNIT_N_PLAN.md at the top; lessons/, assessments/, materials/
-rendered/            what the materials pipeline made; ignored by git, never edited
-```
+- A new ledger entry names the failure it prevents, or says it is a
+  preference, and names the one file where the rule now lives. The
+  entry is not done until that file says it.
+- If a program can check a rule, it goes into tools/plan_check.py and
+  the prose is one line pointing at the check.
+- The files every session reads (this file, course/COURSE.md,
+  course/BUILD_PLAN.md, FEEDBACK.md) stay under 32 KB together.
+  `python3 tools/plan_check.py budget` prints the total. Over budget,
+  the next session prunes before it writes anything else.
+- Every package report names any rule that got in the way and the
+  lesson it hurt. Each REV package reads the format files once and
+  proposes striking what no lesson in the unit used. Dan retires rules
+  the way he adds them: with a dated ledger entry.

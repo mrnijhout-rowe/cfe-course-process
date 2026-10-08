@@ -1,0 +1,24 @@
+CS4120: Computing for Everyone, course development repository
+Copyright (c) 2026 Danial Nijhout-Rowe
+
+Everything in this repository written for the course (the charter
+CLAUDE.md, the decisions ledger, the course facts, outline, build plan,
+packages, and formats, the unit plans, and the lesson material
+published here) is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0): https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+You may share and adapt it for non-commercial purposes, with credit to
+Danial Nijhout-Rowe, and anything you build on it carries the same
+license.
+
+tools/plan_check.py is the exception: it is licensed under the MIT
+License, like the materials pipeline it works with; see tools/LICENSE.
+
+The materials under sources/ have their own authors and licenses:
+
+- sources/thinkpython/: Think Python, 3rd edition, by Allen Downey,
+  CC BY-NC-SA 4.0.
+- sources/peer_instruction/: a question bank drawn from Cynthia Taylor's
+  CS1 peer instruction decks (Oberlin College, via peerinstruction4cs.org),
+  CC BY-NC-SA 4.0.

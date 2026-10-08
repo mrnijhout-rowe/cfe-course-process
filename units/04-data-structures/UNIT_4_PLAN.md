@@ -6,7 +6,7 @@ The last open item, the project's lighter stages under "Project," was
 approved on 2026-10-08, and the same day option B of the project
 became Connect Four (answer 14). Written from the Unit 4 section of
 course/COURSE_OUTLINE.md (APPROVED 2026-10-05) with the six additions
-course/BUILD_PLAN.md asks of package U4-PLAN. Where this plan goes
+course/formats/UNIT_AND_PROJECT.md asks of a unit plan. Where this plan goes
 beyond the outline, "Departures from the outline" at the end says so.
 
 Think Python means Think Python, 3rd edition. Codio codes such as
@@ -238,7 +238,7 @@ about tuples as keys in U10.L1, which spring needs too.
 
 ## Learning checks
 
-Format: CLAUDE.md section 6. Each check takes the first ten minutes of
+Format: course/formats/ASSESSMENTS.md. Each check takes the first ten minutes of
 the lesson it is marked on, in place of a reading quiz, and that
 lesson's plan says in one line what to shorten. Nothing in a check
 comes from the lesson it is marked on or later.
@@ -363,7 +363,7 @@ Dan approved this list as written on 2026-10-08.
 After lesson 4.16. Dan schedules it; in fall that is week 12 beside
 the speed run. About 30 minutes in Canvas: ten to thirteen
 multiple-choice questions at 2 points and two short-answer questions
-at 7 points, format in CLAUDE.md section 6. About a fifth of the
+at 7 points, format in course/formats/ASSESSMENTS.md. About a fifth of the
 points come from earlier units; in fall that share uses return values,
 `while`, and boolean expressions, which the fall quiz on Units 1 and
 2 did not test. It may ask about the project, resting on what every

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Danial Nijhout-Rowe. MIT License; see tools/LICENSE.
 """plan_check.py: checks for CS4120 lesson materials (work package T0).
 
 Standard library only. Two commands:
 
     python3 tools/plan_check.py link FILE.py [--input ANSWER ...] [--md]
     python3 tools/plan_check.py check FILE.md [FILE.md or FOLDER ...] [-v]
+    python3 tools/plan_check.py budget [FILE ...]
 
 link
     Prints the Python Tutor link that opens FILE.py (use - to read the
@@ -26,15 +28,40 @@ check
     - flags every line inside a code block that is longer than 80
       characters, the width that fits every output of the materials
       pipeline (tools/PREPARING_MATERIAL.md);
-    - in a lesson plan (LP_*.md), flags a missing or out-of-order
-      section; in a learning check (CHECK_*.md), confirms four questions
-      worth 2, 2, 3, and 3 points.
+    - in a lesson plan (LP_*.md), flags a missing or out-of-order section,
+      and counts the peer instruction questions under Concept: two or
+      three, each with a "Source:" line and an "Answer:" line
+      (course/formats/LESSON.md);
+    - in a reading quiz (QUIZ_N.N_*.md), confirms every question has
+      options A to D, the key has one row per question, the answers are
+      spread across the letters, and a "Code check" section exists;
+    - in a learning check (CHECK_*.md), confirms four questions worth 2, 2,
+      3, and 3 points, the journal line, the divider, and the two
+      `pipeline: only teacher` and `end only` lines around the notes;
+    - in a deck (DECK_*.md), confirms the title matches the file's lesson
+      number and that no slide heading is a learning check;
+    - in student-facing text (a Canvas page, a deck's slides outside its
+      notes, a quiz's questions, a check's projected half, a project
+      handout, brief, rubric, form, or page), flags lesson numbers; on a
+      Canvas page, also flags anything that says when work is due
+      (course/formats/STUDENT_FACING.md);
+    - in a Plickers sheet (PLICKERS_*.md), confirms each question box is a
+      `text` block with no backticks or bold marks inside;
+    - for a folder, also reads each Codio assessment JSON file under an
+      *_Assessments or MC_Assessments folder and confirms it parses with
+      exactly one correct answer.
     The exit status is 1 if anything failed, so a package can tell at a
     glance.
 
+budget
+    Prints the size of the files every session reads (CLAUDE.md,
+    course/COURSE.md, course/BUILD_PLAN.md, and FEEDBACK.md, or the files
+    named) against the 32 KB budget in CLAUDE.md, "Keeping the rules
+    small". The exit status is 1 when the total is over.
+
 Each block runs on its own, in a fresh Python process, because a
-`python` block in these materials runs exactly as written (CLAUDE.md
-section 6). input() is replaced by a version that prints the prompt and
+`python` block in these materials runs exactly as written
+(course/formats/LESSON.md). input() is replaced by a version that prints the prompt and
 the answer on one line, the way Thonny's shell shows them, so a `text`
 block for an input program is pasted the way students see it.
 
@@ -62,6 +89,22 @@ words.txt needs --cwd pointing at a folder that holds words.txt.
 
 Error messages differ a little between Python versions. The checker
 prints which Python it ran; --python picks a different one.
+
+Expected notes. A python block that prints and has no text block after it
+gets a note, not a failure. On a Canvas page or a deck that is usual: the
+block is there to carry its Python Tutor link, or its answer comes on a
+later slide. The file still passes.
+
+Python Tutor links. A link has this form:
+
+    https://pythontutor.com/visualize.html#code=CODE&mode=display&py=311&curInstr=0
+
+CODE is the program, URL-encoded. py=311 selects Python 3.11. mode=display
+runs the code when the page opens. curInstr=0 starts at the first step.
+Answers for input() ride along as &rawInputLstJSON= with a URL-encoded
+JSON list of strings. The whole link must stay under 5,600 encoded bytes,
+the limit in pythontutor.com's own script (checked 2026-10-05). The
+`link` command builds all of this; never encode a link by hand.
 """
 
 import argparse
@@ -84,7 +127,7 @@ LINK_LABEL = "Open in Python Tutor"
 EM_DASH = "\u2014"
 WIDTH_LIMIT = 80            # characters in a code-block line; tools/PREPARING_MATERIAL.md
 
-# Lesson plan sections, in the order CLAUDE.md section 6 gives them.
+# Lesson plan sections, in the order course/formats/LESSON.md gives them.
 LP_SECTIONS = ["Overview", "Objectives", "Preparation", "Reading", "Agenda", "Pitfalls"]
 LP_OPTIONAL = ["Quick check", "Extras"]
 # Agenda slots. The first slot is either a reading quiz or a learning check.
@@ -94,6 +137,29 @@ AGENDA_OPTIONAL = ["Mini-project"]
 
 CHECK_POINTS = {"A1": 2, "A2": 2, "A3": 3, "B1": 3}
 CHECK_JOURNAL_LINE = "Answer in your journal. Label each answer clearly (A1, A2, A3, B1)."
+CHECK_ONLY_TEACHER = "<!-- pipeline: only teacher -->"
+CHECK_END_ONLY = "<!-- pipeline: end only -->"
+
+# Student-facing text (course/formats/STUDENT_FACING.md): no lesson numbers
+# outside a deck's or page's title, and nothing on a Canvas page about when
+# work is due.
+LESSON_NUMBER = re.compile(r"\blesson \d+\.\d+\b", re.I)
+DUE_WORDS = re.compile(
+    r"(\bdue\s+(?:before|by|on|at|in|tonight|tomorrow|this|next|date|\d)"
+    r"|\b(?:is|are|was|were|it's|they're)\s+due\b"
+    r"|\b(?:before|by)\s+(?:the\s+)?next\s+class\b"
+    r"|\b(?:before|by|after)\s+lesson\s+\d"
+    r"|\b(?:jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?\s+\d{1,2}\b"
+    r"|\bmay\s+\d{1,2}\b"
+    r"|\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b"
+    r"|\b(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b)", re.I)
+STUDENT_FILE = re.compile(
+    r"^(PAGE_|DECK_|CHECK_|QUIZ_\d+\.\d+_|PROJECT_\d+_(?:Page|Handout|Option_|Rubric|Feedback_|Run_Sheet))")
+
+# The files every session reads, and their budget (CLAUDE.md, "Keeping the
+# rules small").
+BUDGET_FILES = ["CLAUDE.md", "course/COURSE.md", "course/BUILD_PLAN.md", "FEEDBACK.md"]
+BUDGET_BYTES = 32 * 1024
 
 # Runs one program. Replaces input() so answers come from the directive and
 # echo like Thonny, and prints tracebacks without this wrapper's own frame.
@@ -616,6 +682,221 @@ def check_learning_check(text, prose, report):
     if set(found) == set(CHECK_POINTS):
         report.ok(1, "four questions, 2 + 2 + 3 + 3 points")
 
+    # The pipeline lines that keep the notes out of the student copy.
+    divider = next((line for line, content in prose
+                    if re.match(r"^\s*(-{3,}|\*{3,}|_{3,})\s*$", content)), None)
+    if divider is not None:
+        above = [content.strip() for line, content in prose if line < divider and content.strip()]
+        if not above or above[-1] != CHECK_ONLY_TEACHER:
+            report.fail(divider, f"the line directly above the divider should be {CHECK_ONLY_TEACHER}")
+    last = [content.strip() for _, content in prose if content.strip()]
+    if not last or last[-1] != CHECK_END_ONLY:
+        report.fail(len(text.split("\n")), f"the last line of a learning check is {CHECK_END_ONLY}")
+
+
+def check_peer_instruction(headings, prose, report):
+    """Two or three peer instruction questions under Concept, each with a
+    Source line and an Answer line (course/formats/LESSON.md)."""
+    concept = end = None
+    for i, (line, level, title) in enumerate(headings):
+        if level == 3 and heading_name(title) == "concept":
+            concept = line
+            end = next((l2 for l2, lv2, _ in headings[i + 1:] if lv2 <= 3), float("inf"))
+            break
+    if concept is None:
+        return
+    sources = [n for n, t in prose if concept < n < end and "Source:" in t]
+    answers = [n for n, t in prose if concept < n < end and re.match(r"^\s*\**Answer\**:", t)]
+    if not sources:
+        report.note(concept, "no peer instruction questions under Concept "
+                             "(a lesson that runs Plickers has two or three)")
+        return
+    if len(sources) == 1:
+        report.fail(sources[0], "one peer instruction question under Concept; "
+                                "a lesson that runs Plickers has at least two")
+    elif len(sources) > 3:
+        report.fail(sources[3], f"{len(sources)} peer instruction questions under Concept; "
+                                "questions beyond three are spares under Extras")
+    if len(answers) != len(sources):
+        report.fail(concept, f"{len(sources)} peer instruction Source lines but "
+                             f"{len(answers)} Answer lines under Concept")
+    elif 2 <= len(sources) <= 3:
+        report.ok(concept, f"{len(sources)} peer instruction questions under Concept, each answered")
+
+
+def check_reading_quiz(headings, prose, report):
+    """Options A to D per question, a key row per question, answers spread
+    across the letters, and a Code check section (course/formats/ASSESSMENTS.md)."""
+    question = re.compile(r"^\*\*(\d+)\.\*\*")
+    option = re.compile(r"^- ([A-D])\. ")
+    key_row = re.compile(r"^\|\s*(\d+)\s*\|\s*([A-D])\s*\|")
+    questions, options, key = [], {}, {}
+    where = None
+    for line, text in prose:
+        h = HEADING.match(text)
+        if h:
+            where = heading_name(h.group(2))
+            continue
+        if where == "questions":
+            m = question.match(text)
+            if m:
+                questions.append((line, int(m.group(1))))
+                options[int(m.group(1))] = []
+            m = option.match(text)
+            if m and questions:
+                options[questions[-1][1]].append(m.group(1))
+        elif where == "key":
+            m = key_row.match(text)
+            if m:
+                key[int(m.group(1))] = m.group(2)
+    if not questions:
+        report.fail(1, 'no questions under "## Questions" (each starts "**1.**")')
+        return
+    problems = 0
+    for line, n in questions:
+        if options.get(n) != ["A", "B", "C", "D"]:
+            problems += 1
+            report.fail(line, f"question {n} needs options A to D, once each, as '- A. ...' lines; "
+                              f"found {options.get(n)}")
+    numbers = sorted(n for _, n in questions)
+    if sorted(key) != numbers:
+        problems += 1
+        report.fail(1, f"key rows {sorted(key)} do not match the questions {numbers}")
+    letters = [key[n] for n in sorted(key)]
+    if letters:
+        most = max(letters.count(c) for c in "ABCD")
+        if most > (len(letters) + 1) // 2 or len(set(letters)) < min(3, len(letters)):
+            problems += 1
+            report.fail(1, f"answers are not spread across A to D: {''.join(letters)}")
+    if not any(heading_name(t) == "code check" for _, _, t in headings):
+        problems += 1
+        report.fail(1, 'no "## Code check" section below the key')
+    if not problems:
+        report.ok(questions[0][0], f"{len(questions)} questions with options A to D, "
+                                   f"a key row each, answers {''.join(letters)}, Code check")
+
+
+def check_deck(path, text, headings, report):
+    """The title matches the file's lesson number; no learning check slide."""
+    m = re.match(r"DECK_(\d+\.\d+)_", path.name)
+    title = None
+    if text.startswith("---"):
+        for line in text.split("\n")[1:]:
+            if line.strip() == "---":
+                break
+            t = re.match(r"""^title:\s*["']?(.*?)["']?\s*$""", line)
+            if t:
+                title = t.group(1)
+    if m and title is None:
+        report.fail(1, "a deck's frontmatter has a title")
+    elif m and not title.startswith(f"Lesson {m.group(1)}:"):
+        report.fail(1, f'deck title should start "Lesson {m.group(1)}:" to match the file; it is "{title}"')
+    for line, level, t in headings:
+        if "learning check" in t.lower():
+            report.fail(line, "a deck has no learning check slide; Dan makes that slide himself")
+
+
+def check_plickers_sheet(blocks, report):
+    """Each question box is a text block, plain enough to paste."""
+    for block in blocks:
+        if block.kind != "text":
+            report.fail(block.start, "a Plickers question box is a `text` block")
+        for i, line in enumerate(block.lines):
+            if "`" in line or "**" in line:
+                report.fail(block.start + 1 + i, "markdown mark inside a Plickers box; "
+                                                 "the box is pasted as plain text")
+
+
+def line_regions(text):
+    """For each line: whether it is frontmatter, inside a notes comment, or
+    inside a code fence."""
+    lines = text.split("\n")
+    front = [False] * len(lines)
+    notes = [False] * len(lines)
+    code = [False] * len(lines)
+    if lines and lines[0].strip() == "---":
+        front[0] = True
+        for i in range(1, len(lines)):
+            front[i] = True
+            if lines[i].strip() == "---":
+                break
+    inside = False
+    for i, line in enumerate(lines):
+        if not inside and re.search(r"<!--\s*pipeline:\s*notes", line):
+            inside = True
+        if inside:
+            notes[i] = True
+            if "-->" in line:
+                inside = False
+    fence = None
+    for i, line in enumerate(lines):
+        m = FENCE_OPEN.match(line)
+        if fence is None and m and not front[i]:
+            fence = m.group(2)
+            code[i] = True
+            continue
+        if fence is not None:
+            code[i] = True
+            if re.match(r"^\s*" + re.escape(fence[0]) + "{" + str(len(fence)) + r",}\s*$", line):
+                fence = None
+    return lines, front, notes, code
+
+
+def check_student_facing(path, text, report):
+    """No lesson numbers in what students see; no due dates on a Canvas page."""
+    name = path.name
+    if not STUDENT_FILE.match(name):
+        return
+    lines, front, notes, code = line_regions(text)
+    is_page = name.startswith("PAGE_") or bool(re.match(r"PROJECT_\d+_Page\.md", name))
+    is_quiz = bool(re.match(r"QUIZ_\d+\.\d+_", name))
+    is_check = name.startswith("CHECK_")
+    selected = range(len(lines))
+    if is_quiz:
+        start = next((i for i, l in enumerate(lines) if re.match(r"^##\s+Questions", l)), None)
+        if start is None:
+            return
+        stop = next((i for i, l in enumerate(lines) if i > start and re.match(r"^##\s+Key", l)), len(lines))
+        selected = range(start, stop)
+    elif is_check:
+        stop = next((i for i, l in enumerate(lines)
+                     if not code[i] and re.match(r"^\s*(-{3,}|\*{3,}|_{3,})\s*$", l)), len(lines))
+        selected = range(0, stop)
+    for i in selected:
+        line = lines[i]
+        if front[i]:
+            # A page's details row counts; its title and unit are the exception.
+            if not is_page or re.match(r"^\s*(title|unit):|^\s*---\s*$", line):
+                continue
+        if notes[i]:
+            continue
+        if LESSON_NUMBER.search(line):
+            report.fail(i + 1, "lesson number in student-facing text (course/formats/STUDENT_FACING.md)")
+        if is_page and not code[i]:
+            m = DUE_WORDS.search(line)
+            if m:
+                report.fail(i + 1, f'says when something is due ("{m.group(0)}"); '
+                                   "a Canvas page never does (course/formats/STUDENT_FACING.md)")
+
+
+def check_json_file(path):
+    """A Codio assessment JSON file parses and has exactly one correct answer."""
+    print(f"{path}")
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as e:
+        print(f"  FAIL  line 1: does not parse as JSON ({e})")
+        print("  FAILED: 1 problems")
+        return 1
+    answers = data.get("source", {}).get("answers", [])
+    correct = [a for a in answers if str(a.get("correct")).lower() == "true"]
+    if len(correct) != 1:
+        print(f"  FAIL  line 1: {len(correct)} answers marked correct; a question has exactly one")
+        print("  FAILED: 1 problems")
+        return 1
+    print(f"  passed: {len(answers)} answers, one correct, 0 problems")
+    return 0
+
 
 # ---------------------------------------------------------------- commands
 
@@ -640,8 +921,16 @@ def check_file(path, options):
 
     if path.name.startswith("LP_"):
         check_lesson_plan(path, text, headings, report)
+        check_peer_instruction(headings, prose, report)
     if path.name.startswith("CHECK_"):
         check_learning_check(text, prose, report)
+    if re.match(r"QUIZ_\d+\.\d+_", path.name):
+        check_reading_quiz(headings, prose, report)
+    if path.name.startswith("DECK_"):
+        check_deck(path, text, headings, report)
+    if path.name.startswith("PLICKERS_"):
+        check_plickers_sheet(blocks, report)
+    check_student_facing(path, text, report)
 
     c = report.counts
     status = "FAILED" if report.fails else "passed"
@@ -656,13 +945,16 @@ def check_file(path, options):
 
 
 def command_check(options):
-    files = []
+    files, json_files = [], []
     for name in options.files:
         p = Path(name)
         if p.is_dir():
             files.extend(sorted(p.rglob("*.md")))
+            json_files.extend(sorted(j for j in p.rglob("*.json")
+                                     if j.parent.name.endswith("_Assessments")
+                                     or j.parent.name == "MC_Assessments"))
         elif p.exists():
-            files.append(p)
+            (json_files if p.suffix == ".json" else files).append(p)
         else:
             print(f"{p}: no such file")
             return 1
@@ -678,8 +970,26 @@ def command_check(options):
     finally:
         if own_tmp:
             own_tmp.cleanup()
-    print(f"\n{len(files)} files checked, {failed} with problems.")
+    failed += sum(check_json_file(j) > 0 for j in json_files)
+    print(f"\n{len(files) + len(json_files)} files checked, {failed} with problems.")
     return 1 if failed else 0
+
+
+def command_budget(options):
+    names = options.files or BUDGET_FILES
+    total = 0
+    for name in names:
+        p = Path(name)
+        if not p.exists():
+            print(f"{'missing':>8}  {name}")
+            continue
+        size = p.stat().st_size
+        total += size
+        print(f"{size:>8,}  {name}")
+    verdict = "under" if total <= BUDGET_BYTES else "OVER"
+    print(f"{total:>8,}  total, {verdict} the {BUDGET_BYTES:,}-byte budget "
+          f'(CLAUDE.md, "Keeping the rules small")')
+    return 0 if total <= BUDGET_BYTES else 1
 
 
 def command_link(options):
@@ -713,8 +1023,12 @@ def main(argv=None):
     check.add_argument("--cwd", help="folder the blocks run in (default: a fresh temporary one)")
     check.add_argument("--timeout", type=float, default=10, help="seconds per block (default 10)")
 
+    budget = commands.add_parser("budget", help="size of the files every session reads, against the budget")
+    budget.add_argument("files", nargs="*", help="files to total (default: the four CLAUDE.md names)")
+
     options = parser.parse_args(argv)
-    return command_link(options) if options.command == "link" else command_check(options)
+    commands = {"link": command_link, "check": command_check, "budget": command_budget}
+    return commands[options.command](options)
 
 
 if __name__ == "__main__":
