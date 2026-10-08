@@ -545,3 +545,23 @@ Asked in chat on 2026-10-08, after package U4-D:
     expects the projects to take a little longer, and that is his
     concern, not the package's. Applied: the project's times stay as
     the run sheet gives them.
+
+Asked in chat on 2026-10-08, after package R on U4-D, which changed
+the Connect Four option to keep the five saved file names in a list
+and ask again for any other name (Dan's choice), so a typo cannot stop
+the program:
+
+19. The Connect Four sample counts pieces with `row.count('X')`, a list
+    method the unit introduces only on strings. Swap it for a loop?
+
+    Dan: do not swap
+
+20. Keep the teacher-only pipeline lines around the spec's teacher
+    section?
+
+    Dan: Keep them
+
+21. The reflection rubric's lowest column ends "The reflection is
+    missing," which scores a missing reflection 1 point. Change it?
+
+    Dan: Keep it as is for now

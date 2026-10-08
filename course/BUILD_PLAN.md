@@ -139,8 +139,7 @@ The session ends by telling Dan:
 
 | Package | Writes | Starts after |
 |---|---|---|
-| U4-D | project spec and its pages, lessons 4.13-4.16 | U4-C (done) |
-| U4-Q | Unit 4 quiz and its Codio review guide | U4-D |
+| U4-Q | Unit 4 quiz and its Codio review guide | U4-D (done) |
 | R | a review of one finished package | that package |
 | U5-S | six taster plans | Dan's choice of tasters |
 | U5-F | final project spec | S0 (done) |
@@ -155,8 +154,8 @@ The session ends by telling Dan:
 | U3-Q | Unit 3 quiz and its Codio review guide | U3-C |
 | REV-4 | Unit 4 revised from fall feedback | fall FEEDBACK.md entries |
 
-Done: S0, T0, U4-PLAN, U4-A, U4-B, U4-DP, U4-C, and R on U4-A, U4-B,
-and U4-C; the log has their stories. Every lesson package's "Writes" entry also
+Done: S0, T0, U4-PLAN, U4-A, U4-B, U4-DP, U4-C, U4-D, and R on U4-A,
+U4-B, U4-C, and U4-D; the log has their stories. Every lesson package's "Writes" entry also
 means the decks, Canvas pages, and Codio quiz files for its lessons.
 Each package's instructions are one file in course/packages/:
 U4-D.md, U4-Q.md, R.md, U5-S.md, U5-F.md, U2.md (the four Unit 2
