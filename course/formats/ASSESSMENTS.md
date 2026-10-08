@@ -116,7 +116,8 @@ exists, and each JSON file parses with exactly one correct answer.
 Guide pages are student-facing and name the unit by its topic.
 The answers page writes out every practice question in full, and
 `tools/review_json.py` makes the JSON files from it, so a change to a
-question is made on the answers page and the tool is run again.
+question is made on the answers page and the tool is run again (Dan,
+2026-10-08).
 
 ## Done when
 

@@ -1,7 +1,8 @@
 # CS4120 Build Plan, second build
 
 Status: in use. Written 2026-10-05; restructured 2026-10-08 in the
-governance audit. It builds what course/COURSE_OUTLINE.md describes
+governance audit; Units 2 and 3 moved ahead of the speed run the same
+day (Dan). It builds what course/COURSE_OUTLINE.md describes
 (APPROVED 2026-10-05) as work packages, each written so that a new
 session with no memory of any conversation can do it from start to
 finish. This file sequences the work and says how a package runs. What
@@ -28,9 +29,12 @@ Dan tells it to, and ends with the report below.
 
 Packages inside a unit run in order, because each one reads the
 lessons written before it. Packages from different units can run side
-by side. Unit 2 and Unit 3 packages do not start until Unit 4 has been
-taught and FEEDBACK.md has entries from it; what Dan learns from Unit 4
-in the room will change how Units 2 and 3 are written.
+by side, except that U3-PLAN waits for U2-PLAN to be approved, since
+Unit 3 lessons may use only what Unit 2's "New in this lesson" table
+introduced. Units 2 and 3 are built now, before Unit 4 is taught, from
+what fall 2026 taught of chapters 1 to 6 and the FEEDBACK.md entries
+on it; what Dan learns in the room this fall reaches them through
+REV-2 and REV-3 (Dan, 2026-10-08).
 
 ## What every lesson package does
 
@@ -139,24 +143,28 @@ The session ends by telling Dan:
 
 | Package | Writes | Starts after |
 |---|---|---|
-| U4-Q | Unit 4 quiz and its Codio review guide | U4-D (done) |
-| R | a review of one finished package | that package |
-| U5-S | six taster plans | Dan's choice of tasters |
-| U5-F | final project spec | S0 (done) |
-| U2-PLAN | UNIT_2_PLAN.md and PAGE_2_Unit.md | Unit 4 taught |
+| U2-PLAN | UNIT_2_PLAN.md and PAGE_2_Unit.md | now |
 | U2-A | lessons 2.1-2.4, two reading quizzes | U2-PLAN approved |
 | U2-B | lessons 2.5-2.10, two reading quizzes, learning check at 2.6, turtle art spec | U2-A |
 | U2-Q | Unit 2 quiz and its Codio review guide | U2-B |
-| U3-PLAN | UNIT_3_PLAN.md and PAGE_3_Unit.md | Unit 4 taught |
+| U3-PLAN | UNIT_3_PLAN.md and PAGE_3_Unit.md | U2-PLAN approved |
 | U3-A | lessons 3.1-3.5, two reading quizzes | U3-PLAN approved |
 | U3-B | lessons 3.6-3.9, one reading quiz, learning check at 3.6 | U3-A |
 | U3-C | project spec, lessons 3.10-3.13 | U3-B |
 | U3-Q | Unit 3 quiz and its Codio review guide | U3-C |
+| R | a review of one finished package | that package |
+| U5-S | six taster plans | Dan's choice of tasters |
+| U5-F | final project spec | S0 (done) |
+| REV-2 | Unit 2 revised from fall feedback | fall FEEDBACK.md entries |
+| REV-3 | Unit 3 revised from fall feedback | fall FEEDBACK.md entries |
 | REV-4 | Unit 4 revised from fall feedback | fall FEEDBACK.md entries |
 
-Done: S0, T0, U4-PLAN, U4-A, U4-B, U4-DP, U4-C, U4-D, and R on U4-A,
-U4-B, U4-C, and U4-D; the log has their stories. Every lesson package's "Writes" entry also
-means the decks, Canvas pages, and Codio quiz files for its lessons.
-Each package's instructions are one file in course/packages/:
+Done: S0, T0, U4-PLAN, U4-A, U4-B, U4-DP, U4-C, U4-D, U4-Q, and R on
+U4-A, U4-B, U4-C, and U4-D; the log has their stories. U5-S and U5-F
+are independent of the Unit 2 and 3 chain and run on whatever day Dan
+picks before fall needs them. Every lesson package's "Writes" entry
+also means the decks, Canvas pages, and Codio quiz files for its
+lessons. Each package's instructions are one file in course/packages/:
 U4-D.md, U4-Q.md, R.md, U5-S.md, U5-F.md, U2.md (the four Unit 2
-packages), U3.md (the five Unit 3 packages), and REV-4.md.
+packages and REV-2), U3.md (the five Unit 3 packages and REV-3), and
+REV-4.md.
