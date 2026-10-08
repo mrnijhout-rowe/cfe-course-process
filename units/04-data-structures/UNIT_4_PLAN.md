@@ -2,9 +2,8 @@
 
 Status: APPROVED 2026-10-05. Dan answered the plan's questions that
 day; his answers are folded into the text and recorded at the end.
-One item stays open for package U4-D, under "Project": how much
-lighter the project's stages run than the text adventure's. Lessons
-4.1 to 4.12 do not depend on it. Written from the Unit 4 section of
+The last open item, the project's lighter stages under "Project," was
+approved on 2026-10-08. Written from the Unit 4 section of
 course/COURSE_OUTLINE.md (APPROVED 2026-10-05) with the six additions
 course/BUILD_PLAN.md asks of package U4-PLAN. Where this plan goes
 beyond the outline, "Departures from the outline" at the end says so.
@@ -82,8 +81,8 @@ after it is assigned.
 | 4.10 | A dictionary of counters | `if key not in d: d[key] = 1`, `else: d[key] += 1`; `for key in d` | none | U10.L2, due 4.11 | none | Mini: letter frequencies of a text you pick |
 | 4.11 | Dictionaries holding lists | A value can be a list; `in` on a dictionary is fast, and the class times it | none | U10.L3, due 4.12 | **learning check** on 4.6 to 4.10 | Mini: anagram families or a Scrabble scorer |
 | 4.12 | Tuples | `a, b = b, a`; a function that returns two values returns a tuple; `.items()` | ch. 11, the five sections | U9.L1, due 4.13; U10.EX with problem 5 removed, due 4.14 | reading quiz | Table: tuples. The table is complete. |
-| 4.13 | Project day 1 | Brief, write the plan, another pair reviews it | ch. 12 as reference for option A only | none | none | Project begins |
-| 4.14 | Project day 2, first half | Sign-off, work plan, comments before code | none | none | none | Project |
+| 4.13 | Project day 1 | Brief, write the plan and the partner agreement, another pair reviews it | ch. 12 as reference for option A only | none | none | Project begins |
+| 4.14 | Project day 2, first half | Comments, then code, from the plan; Dan looks at each plan while walking the room | none | none | none | Project |
 | 4.15 | Project day 2, second half | Code | none | none | none | Project |
 | 4.16 | Project day 3 | Finish, another pair runs and reviews it, fix, turn in | none | none | none | Project due. Reflection is homework. Review guide assigned. |
 
@@ -255,10 +254,10 @@ journal. They count in Labs/Learning Checks.
 ## Project
 
 Lessons 4.13 to 4.16, on the plan of the fall 2026 text adventure
-(sources/fall_2026_text_based_adventure/): a written plan, review by
-another pair, Dan's sign-off before code, a work plan, comments before
-code, a second pair's review of the running program, and an individual
-reflection graded on its own. Pairs. Written in Thonny. Three options
+(sources/fall_2026_text_based_adventure/), with the lighter stages
+below: a written plan with a partner agreement, review by another
+pair, comments before code, a second pair's review of the running
+program, and an individual reflection graded on its own. Pairs. Written in Thonny. Three options
 are written and Dan chooses which a class is offered; each option's
 brief is its own file, and the shared handout names no option. Shared
 requirements: the program reads a text file, uses a string operation,
@@ -282,7 +281,7 @@ Monday out.
 Dan confirmed on 2026-10-05 that the rotation puts a 90-minute
 meeting in that week.
 
-**Lighter stages [OPEN, settle before U4-D].** Dan's note in
+**Lighter stages [APPROVED 2026-10-08].** Dan's note in
 FEEDBACK.md (2026-10-05) on the text adventure: the activities around
 the project can carry a little less scaffolding; keep peer critical
 feedback during planning and before turn-in; and have partners write
@@ -302,8 +301,7 @@ noted here.
   into the plan page; comments before code is a rubric row, not its
   own stage.
 
-Dan: approve as written, or mark what stays as it was in the text
-adventure.
+Dan approved this list as written on 2026-10-08.
 
 ## Unit quiz
 
@@ -369,8 +367,8 @@ and where the text generator stops and a real language model begins.
 5. The chapter 11 sections for 4.12 are named: five in, three out.
 6. Students first drive Python Tutor at 4.3.
 7. The project's stages run lighter than the ledger's default, following
-   Dan's FEEDBACK.md note of 2026-10-05. Open until Dan approves the
-   list under "Project."
+   Dan's FEEDBACK.md note of 2026-10-05. Dan approved the list under
+   "Project" on 2026-10-08.
 
 ## Dan's answers
 
@@ -437,3 +435,9 @@ Asked in chat on 2026-10-06, after package U4-B:
     4.6 a recap. All right?
 
     Dan: Yes
+
+Asked in chat on 2026-10-08:
+
+12. Approve the lighter project stages under "Project" as written?
+
+    Dan: Mark it as approved.

@@ -30,8 +30,8 @@ those live in CLAUDE.md and DECISIONS.md.
   need" says how to use it.
 - Package U4-PLAN is done. units/04-data-structures/UNIT_4_PLAN.md
   is APPROVED (2026-10-05) with Dan's answers recorded at its end.
-  One item in it is open for U4-D: how much lighter the project's
-  stages run, following Dan's FEEDBACK.md note on the text adventure.
+  Its last open item, the project's lighter stages, following Dan's
+  FEEDBACK.md note on the text adventure, was approved on 2026-10-08.
 - Package U4-A is done: lessons 4.1 to 4.4, QUIZ_4.2 and QUIZ_4.3, and
   the first questions on materials/PLICKERS_4_Questions.md. Dan's
   answers to its report are in UNIT_4_PLAN.md (`not in` at 4.2) and
@@ -137,8 +137,8 @@ those live in CLAUDE.md and DECISIONS.md.
   rule about checking and narrowing printed word lists was removed,
   along with the notes in lessons 4.2, 4.7, and 4.11 that followed
   from it.
-- **Next:** R on U4-C, then U4-D (needed November 3). U4-D waits on
-  the open "Lighter stages" item in UNIT_4_PLAN.md.
+- **Next:** R on U4-C, then U4-D (needed November 3). The project's
+  lighter stages in UNIT_4_PLAN.md are approved (2026-10-08).
 
 **Open after U4-A, U4-B, and U4-DP:**
 
@@ -592,7 +592,7 @@ the repository.
 
 Done 2026-10-05, in a session with Dan rather than as a cold package,
 so his answers went straight into the plan. The plan is APPROVED. Its
-one open item, the project's stages, waits under "Project" for U4-D.
+one open item, the project's stages, was approved on 2026-10-08.
 The unit's Canvas page, `PAGE_4_Unit.md`, was added on 2026-10-07 by
 package U4-DP; later unit plan packages write theirs with the plan.
 
@@ -752,15 +752,17 @@ sources/fall_2026_text_based_adventure/. Skip its docx folder. It is
 the plan this project follows, and fall students have just been
 through it. FEEDBACK.md has Dan's note of 2026-10-05 on how it went,
 and the unit plan's "Project" section says how the stages change
-because of it. If that item is still marked open there, ask Dan
-before writing the spec.
+because of it; Dan approved those lighter stages on 2026-10-08.
 
 **Writes:** `assessments/PROJECT_4_Data_Structures.md` and `LP_4.13`
 through `LP_4.16`. The project keeps the text adventure's stages,
-adapted: a written plan in place of the story idea, review by another
-pair, a flowchart or outline that Dan signs before any code, a work
-plan, comments before code, review of the running program by another
-pair, and an individual reflection graded on its own. The student
+lightened as UNIT_4_PLAN.md's "Project" section says: a written plan
+in place of the story idea, with a partner agreement naming who
+writes which functions and who keeps the file; review by another pair;
+Dan's look at each plan while walking the room, not a sign-off gate;
+comments before code, scored as a rubric row; review of the running
+program by another pair; and an individual reflection graded on its
+own. The student
 handout, both feedback forms, the rubric, the run sheet, and one brief
 per option are separate markdown files beside the spec, named as the
 CLAUDE.md section 6 says; Dan asks for Word versions separately
