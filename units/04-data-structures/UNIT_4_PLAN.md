@@ -26,9 +26,10 @@ five coding exercises.
 - Chapter 9, all of it: lists, mutability, slices, `+` and `*`, `sum`,
   `min`, `max`, list methods, `split` and `join`, `sorted`, objects and
   values, aliasing, list arguments, making a word list.
-- Chapter 10, all but "Memos": dictionaries, `in`, a dictionary of
+- Chapter 10, all of it: dictionaries, `in`, a dictionary of
   counters, looping over a dictionary, a dictionary whose values are
-  lists, accumulating a list.
+  lists, accumulating a list, and "Memos," which spring students read
+  after recursion in Unit 3 (Dan, 2026-10-08).
 - Chapter 11, five sections: "Tuples are like lists," "But tuples are
   immutable," "Tuple assignment," "Tuples as return values," and "Zip."
   "Zip" is for pairs who are ready.
@@ -39,8 +40,7 @@ lists (Codio U5.L6), `try` and `except`, list and dictionary
 comprehensions (they appear in Codio pages), `del`, `while` with an
 index over a string (Codio U6.L4).
 
-**Out.** Chapter 8 from "Writing files" on. Chapter 10 "Memos," which
-needs recursion. Chapter 11 "Argument packing," "Comparing and
+**Out.** Chapter 8 from "Writing files" on. Chapter 11 "Argument packing," "Comparing and
 Sorting," and "Inverting a dictionary." Codio U5.L6, U6.L2, Unit 7,
 U8.LAB, U9.L2 to U9.L4 with U9.LAB and U9.EX, U10.L4, and Unit 11.
 U10.LAB (ASCII art with the Pillow library) is optional enrichment.
@@ -77,7 +77,7 @@ after it is assigned.
 | 4.6 | List methods | `append` changes the list and returns `None`; a list built in a loop; `sum`, `min`, `max` | none | U5.L3, U5.L4, U5.L5, due 4.7; U5.LAB, due 4.8 | **learning check** on 4.1 to 4.5 | Mini: a dice-roll histogram or a playlist manager |
 | 4.7 | Lists and strings | `split` turns a string into a list and `join` turns it back; `sorted` gives a new list | none | U5.EX with problem 5 removed, due 4.9 | none | Mini: an anagram finder or a word scramble |
 | 4.8 | Aliasing | Two names, one list; a function that changes a list changes the caller's list | none | U8.EX with problems 1 and 4 removed (spring: 4 only), due 4.10; U12.EX in spring | none | Students drive Python Tutor, three links |
-| 4.9 | Dictionaries | A key in place of a position; `KeyError` | ch. 10, skipping "Memos" | U10.L1, due 4.10 | reading quiz | Python Tutor demo. Table: dictionaries. |
+| 4.9 | Dictionaries | A key in place of a position; `KeyError` | ch. 10 | U10.L1, due 4.10 | reading quiz | Python Tutor demo. Table: dictionaries. |
 | 4.10 | A dictionary of counters | `if key not in d: d[key] = 1`, `else: d[key] += 1`; `for key in d` | none | U10.L2, due 4.11 | none | Mini: letter frequencies of a text you pick |
 | 4.11 | Dictionaries holding lists | A value can be a list; `in` on a dictionary is fast, and the class times it | none | U10.L3, due 4.12 | **learning check** on 4.6 to 4.10 | Mini: anagram families or a Scrabble scorer |
 | 4.12 | Tuples | `a, b = b, a`; a function that returns two values returns a tuple; `.items()` | ch. 11, the five sections | U9.L1, due 4.13; U10.EX with problem 5 removed, due 4.14 | reading quiz | Table: tuples. The table is complete. |
@@ -198,6 +198,12 @@ practice exercises, `11_strings` slide 11 (`num_vowels`) and
 What UNIT_2_AS_TAUGHT.md says fall students have not seen, and the
 lesson that carries a line or two more because of it. Package REV-4
 removes these for spring.
+
+Lessons 4.9 to 4.12 were written as they run in spring, with no fall
+lines (Dan, 2026-10-08; answer 13 below). So the skip of "Memos" at
+4.9 and the text adventure lines at 4.10 and 4.12 are not in those
+plans; Dan handles them in the room. LP_4.9 keeps its one sentence
+about tuples as keys in U10.L1, which spring needs too.
 
 - 4.1: the first `for` that is not over `range`. `+=` was mentioned
   only in passing, so it is taught as new, with `len` and
@@ -441,3 +447,14 @@ Asked in chat on 2026-10-08:
 12. Approve the lighter project stages under "Project" as written?
 
     Dan: Mark it as approved.
+
+Said in chat on 2026-10-08, after package U4-C, and recorded here by
+package R on U4-C:
+
+13. Dan: "Please stop asking about differences between fall and
+    spring. Write this exactly how it will be presented in the spring,
+    I will handle in-class interventions as needed for the fall."
+
+    Applied: lessons 4.9 to 4.12 have no fall lines, chapter 10 is
+    read whole with "Memos," `QUIZ_4.9` has a question on it, and
+    U10.EX keeps problems 3 and 4, which use `isinstance`.

@@ -453,9 +453,8 @@ page file," with the `cfe` style's frontmatter: `type: class recap`,
 `unit`, a one-line `summary`, and `details` for the header row. The
 body, in order:
 
-1. **What happened in class.** Three to five sentences in students'
-   words: the idea, the error hit on purpose if there was one, and
-   what students built.
+1. **What happened in class.** In students' words: the idea, the
+   error hit on purpose if there was one, and what students built.
 2. **Links.** Everything the plan's Preparation list says to post: the
    Python Tutor links students open themselves, files they download,
    anything else "too long to type." Each link has its full address

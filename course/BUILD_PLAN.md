@@ -11,7 +11,7 @@ Opus 5.5 session with no memory of any conversation can do it from
 start to finish. This file sequences work. It sets no standing rules;
 those live in CLAUDE.md and DECISIONS.md.
 
-## Where things stand (2026-10-08, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, U4-DP, R on U4-B, and U4-C)
+## Where things stand (2026-10-08, after packages S0, T0, U4-PLAN, U4-A, R on U4-A, U4-B, U4-DP, R on U4-B, U4-C, and R on U4-C)
 
 - The outline is approved. Lesson materials exist for 4.1 to 4.12: for
   each lesson a plan, a deck, and a Canvas page, plus the unit's
@@ -137,8 +137,20 @@ those live in CLAUDE.md and DECISIONS.md.
   rule about checking and narrowing printed word lists was removed,
   along with the notes in lessons 4.2, 4.7, and 4.11 that followed
   from it.
-- **Next:** R on U4-C, then U4-D (needed November 3). The project's
-  lighter stages in UNIT_4_PLAN.md are approved (2026-10-08).
+- Package R on U4-C is done (2026-10-08). It covered lessons 4.9 to
+  4.12, QUIZ_4.9, QUIZ_4.12 and their Codio files, CHECK_4.11, the
+  Plickers sheet, and the four decks and Canvas pages. Every key,
+  answer, Codio page claim, and error message was right, and the Codio
+  files match their quizzes. Small fixes: LP_4.9's description of how
+  Python Tutor draws a dictionary and its line on `values()`; a lesson
+  number in a code comment on LP_4.10 and DECK_4.10; the anagram
+  brief in LP_4.11 and DECK_4.11, which assumed every student built
+  the 4.7 anagram finder; and in LP_4.12, a line that assumed every
+  student did 4.5's swap ceiling and a typo in Extras. UNIT_4_PLAN.md
+  now reads chapter 10 whole, "Memos" included, and records Dan's
+  answer of 2026-10-08 on writing for spring as its answer 13.
+- **Next:** U4-D (needed November 3). The project's lighter stages in
+  UNIT_4_PLAN.md are approved (2026-10-08).
 
 **Open after U4-A, U4-B, and U4-DP:**
 
@@ -166,11 +178,6 @@ those live in CLAUDE.md and DECISIONS.md.
 - For Dan, before assigning U5.EX at lesson 4.7: remove problem 5.
   Before assigning U8.EX at lesson 4.8: remove problems 1 and 4 (LP_4.7
   and LP_4.8 Preparation).
-- For U4-C: CHECK_4.11 may not repeat a Quick check. LP_4.6's is a
-  `pop` and `append` trace, LP_4.7's is `'-'.join(sorted('cab'))`, and
-  LP_4.8's is `y = x`, `y.append(3)`, `x = [0]`. `t = t.append(x)` as
-  an explain-and-fix question is still unused. Lesson 4.5's partner
-  challenge taught the index loop that U5.EX problem 1 needs.
 - For whoever next edits tools/plan_check.py or this file: `check`
   flags the two example Python Tutor links under "Facts packages need"
   ("no python block above this link"). That predates U4-A and still
@@ -490,8 +497,7 @@ not part of a package unless Dan asks.
   on, which was due before the check. Nothing in it comes from the
   lesson it is marked on or from a later one. Its questions and
   answers are about as long as those in Dan's examples. Any code in it
-  was run. No question repeats a reading quiz question, a peer
-  instruction question, or a lesson's Quick check.
+  was run.
 - The plan for a lesson with a learning check opens its Agenda with
   "Learning check (10 min)," points to the CHECK file, and says in one
   line what to shorten.
@@ -818,8 +824,6 @@ Codio_Review, and two or three of the JSON files).
 - One short answer asks students to write a short function. The other
   asks them to explain and fix a piece of code, as the model's two do.
   Each has a point-by-point rubric.
-- No question repeats a reading quiz, a learning check, or a peer
-  instruction question from the unit.
 
 **The review guide:**
 
@@ -940,6 +944,6 @@ Unit 4 in the room will change how Units 2 and 3 are written.
 
 **Writes:** edits to the Unit 4 files, from the fall FEEDBACK.md
 entries. It removes the lines added for fall students under U4-PLAN
-item 4 and the skip of chapter 10's "Memos" section, adds U12.EX at
+item 4 (lessons 4.9 to 4.12 already have none), adds U12.EX at
 4.8, and moves the Unit 4 quiz's earlier-unit questions onto what
 spring's Units 2 and 3 taught.
