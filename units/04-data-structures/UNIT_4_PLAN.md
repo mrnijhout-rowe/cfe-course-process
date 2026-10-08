@@ -523,3 +523,25 @@ option in place of the codebreaker:
     the Connections lines in LP_4.4 and LP_4.10, LP_4.12's
     Preparation and Codio sections with its deck and page, and the
     brief saved in sources/connect_four_spring_2026/.
+
+Asked in chat on 2026-10-08, after package U4-D:
+
+15. Write sample solutions for Hangman and Spelling Bee, beside the
+    Wordle sample?
+
+    Dan: no
+
+16. The rubric totals 40 points for the pair, and 5 for each partner's
+    reflection. Right split?
+
+    Dan: sounds good
+
+17. Require a file of common five-letter words for the Wordle secret,
+    since `words.txt` has many rare ones?
+
+    Dan: Let's not change anything yet, I may revisit later.
+
+18. On project-day plans fitting the lesson-plan format: Dan said he
+    expects the projects to take a little longer, and that is his
+    concern, not the package's. Applied: the project's times stay as
+    the run sheet gives them.
