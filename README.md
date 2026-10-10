@@ -6,10 +6,17 @@ Mathematics. This repository is a public copy of how I plan and build that
 course with help from an AI model, Claude. It updates automatically
 whenever I change my private copy, so what you see here is current.
 
-I'm sharing it for two reasons. The first is for other teachers who are
-curious what this looks like in an actual classroom. The second is for my
-students, who deserve to know exactly how I'm using AI in the course
-they're taking.
+I'm sharing it for two reasons. The first is for my students, who deserve
+to know exactly how I'm using AI in the course they're taking. If I want
+them to use AI thoughtfully, it's only fair that I show my work. The second
+is for other teachers who are curious what this looks like in an actual
+classroom.
+
+Several of my students have also asked me some version of "But how do you
+get beyond prompting?" This repository is my best attempt at an answer: a
+look at how a professional actually works with AI, with written rules, a
+clear division of labor, and a human checking everything before it reaches
+a classroom.
 
 You don't need any special software to read any of this. It's all plain
 text you can read right here on GitHub.
@@ -27,17 +34,27 @@ something to reach for.
 
 An intro Python course doesn't come with any of that, so this is how I
 build my own. I decide what the course covers and how the lessons fit
-together. The AI fills the binder: lesson plans, examples to use in class,
-extra practice for students who need more reps, slides, and quiz questions
-to check understanding along the way. I read all of it, change what needs
+together. The AI fills the binder: examples to use in class, extra practice
+for students who need more reps, slides, and quiz questions to check
+understanding along the way. I read all of it, change what needs
 changing, and toss what doesn't fit, the same as I would with any
 supplemental material. The big difference is that this binder gets
 written for my class, instead of my class bending to fit the binder.
 
+That fit comes from the rules the AI works from, which describe how I
+actually teach. The one I care about most is that the thinking belongs to
+the students. So the materials come back built around my favorite
+routines: students write in their journals before they talk, pairs work a
+problem out on a whiteboard before anyone types, concept questions run as
+peer instruction (vote, argue with a partner, vote again), and I live-code
+the messy way, errors and all, instead of showing a polished answer. The
+AI isn't here to do anyone's thinking for them. It helps me build a class
+where students do more of it.
+
 It also handles the busywork that would otherwise eat my evenings, like
-formatting lesson pages so they look good in Canvas (our online course
-system) and putting quiz questions into the file format Codio (our
-homework platform) needs, so I'm not typing each one in by hand.
+formatting lesson pages so they look good in Canvas and putting quiz
+questions into the file format Codio (our coding platform) needs, so
+I'm not typing each one in by hand.
 
 ## How it works
 
