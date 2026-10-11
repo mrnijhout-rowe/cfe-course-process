@@ -85,10 +85,7 @@ I've left out:
 - My notes after teaching each lesson. They're written about real
   classes, so I keep them private as a precaution.
 - Codio's own course content, which isn't mine to share.
-- My other assessments, from this course and others, including the fall
-  2026 text adventure lab.
-- My planning calendar. The materials are written lesson by lesson rather
-  than week by week anyway.
+- My other assessments, from this course and others.
 
 If you're a teacher and would like to see more of what the process
 produces, reach out through my GitHub profile:
