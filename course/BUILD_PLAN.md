@@ -52,7 +52,8 @@ REV-2 and REV-3 (Dan, 2026-10-08).
    Add these lessons' peer instruction questions to the unit's Plickers
    sheet. Then, after each plan is finished, its deck and its Canvas
    page, which copy the plan. After each reading quiz is final, its
-   Codio files, made with the codio-mcq skill into rendered/codio/.
+   Codio files, made with the codio-mcq skill into the unit's
+   rendered/NN-unit-name/codio/.
    Making Word, PowerPoint, or HTML output is not part of a package
    unless Dan asks.
 3. **Check.** Run `python3 tools/plan_check.py check` on every file

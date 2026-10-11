@@ -14,7 +14,8 @@ students saw the idea there. For each deck and Canvas page it reads
 the plan beside it and confirms that every slide and every sentence
 on the page comes from the plan (reworded for students is fine; new
 or changed substance is not), that the deck follows the slide order in course/formats/STUDENT_FACING.md, and that no page says when anything is due.
-For each reading quiz it confirms the Codio files in rendered/codio/
+For each reading quiz it confirms the Codio files in the unit's
+rendered/NN-unit-name/codio/
 match the quiz file question for question, or makes them again with
 the codio-mcq skill if the quiz changed. It fixes small errors in
 place and lists what it changed. It does not rewrite a lesson's

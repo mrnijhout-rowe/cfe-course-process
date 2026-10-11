@@ -29,9 +29,10 @@ check section.
 
 Students take the quiz in Codio, through a link in Canvas. After the
 quiz is final, its Codio files are made from it with the codio-mcq
-skill into `rendered/codio/QUIZ_N.N_Short_Name/`: a guide page that
-embeds the questions and `MC_Assessments/` with one JSON (JavaScript
-Object Notation) file per question. Each question's guidance is its key
+skill into the unit's folder under rendered/, as in
+`rendered/04-data-structures/codio/QUIZ_4.2_Iteration_And_Search/`: a
+guide page that embeds the questions and `MC_Assessments/` with one
+JSON (JavaScript Object Notation) file per question. Each question's guidance is its key
 explanation, the answers keep the quiz's order, the questions are not
 shuffled, each JSON file parses and has exactly one correct answer, and
 the guide page names every JSON file. Those files are output: remade
@@ -39,6 +40,14 @@ when the quiz changes, never edited by hand, and outside git with the
 rest of rendered/. The lesson plan's Preparation list tells Dan to put
 them in Codio, and the deck's reading quiz slide sends students to the
 link in Canvas.
+
+To put a quiz in Codio:
+
+1. Create a new Codio level for the quiz.
+2. Put the guide page (the `.md` file) in the level's root folder.
+3. Put every JSON file from `MC_Assessments/` in the level's
+   `.guides/assessments/` folder. Each `{Check It!|assessment}` line on
+   the guide page shows its question once its JSON file is there.
 
 ## Learning check
 
@@ -117,12 +126,14 @@ Guide pages are student-facing and name the unit by its topic.
 The answers page writes out every practice question in full, and
 `tools/review_json.py` makes the JSON files from it, so a change to a
 question is made on the answers page and the tool is run again (Dan,
-2026-10-08).
+2026-10-08). It goes into Codio the way a reading quiz does (see
+"Reading quiz"), with every guide page in the level's root folder.
 
 ## Done when
 
 - Reading quiz: `check` passes; the Codio files exist in
-  rendered/codio/, made from the final quiz; Preparation tells Dan to
+  the unit's rendered/NN-unit-name/codio/, made from the final quiz;
+  Preparation tells Dan to
   put them in Codio.
 - Learning check: `check` passes; the notes name the lesson for each
   Part A question and the assignment for B1, due before the check;
