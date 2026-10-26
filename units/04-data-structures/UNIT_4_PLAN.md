@@ -601,3 +601,25 @@ Asked in chat on 2026-10-08, after package U4-Q:
 
     Applied: `tools/review_json.py`, which reads the guide's answers
     page, named in README.md and course/formats/ASSESSMENTS.md.
+
+Asked in chat on 2026-10-26, after the ceiling structure was rolled
+out to every lesson:
+
+25. A loop inside a loop is the second-level ceiling's idea in six
+    lessons, sort-in-place appears at 4.5 and 4.8, and 4.12's streak
+    repeats 4.3's longest stretch. Thin it out?
+
+    Dan: Leave as is.
+
+26. 4.1's vowel table previews 4.10's letter frequencies, and 4.10's
+    "word after the" is the first step of the project's text
+    generator. Keep the previews?
+
+    Dan: Leave as is.
+
+27. Record the card and the two ceiling levels in this plan?
+
+    Dan: Yes.
+
+    Applied: the "Partner challenges and mini-projects" paragraph under
+    the lesson table, and cut point 3.
