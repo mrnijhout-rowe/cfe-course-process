@@ -30,6 +30,9 @@ Students will be able to:
   Concept section, one with the peer instruction reveal in Extras.
 - [ ] Draw the comparison table frame, all four columns, on a wall
   whiteboard (end of the Concept section), or plan to project it.
+- [ ] Print `materials/HANDOUT_4_Before_You_Type.md`, two to a page,
+  and cut it: one card per pair, left on the tables for the
+  mini-project and collected after. It is reused in later lessons.
 
 ## Reading
 
@@ -290,8 +293,11 @@ with `'0123456789'`. Keys are in Extras.
 <!-- Partner challenge: today the mini-project takes this slot, as the
 unit plan marks for lesson 4.1. -->
 
-Pairs, as in a partner challenge: sketch the steps on the table
-whiteboard first, then type in Thonny.
+Pairs. Each pair takes a "Before you type" card from the table
+(`materials/HANDOUT_4_Before_You_Type.md`), works through its steps on
+the whiteboard, then types. A pair that is stuck tells you which step
+of the card they're on. Today is the card's first use: hold one up and
+say that the answers go on the whiteboard, not on the card.
 
 Project this:
 
@@ -306,6 +312,25 @@ Project this:
 >   are none, print a message saying it could go in *Gadsby*.
 >
 > Your prompt should tell the user what to type.
+>
+> **Before you type.** Write a short sentence on your whiteboard, like
+> "I see a bee." Draw a box around each character, spaces too. Go
+> along the boxes one at a time and keep a tally of what your option
+> counts. What do you check at each box, and what do you print at the
+> end?
+>
+> You have written every piece of this before:
+>
+> - Asking the user is the text adventure: `input()` with a prompt
+>   that says what to type, and `.lower()` so capitals count.
+> - Letter hunt: the counter is the loop that counted the s's in
+>   "Mississippi," with the user's letter in place of `'s'`.
+> - Sentence report: `num_vowels` from Try it, with more counters in
+>   the same loop, one for each thing you report, and `len` for the
+>   characters.
+> - Gadsby check: the "Mississippi" counter looking for `'e'`, then an
+>   `if` and `else` after the loop, like a decision in the text
+>   adventure.
 
 While you walk the room, look for:
 
@@ -345,6 +370,49 @@ print(report)
 Type a sentence: Gadsby is a novel without the letter E
 38 characters, 31 letters, 12 vowels, 7 spaces
 ```
+
+Two levels of ceiling, one of each per option, both on the deck so a
+pair can start one without asking. Project this:
+
+> **Finished? Try the next step of your option.**
+>
+> - Letter hunt: if the user types more than one character, or
+>   nothing, say so and ask again, the way the text adventure asked
+>   again when it didn't understand an answer.
+> - Sentence report: also count the consonants, and print what percent
+>   of the letters are vowels, to one decimal place.
+> - Gadsby check: check every vowel, not only e. For each of a, e, i,
+>   o, and u, print whether the sentence uses it.
+>
+> **Still going? Each of these needs an idea you haven't been shown.**
+>
+> - Letter hunt: count a pair of letters the user types, like "ss" in
+>   "Mississippi," which has two. Hint: keep the character from the
+>   last pass in a variable; `previous + c` is the two characters that
+>   end here.
+> - Sentence report: count the words, even when the user types extra
+>   spaces between words or at the start. Hint: keep a `True` or
+>   `False` variable that says whether you are inside a word. A word
+>   starts at a character that isn't a space when that variable is
+>   `False`.
+> - Gadsby check: print how many times each vowel appears, one line
+>   per vowel, like `a 3`. Hint: a loop inside a loop. The outer loop
+>   goes through `'aeiou'`, and the inner loop counts that vowel in the
+>   sentence.
+
+The second level goes past today's material on purpose. The pair count
+needs a variable that remembers the character from the last pass, the
+idea lesson 4.3 shows as an option; the word count needs a `True` or
+`False` variable that changes as the loop runs, which the unit doesn't
+teach; the vowel table needs a loop inside a loop, which the unit
+doesn't teach either. Answers: on "Mississippi River," the safe letter
+hunt turns down "ss" and a bare Enter, then reports 4 for "S";
+"Gadsby is a novel without the letter E" has 19 consonants and is 38.7
+percent vowels; "Rhythm and blues" uses a, e, and u, and never i or o.
+"Mississippi" has "ss" twice; "  Gadsby   is a  novel," typed with
+extra spaces, has 4 words, where spaces plus one gives 9; "The quick
+brown fox jumps over the lazy dog" has a 1, e 3, i 1, o 4, u 2. All six
+keys are in Extras.
 
 ### Codio (10 min)
 
@@ -472,6 +540,157 @@ print(count_digits('Room 2104, 3rd floor'))
 ```text
 5
 ```
+
+**Mini-project, first-level ceilings, keys.**
+
+<!-- plan_check input: ["Mississippi River", "ss", "", "S"] -->
+```python
+# Letter hunt that asks again until the user types exactly one character.
+sentence = input('Type a sentence: ').lower()
+letter = input('Type one letter to count: ').lower()
+while len(letter) != 1:                   # nothing, or more than one
+    print('Please type exactly one letter.')
+    letter = input('Type one letter to count: ').lower()
+
+count = 0
+for c in sentence:
+    if c == letter:
+        count += 1
+print(f'{letter} appears {count} times')
+```
+
+```text
+Type a sentence: Mississippi River
+Type one letter to count: ss
+Please type exactly one letter.
+Type one letter to count:
+Please type exactly one letter.
+Type one letter to count: S
+s appears 4 times
+```
+
+<!-- plan_check input: ["Gadsby is a novel without the letter E"] -->
+```python
+# Sentence report with consonants and the percent of letters that are vowels.
+sentence = input('Type a sentence: ').lower()
+
+letters = 0
+vowels = 0
+for c in sentence:
+    if c in 'abcdefghijklmnopqrstuvwxyz':
+        letters += 1
+    if c in 'aeiou':
+        vowels += 1
+
+consonants = letters - vowels             # a letter that isn't a vowel
+percent = vowels / letters * 100
+print(consonants, 'consonants')
+print(f'{percent:.1f} percent of the letters are vowels')   # :.1f is 1 place
+```
+
+```text
+Type a sentence: Gadsby is a novel without the letter E
+19 consonants
+38.7 percent of the letters are vowels
+```
+
+<!-- plan_check input: ["Rhythm and blues"] -->
+```python
+# Gadsby check for every vowel: a loop over 'aeiou' asks about each one.
+sentence = input('Type a sentence: ').lower()
+
+for v in 'aeiou':                         # a for loop over a string you typed
+    if v in sentence:
+        print(v, 'is used')
+    else:
+        print(v, 'is never used')
+```
+
+```text
+Type a sentence: Rhythm and blues
+a is used
+e is used
+i is never used
+o is never used
+u is used
+```
+
+**Mini-project, second-level ceilings, keys.**
+
+<!-- plan_check input: ["Mississippi", "ss"] -->
+```python
+# Count a pair of letters: remember the character from the last pass.
+sentence = input('Type a sentence: ').lower()
+pair = input('Type two letters to count: ').lower()
+
+count = 0
+previous = ''                             # no character yet
+for c in sentence:
+    if previous + c == pair:              # the two characters that end here
+        count += 1
+    previous = c                          # after the test, remember this one
+print(f'{pair} appears {count} times')
+```
+
+```text
+Type a sentence: Mississippi
+Type two letters to count: ss
+ss appears 2 times
+```
+
+The common bug is `previous = c` above the `if`. Then `previous + c`
+is the same character twice, so every "s" counts, and "Mississippi"
+gives 4.
+
+<!-- plan_check input: ["  Gadsby   is a  novel"] -->
+```python
+# Count the words, however many spaces: a True or False variable says
+# whether the loop is inside a word.
+sentence = input('Type a sentence: ')
+
+words = 0
+in_word = False                           # no word yet
+for c in sentence:
+    if c == ' ':
+        in_word = False                   # a space ends any word
+    elif not in_word:                     # not a space, and not in a word:
+        words += 1                        # a new word starts here
+        in_word = True
+print(words, 'words')
+```
+
+```text
+Type a sentence:   Gadsby   is a  novel
+4 words
+```
+
+The common bug is leaving out `in_word = True`, so every character
+that isn't a space counts as a new word: the same sentence gives 14.
+
+<!-- plan_check input: ["The quick brown fox jumps over the lazy dog"] -->
+```python
+# How many times each vowel appears: a loop inside a loop.
+sentence = input('Type a sentence: ').lower()
+
+for v in 'aeiou':                         # outer loop: one vowel at a time
+    count = 0                             # a fresh count for each vowel
+    for c in sentence:                    # inner loop: the whole sentence
+        if c == v:
+            count += 1
+    print(v, count)
+```
+
+```text
+Type a sentence: The quick brown fox jumps over the lazy dog
+a 1
+e 3
+i 1
+o 4
+u 2
+```
+
+The common bug is `count = 0` above the outer loop, so the counts run
+on from one vowel to the next: a 1, e 4, i 5, o 9, u 11.
 
 **Connections.** The counter is the first accumulator pattern of the
 unit: in lesson 4.4 the same loop builds a string, and later in the

@@ -113,14 +113,18 @@ print(num_vowels('rhythm'))
 
 ## Mini-project: Letter counter
 <!-- pipeline: notes
-Pairs. Sketch the steps on the table whiteboard first, then type in
-Thonny. While you walk the room, look for: the counter set to 0 above
-the loop; the print lined up with for; capitals handled with .lower()
-or both cases in the test string; a prompt that says what to type.
-Sample solution for the sentence report is in the lesson plan.
+Pairs. Each pair takes a "Before you type" card from the table, works
+through its steps on the whiteboard, then types. A pair that is stuck
+says which step of the card they're on. It's the card's first use:
+hold one up and say the answers go on the whiteboard, not on the card.
+While you walk the room, look for: the counter set to 0 above the
+loop; the print lined up with for; capitals handled with .lower() or
+both cases in the test string; a prompt that says what to type. Key
+for the sentence report in the lesson plan.
 -->
 
-Pairs. Sketch the steps on your whiteboard before either of you types.
+Pairs. Work through the "Before you type" card on your whiteboard,
+then type.
 
 > Write a program that asks the user to type a sentence and then
 > reports something about its characters. Pick one:
@@ -133,6 +137,79 @@ Pairs. Sketch the steps on your whiteboard before either of you types.
 >   are none, print a message saying it could go in *Gadsby*.
 >
 > Your prompt should tell the user what to type.
+
+## Before you type
+<!-- pipeline: reveal -->
+<!-- pipeline: notes
+Pairs work the card on the whiteboard first. The pieces appear on
+click, after pairs have tallied their sentence by hand.
+-->
+
+Write a short sentence on your whiteboard, like "I see a bee." Draw a
+box around each character, spaces too. Go along the boxes one at a
+time and keep a tally of what your option counts. What do you check at
+each box, and what do you print at the end?
+
+You have written every piece of this before:
+
+- Asking the user is the text adventure: `input()` with a prompt that
+  says what to type, and `.lower()` so capitals count.
+- Letter hunt: the counter is the loop that counted the s's in
+  "Mississippi," with the user's letter in place of `'s'`.
+- Sentence report: `num_vowels` from Try it, with more counters in the
+  same loop, one for each thing you report, and `len` for the
+  characters.
+- Gadsby check: the "Mississippi" counter looking for `'e'`, then an
+  `if` and `else` after the loop, like a decision in the text
+  adventure.
+
+## Finished? Try the next step of your option
+<!-- pipeline: notes
+First-level ceilings, one per option. Keys in the lesson plan's
+Extras. Letter hunt: a while loop that asks again until len(letter) is
+1; on "Mississippi River" it turns down "ss" and a bare Enter, then
+reports 4 for "S". Sentence report: consonants are letters minus
+vowels; "Gadsby is a novel without the letter E" has 19 consonants and
+is 38.7 percent vowels. Gadsby check: a for loop over 'aeiou';
+"Rhythm and blues" uses a, e, and u, and never i or o.
+-->
+
+- Letter hunt: if the user types more than one character, or nothing,
+  say so and ask again, the way the text adventure asked again when it
+  didn't understand an answer.
+- Sentence report: also count the consonants, and print what percent
+  of the letters are vowels, to one decimal place.
+- Gadsby check: check every vowel, not only e. For each of a, e, i, o,
+  and u, print whether the sentence uses it.
+
+## Still going?
+<!-- pipeline: notes
+Second-level ceilings; each needs an idea students haven't been shown.
+Pair count: a variable that remembers the last character; "Mississippi"
+has "ss" twice. The common bug is previous = c above the if, which
+gives 4. Word count: a True or False variable that changes as the loop
+runs; "  Gadsby   is a  novel" has 4 words, where spaces plus one gives
+9. The common bug is never setting it to True, which gives 14. Vowel
+table: a loop inside a loop; "The quick brown fox jumps over the lazy
+dog" has a 1, e 3, i 1, o 4, u 2. The common bug is count = 0 above
+the outer loop, so the counts run on: a 1, e 4, i 5, o 9, u 11. Keys
+in the lesson plan's Extras.
+-->
+
+Each of these needs an idea you haven't been shown.
+
+- Letter hunt: count a pair of letters the user types, like "ss" in
+  "Mississippi," which has two. Hint: keep the character from the last
+  pass in a variable; `previous + c` is the two characters that end
+  here.
+- Sentence report: count the words, even when the user types extra
+  spaces between words or at the start. Hint: keep a `True` or `False`
+  variable that says whether you are inside a word. A word starts at a
+  character that isn't a space when that variable is `False`.
+- Gadsby check: print how many times each vowel appears, one line per
+  vowel, like `a 3`. Hint: a loop inside a loop. The outer loop goes
+  through `'aeiou'`, and the inner loop counts that vowel in the
+  sentence.
 
 ## Quick check: how it works
 <!-- pipeline: layout center -->

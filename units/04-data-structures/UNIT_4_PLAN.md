@@ -100,6 +100,22 @@ top of finishing the Unit 6 lab and exercises.
 
 Dan confirmed this load on 2026-10-05.
 
+**Partner challenges and mini-projects** (FEEDBACK.md, 2026-10-16;
+rolled out to every lesson 2026-10-26). Each pair works from a "Before
+you type" card, `materials/HANDOUT_4_Before_You_Type.md`, printed at
+4.1 and left on the tables for every partner challenge and
+mini-project: six whiteboard questions a pair answers before opening
+Thonny, and a pair that is stuck says which step it is on. The
+projected brief carries a **Before you type** task on a small example
+and a "You have written every piece of this before" list naming the
+earlier programs the pieces come from. Ceilings come in two levels,
+both projected so a pair can start one without asking: "Finished?"
+holds the old stretch goals, and "Still going?" holds one or two
+problems that need an idea the lesson has not shown, each with a
+one-sentence hint. Every ceiling has a run key under Extras, and the
+plan's teacher paragraph gives the answers so a pair's result can be
+checked at a glance.
+
 **File names.** `LP_4.1_String_Sequence`, `LP_4.2_Search`,
 `LP_4.3_Indexing_Slicing`, `LP_4.4_Strings_Do_Not_Change`,
 `LP_4.5_Lists`, `LP_4.6_List_Methods`, `LP_4.7_Lists_And_Strings`,
@@ -401,9 +417,9 @@ a day:
    at the end of 4.1, and the Spelling Bee mini is dropped. The
    chapter 7 quiz is either dropped or given at 4.3 beside chapter
    8's.
-3. Inside a lesson, the first thing to drop is the ceiling variant,
-   then the mini-project's second option; 4.11's timing demo goes
-   before its mini.
+3. Inside a lesson, the first thing to drop is the second-level
+   ceiling, then the first, then the mini-project's second option;
+   4.11's timing demo goes before its mini.
 
 **Final-project pointers:** regular expressions, modern cryptography,
 and where the text generator stops and a real language model begins.
